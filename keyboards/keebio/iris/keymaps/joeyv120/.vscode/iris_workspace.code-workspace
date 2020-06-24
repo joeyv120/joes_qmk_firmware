@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "qmk_firmware",
+			"path": "..\\..\\..\\..\\..\\..\\qmk_firmware"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
