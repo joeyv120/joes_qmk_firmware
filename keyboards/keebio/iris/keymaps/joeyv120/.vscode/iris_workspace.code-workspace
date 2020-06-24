@@ -5,7 +5,7 @@
 		},
 		{
 			"name": "qmk_firmware",
-			"path": "..\\..\\..\\..\\..\\..\\qmk_firmware"
+			"path": "..\\..\\..\\..\\..\\..\\"
 		}
 	],
 	"settings": {
