@@ -56,15 +56,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_ADVANCED] = LAYOUT(
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     RESET,  XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,                              XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,  XXXXXXX,
+     RESET,   XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     RGB_TOG, RGB_M_P, RGB_M_B,   RGB_M_R, RGB_M_SW,  XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+     RGB_TOG, XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     RGB_MOD, RGB_M_SN, RGB_M_K, RGB_M_X, RGB_M_G, XXXXXXX,                            XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+     RGB_MOD, XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     RGB_VAI, RGB_VAD, RGB_SAI, RGB_SAD, RGB_HUI, RGB_HUD, _______,          _______, XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+     RGB_M_P, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, TO(0),                   XXXXXXX, XXXXXXX, XXXXXXX
+                                    _______, _______, TO(0),                     XXXXXXX, XXXXXXX, XXXXXXX
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -146,9 +146,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
 // https://www.reddit.com/r/olkb/comments/8bzipp/qmk_help_rgb_layers_and_additional_questions/dxdefrh?utm_source=share&utm_medium=web2x
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/rgblight_list.h
-// https://docs.qmk.fm/#/feature_rgblight?id=effects-and-animations
+// https://docs.qmk.fm/#/feature_rgblight
 uint32_t base_mode = 1; // Unlocked animation (solid)
-uint32_t lock_mode = 5; // Locked animation (breathing)
+uint32_t lock_mode = 36; // Locked animation (breathing)
 uint16_t hue = 64;
 uint16_t sat = 255;
 uint16_t val = 255;
@@ -182,7 +182,7 @@ uint32_t layer_state_set_user(uint32_t state) {
       break;
     
     case _ADVANCED: // Name of my 2nd layer
-      rgblight_mode(base_mode);
+      rgblight_mode(lock_mode);
       rgblight_sethsv(0, 255, 255); // red
       break;
     }
@@ -195,6 +195,9 @@ bool led_update_user(led_t led_state) {
     }
     else if (led_state.num_lock & layer_state_is(1)) {
       rgblight_mode(lock_mode);      
+    }
+    else if (layer_state_is(2)) {
+      rgblight_mode(lock_mode);
     }
     else {
       rgblight_mode(base_mode);
