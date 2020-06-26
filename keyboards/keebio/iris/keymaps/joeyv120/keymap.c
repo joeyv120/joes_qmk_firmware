@@ -153,6 +153,7 @@ uint16_t hue = 64;
 uint16_t sat = 255;
 uint16_t val = 255;
 
+# Eroviaa: Just a quick note, the matrix_init_user might work in this example, but that's not guaranteed. keyboard_post_init_user is the recommended as when it's called, all HW features are already initialized.
 void matrix_init_user() {
   rgblight_mode(base_mode);
   rgblight_enable();
