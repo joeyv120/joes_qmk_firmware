@@ -3,15 +3,15 @@
 
 #define _QWERTY 0
 #define _FUNCTION 1
-#define _ADVANCED 2
-#define _ADJUST 3
+#define _NAVIGATION 2
+#define _ADVANCED 3
 
-enum custom_keycodes {
-  QWERTY = SAFE_RANGE,
-  LOWER,
-  RAISE,
-  ADJUST,
-};
+// enum custom_keycodes {
+//   QWERTY = SAFE_RANGE,
+//   LOWER,
+//   RAISE,
+//   ADJUST,
+// };
 
 // Tap Dance declarations
 enum {
@@ -44,13 +44,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_LABK,                            KC_RABK, KC_NUMLOCK, KC_KP_SLASH, KC_KP_ASTERISK, KC_MINUS, KC_BSPACE,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_LCBR,                               KC_RCBR,    KC_KP_7,    KC_KP_8,    KC_KP_9,    KC_KP_PLUS,    XXXXXXX,
+     _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_LCBR,                            KC_RCBR, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_PLUS, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______,  KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LBRC,                            KC_RBRC, KC_P4,   KC_P5,   KC_P6,   KC_KP_ENTER, XXXXXXX,
+     _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LBRC,                            KC_RBRC, KC_P4,   KC_P5,   KC_P6,   KC_KP_ENTER, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, _______,_______,_______,KC_LPRN,_______,          _______, KC_RPRN, KC_P1,   KC_P2,   KC_P3,   KC_KP_ENTER, _______,
+     _______, _______, _______, _______, _______, KC_LPRN, _______,          _______, KC_RPRN, KC_P1,   KC_P2,   KC_P3,   KC_KP_ENTER, _______,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, TO(0),                    TO(2),  KC_KP_0, KC_KP_DOT
+                                    _______, _______, TO(0),                     TO(2),   KC_KP_0, KC_KP_DOT
+                                // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
+  ),
+
+  [_NAVIGATION] = LAYOUT(
+  //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
+     _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
+  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
+     _______, _______, _______, _______, _______, _______,                            _______, KC_HOME, KC_UP,   KC_PGUP, _______, _______,
+  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
+     _______, _______, _______, _______, _______, _______,                            _______, KC_LEFT, XXXXXXX, KC_RIGHT, _______, _______,
+  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
+     _______, _______, _______, _______, _______, _______, _______,          _______, _______, KC_END,  KC_DOWN, KC_PGDOWN, _______, _______,
+  //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
+                                    _______, _______, TO(0),                     TO(3),   _______, _______
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -68,78 +82,65 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
-  [_ADJUST] = LAYOUT(
-  //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-     _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
-  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
-  //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
-  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-  //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, _______,                   _______, _______, _______
-                                // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
-  )
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case QWERTY:
-      if (record->event.pressed) {
-        set_single_persistent_default_layer(_QWERTY);
-      }
-      return false;
-      break;
-    case LOWER:
-      if (record->event.pressed) {
-        layer_on(_FUNCTION);
-        update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
-      } else {
-        layer_off(_FUNCTION);
-        update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
-      }
-      return false;
-      break;
-    case RAISE:
-      if (record->event.pressed) {
-        layer_on(_ADVANCED);
-        update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
-      } else {
-        layer_off(_ADVANCED);
-        update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
-      }
-      return false;
-      break;
-    case ADJUST:
-      if (record->event.pressed) {
-        layer_on(_ADJUST);
-      } else {
-        layer_off(_ADJUST);
-      }
-      return false;
-      break;
-  }
-  return true;
-}
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//   switch (keycode) {
+//     case QWERTY:
+//       if (record->event.pressed) {
+//         set_single_persistent_default_layer(_QWERTY);
+//       }
+//       return false;
+//       break;
+//     case LOWER:
+//       if (record->event.pressed) {
+//         layer_on(_FUNCTION);
+//         update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
+//       } else {
+//         layer_off(_FUNCTION);
+//         update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
+//       }
+//       return false;
+//       break;
+//     case RAISE:
+//       if (record->event.pressed) {
+//         layer_on(_ADVANCED);
+//         update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
+//       } else {
+//         layer_off(_ADVANCED);
+//         update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
+//       }
+//       return false;
+//       break;
+//     case ADJUST:
+//       if (record->event.pressed) {
+//         layer_on(_ADJUST);
+//       } else {
+//         layer_off(_ADJUST);
+//       }
+//       return false;
+//       break;
+//   }
+//   return true;
+// }
 
-// Rotary Encoder
-void encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) {
-        if (clockwise) {
-            tap_code(KC_VOLU);
-        } else {
-            tap_code(KC_VOLD);
-        }
-    }
-    else if (index == 1) {
-        if (clockwise) {
-            tap_code(KC_PGDN);
-        } else {
-            tap_code(KC_PGUP);
-        }
-    }
-}
+// // Rotary Encoder
+// void encoder_update_user(uint8_t index, bool clockwise) {
+//     if (index == 0) {
+//         if (clockwise) {
+//             tap_code(KC_VOLU);
+//         } else {
+//             tap_code(KC_VOLD);
+//         }
+//     }
+//     else if (index == 1) {
+//         if (clockwise) {
+//             tap_code(KC_PGDN);
+//         } else {
+//             tap_code(KC_PGUP);
+//         }
+//     }
+// }
 
 // Links for reference
 // https://docs.qmk.fm/#/feature_rgblight
@@ -147,13 +148,14 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 // https://www.reddit.com/r/olkb/comments/8bzipp/qmk_help_rgb_layers_and_additional_questions/dxdefrh?utm_source=share&utm_medium=web2x
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/rgblight_list.h
 // https://docs.qmk.fm/#/feature_rgblight
+// https://github.com/qmk/qmk_firmware/blob/master/quantum/rgblight.h
 uint32_t base_mode = 1; // Unlocked animation (solid)
 uint32_t lock_mode = 36; // Locked animation (breathing)
 uint16_t hue = 64;
 uint16_t sat = 255;
 uint16_t val = 255;
 
-# Eroviaa: Just a quick note, the matrix_init_user might work in this example, but that's not guaranteed. keyboard_post_init_user is the recommended as when it's called, all HW features are already initialized.
+// Eroviaa: Just a quick note, the matrix_init_user might work in this example, but that's not guaranteed. keyboard_post_init_user is the recommended as when it's called, all HW features are already initialized.
 void matrix_init_user() {
   rgblight_mode(base_mode);
   rgblight_enable();
@@ -181,6 +183,11 @@ uint32_t layer_state_set_user(uint32_t state) {
         rgblight_mode(base_mode);
       }
       break;
+
+    case _NAVIGATION: // Name of my 1st layer (includes 10-key and num-lock)
+      rgblight_mode(base_mode);
+      rgblight_sethsv(190, 255, 255); // purple
+      break;
     
     case _ADVANCED: // Name of my 2nd layer
       rgblight_mode(lock_mode);
@@ -198,6 +205,9 @@ bool led_update_user(led_t led_state) {
       rgblight_mode(lock_mode);      
     }
     else if (layer_state_is(2)) {
+      rgblight_mode(base_mode);
+    }
+    else if (layer_state_is(3)) {
       rgblight_mode(lock_mode);
     }
     else {
