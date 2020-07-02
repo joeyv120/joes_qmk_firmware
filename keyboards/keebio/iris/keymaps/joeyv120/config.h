@@ -34,3 +34,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLED_NUM 12
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
+
+// Not defined	If defined, the RGB lighting will be switched off when the host goes to sleep
+#define RGBLIGHT_SLEEP
+
+// 	If defined, synchronization functionality for split keyboards is added
+#define RGBLIGHT_SPLIT 
