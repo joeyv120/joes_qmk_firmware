@@ -150,7 +150,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // https://docs.qmk.fm/#/feature_rgblight
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/rgblight.h
 uint32_t base_mode = 1; // Unlocked animation (solid)
-uint32_t lock_mode = 36; // Locked animation (alternating)
+uint32_t lock_mode = 5; // Locked animation (breathing)
+uint32_t advn_mode = 36; // Advanced layer animation (alternating)
 uint16_t hue = 64;
 uint16_t sat = 255;
 uint16_t val = 255;
@@ -184,13 +185,13 @@ uint32_t layer_state_set_user(uint32_t state) {
       }
       break;
 
-    case _NAVIGATION: // Name of my 1st layer (includes 10-key and num-lock)
+    case _NAVIGATION: // Name of my 2st layer (includes 10-key and num-lock)
       rgblight_mode(base_mode);
       rgblight_sethsv(190, 255, 255); // purple
       break;
     
-    case _ADVANCED: // Name of my 2nd layer
-      rgblight_mode(lock_mode);
+    case _ADVANCED: // Name of my 3nd layer (includes hardware related keys)
+      rgblight_mode(advn_mode);
       rgblight_sethsv(0, 255, 255); // red
       break;
     }
@@ -208,7 +209,7 @@ bool led_update_user(led_t led_state) {
       rgblight_mode(base_mode);
     }
     else if (layer_state_is(3)) {
-      rgblight_mode(lock_mode);
+      rgblight_mode(advn_mode);
     }
     else {
       rgblight_mode(base_mode);
