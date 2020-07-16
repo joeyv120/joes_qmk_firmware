@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Enable Lighting Layers
 // #define RGBLIGHT_LAYERS
 
-#define TAPPING_TERM 250
+#define TAPPING_TERM 225
 
 // Remove some features to save space
 // https://docs.qmk.fm/#/feature_rgblight
