@@ -160,7 +160,7 @@ uint32_t advn_mode = 22; // Advanced layer animation (alternating)
 void keyboard_post_init_user(void) {
   rgblight_enable();
   rgblight_mode(base_mode);
-  rgblight_sethsv(64, 255, 255);
+  rgblight_sethsv(128, 255, 255);
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
@@ -169,7 +169,7 @@ uint32_t layer_state_set_user(uint32_t state) {
   switch (layer) {
     case _QWERTY: // Name of my 0-th layer (includes alphas and caps-lock)
       // rgblight_mode_noeeprom(base_mode);
-      rgblight_sethsv_noeeprom(64, 255, rgblight_get_val());
+      rgblight_sethsv_noeeprom(145, 255, rgblight_get_val());
       // keyboard_post_init_user();
       if (led_state.caps_lock) {
         rgblight_mode_noeeprom(lock_mode);
@@ -180,7 +180,7 @@ uint32_t layer_state_set_user(uint32_t state) {
     
     case _FUNCTION: // Name of my 1st layer (includes 10-key and num-lock)
       // rgblight_sethsv(130, 255, 255); // Blue
-      rgblight_sethsv_noeeprom(130, 255, rgblight_get_val());
+      rgblight_sethsv_noeeprom(190, 255, rgblight_get_val());
       if (led_state.num_lock) {
         rgblight_mode_noeeprom(lock_mode);
       } else {
@@ -191,7 +191,7 @@ uint32_t layer_state_set_user(uint32_t state) {
     case _NAVIGATION: // Name of my 2st layer (includes 10-key and num-lock)
       rgblight_mode_noeeprom(base_mode);
       // rgblight_sethsv(190, 255, 255); // purple
-      rgblight_sethsv_noeeprom(190, 255, rgblight_get_val());
+      rgblight_sethsv_noeeprom(70, 255, rgblight_get_val());
       break;
     
     case _ADVANCED: // Name of my 3nd layer (includes hardware related keys)
