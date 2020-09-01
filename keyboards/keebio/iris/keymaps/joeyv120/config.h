@@ -26,12 +26,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // https://www.all8.com/tools/bpm.htm
 #define TAPPING_TERM 200
 
+// #define TAPPING_TOGGLE 2
+
 // Remove some features to save space
 // https://docs.qmk.fm/#/feature_rgblight
-// #undef RGBLED_NUM
-// #undef RGBLIGHT_ANIMATIONS
+#undef RGBLED_NUM
+#undef RGBLIGHT_ANIMATIONS
 // #define RGBLIGHT_EFFECT_ALTERNATING
-// #define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_KNIGHT
 #define RGBLED_NUM 12
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
