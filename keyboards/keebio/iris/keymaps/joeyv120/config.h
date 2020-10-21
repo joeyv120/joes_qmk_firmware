@@ -26,7 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // https://www.all8.com/tools/bpm.htm
 #define TAPPING_TERM 200
 
-// #define TAPPING_TOGGLE 2
+#define TAPPING_TOGGLE 2
 
 // Remove some features to save space
 // https://docs.qmk.fm/#/feature_rgblight

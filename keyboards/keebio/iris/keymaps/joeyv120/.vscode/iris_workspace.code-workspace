@@ -2,9 +2,12 @@
 	"folders": [
 		{
 			"path": ".."
-		}
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\Documents\\vizLayer"
+		},
 	],
 	"settings": {
 		"git.ignoreLimitWarning": true
-	}
+	},
 }
