@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-#include <print.h>
 
 #define _QWERTY 0
 #define _NAVIGATION 1
@@ -94,6 +93,7 @@ uint32_t advn_mode = 22; // Advanced layer animation (alternating)
 // uint16_t sat = 255;
 // uint16_t val = 255;
 
+// Eroviaa: Just a quick note, the matrix_init_user might work in this example, but that's not guaranteed. keyboard_post_init_user is the recommended as when it's called, all HW features are already initialized.
 void keyboard_post_init_user(void) {
   rgblight_enable();
   rgblight_mode(base_mode);
@@ -103,7 +103,6 @@ void keyboard_post_init_user(void) {
 uint32_t layer_state_set_user(uint32_t state) {
   state = update_tri_layer_state(state, _FUNCTION, _NAVIGATION, _ADVANCED);
   uint8_t layer = biton32(state);
-  xprintf("%d", layer);
   led_t led_state = host_keyboard_led_state();
   switch (layer) {
     case _QWERTY: // Name of my 0-th layer (includes alphas and caps-lock)
