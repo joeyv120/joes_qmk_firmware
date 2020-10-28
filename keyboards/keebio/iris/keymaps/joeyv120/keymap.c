@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    TD(S_GUAP),       KC_GESC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_LALT, KC_SPACE, MO(1),                    TO(1),   KC_ENT,  KC_BSPC
+                                    KC_LALT, KC_SPACE, TT(1),                    TT(2),   KC_ENT,  KC_BSPC
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,          _______, XXXXXXX, KC_END,  KC_DOWN, KC_PGDN, XXXXXXX, KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, TO(0),                     TO(2),   _______, KC_DEL
+                                    _______, _______, _______,                   _______, _______, KC_DEL
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -61,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LPRN, _______,          _______, KC_RPRN, KC_P1,   KC_P2,   KC_P3,   KC_PENT, KC_EQL,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, TO(0),                     TO(3),   KC_P0,   KC_PDOT
+                                    _______, _______, _______,                   _______, KC_P0,   KC_PDOT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -69,74 +69,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, XXXXXXX,                            XXXXXXX, KC_VOLU, XXXXXXX, KC_BRIU, XXXXXXX, XXXXXXX,
+     RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, XXXXXXX,                            XXXXXXX, KC_VOLU, KC_BRIU, XXXXXXX, XXXXXXX, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┤────────┼                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     RGB_M_P, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+     RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     RGB_RMOD,RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, XXXXXXX, XXXXXXX,          RESET,   XXXXXXX, KC_VOLD, XXXXXXX, KC_BRID, XXXXXXX, XXXXXXX,
+     RGB_RMOD,RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, XXXXXXX, XXXXXXX,          RESET,   XXXXXXX, KC_VOLD, KC_BRID, XXXXXXX, XXXXXXX, XXXXXXX,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    XXXXXXX, XXXXXXX, TO(0),                     TO(0),   XXXXXXX, XXXXXXX
+                                    XXXXXXX, XXXXXXX, _______,                   _______, XXXXXXX, XXXXXXX
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 };
-
-// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-//   switch (keycode) {
-//     case QWERTY:
-//       if (record->event.pressed) {
-//         set_single_persistent_default_layer(_QWERTY);
-//       }
-//       return false;
-//       break;
-//     case LOWER:
-//       if (record->event.pressed) {
-//         layer_on(_FUNCTION);
-//         update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
-//       } else {
-//         layer_off(_FUNCTION);
-//         update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
-//       }
-//       return false;
-//       break;
-//     case RAISE:
-//       if (record->event.pressed) {
-//         layer_on(_ADVANCED);
-//         update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
-//       } else {
-//         layer_off(_ADVANCED);
-//         update_tri_layer(_FUNCTION, _ADVANCED, _ADJUST);
-//       }
-//       return false;
-//       break;
-//     case ADJUST:
-//       if (record->event.pressed) {
-//         layer_on(_ADJUST);
-//       } else {
-//         layer_off(_ADJUST);.
-//       }
-//       return false;
-//       break;
-//   }
-//   return true;
-// }
-
-// // Rotary Encoder
-// void encoder_update_user(uint8_t index, bool clockwise) {
-//     if (index == 0) {
-//         if (clockwise) {
-//             tap_code(KC_VOLU);
-//         } else {
-//             tap_code(KC_VOLD);
-//         }
-//     }
-//     else if (index == 1) {
-//         if (clockwise) {
-//             tap_code(KC_PGDN);
-//         } else {
-//             tap_code(KC_PGUP);
-//         }
-//     }
-// }
 
 // Links for reference
 // https://docs.qmk.fm/#/feature_rgblight
@@ -155,11 +97,11 @@ uint32_t advn_mode = 22; // Advanced layer animation (alternating)
 void keyboard_post_init_user(void) {
   rgblight_enable();
   rgblight_mode(base_mode);
-  rgblight_sethsv(128, 255, 255);
+  rgblight_sethsv(128, 255, 128);
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
-  // state = update_tri_layer_state(state, _FUNCTION, _NAVIGATION, _ADVANCED);
+  state = update_tri_layer_state(state, _FUNCTION, _NAVIGATION, _ADVANCED);
   uint8_t layer = biton32(state);
   xprintf("%d", layer);
   led_t led_state = host_keyboard_led_state();
