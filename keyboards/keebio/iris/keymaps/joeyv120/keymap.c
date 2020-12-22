@@ -8,18 +8,20 @@
 
 // Tap Dance declarations
 enum {
-    S_CAPS,
-    S_NUMS,
-    S_GUAP,
+    CPS,
+    NMS,
+    GAP,
 };
 // Tap Dance definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Left Shift, twice for Caps Lock
-    [S_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
-    [S_NUMS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_NLCK),
-    [S_GUAP] = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, KC_APP),
+    [CPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
+    [NMS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_NLCK),
+    [GAP] = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, KC_APP),
 };
 
+// Defines custom aliases
+#define ALTtDOT RALT_T(KC_DOT) // Hold for Alt, tap for Dot
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -29,11 +31,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     TD(S_CAPS), KC_A, KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+     TD(CPS), KC_A, KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    XXXXXXX,          XXXXXXX, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                 TD(S_GUAP), KC_SPACE, TT(1),                    TT(2),   KC_ENT,  KC_RALT
+                                    TD(GAP), KC_SPACE,TT(1),                     TT(2),   KC_ENT,  KC_RALT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -57,11 +59,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_LCBR,                            KC_RCBR, KC_P7,   KC_P8,   KC_P9,   KC_PAST, KC_PSLS,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     TD(S_NUMS),KC_F5, KC_F6,   KC_F7,   KC_F8,   KC_LBRC,                            KC_RBRC, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, KC_MINS,
+     TD(NMS),KC_F5, KC_F6,   KC_F7,   KC_F8,   KC_LBRC,                            KC_RBRC, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, KC_MINS,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LPRN, XXXXXXX,          XXXXXXX, KC_RPRN, KC_P1,   KC_P2,   KC_P3,   KC_PENT, KC_EQL,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    _______, _______, _______,                   _______, KC_P0,   RALT_T(KC_DOT)
+                                    _______, _______, _______,                   _______, KC_P0,   ALTtDOT
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
