@@ -100,6 +100,7 @@ void keyboard_post_init_user(void) {
   rgblight_enable();
   rgblight_mode(base_mode);
   rgblight_sethsv(128, 255, 128);
+  rgblight_disable();
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
