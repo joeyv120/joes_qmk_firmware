@@ -3,7 +3,8 @@
 		{"path": ".."},
 		{"path": "..\\..\\..\\..\\..\\JNAO\\keymaps\\JoeNAO\\"},
 		{"path": "..\\..\\..\\..\\..\\..\\..\\Documents\\vizLayer"},
-		{"path": "..\\..\\..\\..\\..\\uno\\keymaps\\JoesUno\\"},
+		// {"path": "..\\..\\..\\..\\..\\uno\\keymaps\\JoesUno\\"},
+		{"path": "..\\..\\..\\..\\..\\uno\\"},
 	],
 	"settings": {
 		"git.ignoreLimitWarning": true
