@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -32,3 +33,6 @@ AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 
 SPLIT_KEYBOARD = yes        # Enable split keyboard
+=======
+DEFAULT_FOLDER = choco60/rev1
+>>>>>>> dontTouch/master

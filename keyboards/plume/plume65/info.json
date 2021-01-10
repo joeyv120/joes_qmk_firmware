@@ -1,7 +1,11 @@
 {
     "keyboard_name": "Plume65", 
     "url": "", 
+<<<<<<< HEAD
     "maintainer": "maartenwut", 
+=======
+    "maintainer": "evyd13", 
+>>>>>>> dontTouch/master
     "width": 16, 
     "height": 5, 
     "layouts": {

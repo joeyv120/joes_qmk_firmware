@@ -15,4 +15,10 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+=======
+#ifndef EARLY_INIT_PERFORM_BOOTLOADER_JUMP
+#    define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+#endif
+>>>>>>> dontTouch/master

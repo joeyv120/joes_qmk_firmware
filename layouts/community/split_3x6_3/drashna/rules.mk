@@ -22,7 +22,11 @@ SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 
 ifeq ($(strip $(KEYBOARD)), crkbd/rev1)
     OLED_DRIVER_ENABLE = yes
+<<<<<<< HEAD
     RGB_MATRIX_ENABLE = WS2812
+=======
+    RGB_MATRIX_ENABLE = yes
+>>>>>>> dontTouch/master
     HAPTIC_ENABLE = SOLENOID
     BOOTLOADER = qmk-dfu
 endif

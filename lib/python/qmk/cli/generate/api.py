@@ -36,7 +36,11 @@ def generate_api(cli):
         keyboard_readme_src = Path('keyboards') / keyboard_name / 'readme.md'
 
         keyboard_dir.mkdir(parents=True, exist_ok=True)
+<<<<<<< HEAD
         keyboard_info.write_text(json.dumps(kb_all['keyboards'][keyboard_name]))
+=======
+        keyboard_info.write_text(json.dumps({'last_updated': current_datetime(), 'keyboards': {keyboard_name: kb_all['keyboards'][keyboard_name]}}))
+>>>>>>> dontTouch/master
 
         if keyboard_readme_src.exists():
             copyfile(keyboard_readme_src, keyboard_readme)

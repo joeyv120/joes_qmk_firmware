@@ -21,4 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "rev1.h"
 
 #define has_usb() is_keyboard_master()
+<<<<<<< HEAD
 extern uint8_t is_master;
+=======
+#define is_master is_keyboard_master()
+>>>>>>> dontTouch/master

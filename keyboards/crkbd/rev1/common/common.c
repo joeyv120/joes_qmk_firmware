@@ -17,5 +17,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "common.h"
+<<<<<<< HEAD
 
 uint8_t is_master;
+=======
+>>>>>>> dontTouch/master

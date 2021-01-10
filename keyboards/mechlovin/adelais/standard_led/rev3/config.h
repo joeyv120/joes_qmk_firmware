@@ -6,3 +6,7 @@
 #define ENCODERS_PAD_B { A5, A3, B6 }
 #define ENCODER_RESOLUTION 4
 
+<<<<<<< HEAD
+=======
+#define TAP_CODE_DELAY 10
+>>>>>>> dontTouch/master

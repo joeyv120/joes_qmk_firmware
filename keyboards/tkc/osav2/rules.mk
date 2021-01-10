@@ -31,3 +31,8 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 LTO_ENABLE = yes            # Reduces compile size
+<<<<<<< HEAD
+=======
+
+LAYOUTS = alice alice_split_bs
+>>>>>>> dontTouch/master

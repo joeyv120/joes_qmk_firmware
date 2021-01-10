@@ -17,4 +17,8 @@
 
 // #define HAL_USE_DAC TRUE
 
+<<<<<<< HEAD
 #include_next "halconf.h"
+=======
+#include_next <halconf.h>
+>>>>>>> dontTouch/master

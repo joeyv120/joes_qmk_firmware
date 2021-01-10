@@ -23,7 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdbool.h>
 #include <stdint.h>
 #include <stddef.h>
+<<<<<<< HEAD
 #include <split_scomm.h>
+=======
+#include "split_scomm.h"
+>>>>>>> dontTouch/master
 #include "serial.h"
 #ifdef CONSOLE_ENABLE
   #include "debug.h"

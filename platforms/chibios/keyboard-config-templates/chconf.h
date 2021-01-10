@@ -17,4 +17,8 @@
 
 // #define CH_CFG_OPTIMIZE_SPEED TRUE
 
+<<<<<<< HEAD
 #include_next "chconf.h"
+=======
+#include_next <chconf.h>
+>>>>>>> dontTouch/master

@@ -23,13 +23,15 @@
 #include <string.h>
 #include <math.h>
 
-#include "lib/lib8tion/lib8tion.h"
+#include <lib/lib8tion/lib8tion.h>
 
 #ifndef RGB_MATRIX_CENTER
 const point_t k_rgb_matrix_center = {112, 32};
 #else
 const point_t k_rgb_matrix_center = RGB_MATRIX_CENTER;
 #endif
+
+__attribute__((weak)) RGB rgb_matrix_hsv_to_rgb(HSV hsv) { return hsv_to_rgb(hsv); }
 
 // Generic effect runners
 #include "rgb_matrix_runners/effect_runner_dx_dy_dist.h"
@@ -401,6 +403,10 @@ void rgb_matrix_task(void) {
             break;
         case RENDERING:
             rgb_task_render(effect);
+            if (effect) {
+                rgb_matrix_indicators();
+                rgb_matrix_indicators_advanced(&rgb_effect_params);
+            }
             break;
         case FLUSHING:
             rgb_task_flush(effect);
@@ -408,10 +414,6 @@ void rgb_matrix_task(void) {
         case SYNCING:
             rgb_task_sync();
             break;
-    }
-
-    if (!suspend_backlight) {
-        rgb_matrix_indicators();
     }
 }
 
@@ -423,6 +425,28 @@ void rgb_matrix_indicators(void) {
 __attribute__((weak)) void rgb_matrix_indicators_kb(void) {}
 
 __attribute__((weak)) void rgb_matrix_indicators_user(void) {}
+
+void rgb_matrix_indicators_advanced(effect_params_t *params) {
+    /* special handling is needed for "params->iter", since it's already been incremented.
+     * Could move the invocations to rgb_task_render, but then it's missing a few checks
+     * and not sure which would be better. Otherwise, this should be called from
+     * rgb_task_render, right before the iter++ line.
+     */
+#if defined(RGB_MATRIX_LED_PROCESS_LIMIT) && RGB_MATRIX_LED_PROCESS_LIMIT > 0 && RGB_MATRIX_LED_PROCESS_LIMIT < DRIVER_LED_TOTAL
+    uint8_t min = RGB_MATRIX_LED_PROCESS_LIMIT * (params->iter - 1);
+    uint8_t max = min + RGB_MATRIX_LED_PROCESS_LIMIT;
+    if (max > DRIVER_LED_TOTAL) max = DRIVER_LED_TOTAL;
+#else
+    uint8_t min = 0;
+    uint8_t max = DRIVER_LED_TOTAL;
+#endif
+    rgb_matrix_indicators_advanced_kb(min, max);
+    rgb_matrix_indicators_advanced_user(min, max);
+}
+
+__attribute__((weak)) void rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {}
+
+__attribute__((weak)) void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {}
 
 void rgb_matrix_init(void) {
     rgb_matrix_driver.init();
@@ -514,6 +538,7 @@ void rgb_matrix_mode_eeprom_helper(uint8_t mode, bool write_to_eeprom) {
 }
 void rgb_matrix_mode_noeeprom(uint8_t mode) { rgb_matrix_mode_eeprom_helper(mode, false); }
 void rgb_matrix_mode(uint8_t mode) { rgb_matrix_mode_eeprom_helper(mode, true); }
+<<<<<<< HEAD
 
 uint8_t rgb_matrix_get_mode(void) { return rgb_matrix_config.mode; }
 
@@ -531,6 +556,25 @@ void rgb_matrix_step_reverse_helper(bool write_to_eeprom) {
 void rgb_matrix_step_reverse_noeeprom(void) { rgb_matrix_step_reverse_helper(false); }
 void rgb_matrix_step_reverse(void) { rgb_matrix_step_reverse_helper(true); }
 
+=======
+
+uint8_t rgb_matrix_get_mode(void) { return rgb_matrix_config.mode; }
+
+void rgb_matrix_step_helper(bool write_to_eeprom) {
+    uint8_t mode = rgb_matrix_config.mode + 1;
+    rgb_matrix_mode_eeprom_helper((mode < RGB_MATRIX_EFFECT_MAX) ? mode : 1, write_to_eeprom);
+}
+void rgb_matrix_step_noeeprom(void) { rgb_matrix_step_helper(false); }
+void rgb_matrix_step(void) { rgb_matrix_step_helper(true); }
+
+void rgb_matrix_step_reverse_helper(bool write_to_eeprom) {
+    uint8_t mode = rgb_matrix_config.mode - 1;
+    rgb_matrix_mode_eeprom_helper((mode < 1) ? RGB_MATRIX_EFFECT_MAX - 1 : mode, write_to_eeprom);
+}
+void rgb_matrix_step_reverse_noeeprom(void) { rgb_matrix_step_reverse_helper(false); }
+void rgb_matrix_step_reverse(void) { rgb_matrix_step_reverse_helper(true); }
+
+>>>>>>> dontTouch/master
 void rgb_matrix_sethsv_eeprom_helper(uint16_t hue, uint8_t sat, uint8_t val, bool write_to_eeprom) {
     if (!rgb_matrix_config.enable) {
         return;

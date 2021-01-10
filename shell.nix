@@ -16,15 +16,44 @@ let
       inherit pname version;
       sha256 = "1yaimcgz8w0ps1wk28wk9g9zdidp79d14xqqj9rjkvxalvx2f5qx";
     };
+<<<<<<< HEAD
     doCheck = false;
   };
 
+=======
+
+    doCheck = false;
+  };
+
+  milc = with pkgs.python3Packages; buildPythonPackage rec {
+    pname = "milc";
+    version = "1.0.10";
+
+    src = fetchPypi {
+      inherit pname version;
+      sha256 = "1q1p7qrqk78mw67nhv04zgxaq8himmdxmy2vp4fmi7chwgcbpi32";
+    };
+
+    propagatedBuildInputs = [
+      appdirs
+      argcomplete
+      colorama
+    ];
+
+    doCheck = false;
+  };
+
+>>>>>>> dontTouch/master
   pythonEnv = pkgs.python3.withPackages (p: with p; [
     # requirements.txt
     appdirs
     argcomplete
     colorama
     hjson
+<<<<<<< HEAD
+=======
+    milc
+>>>>>>> dontTouch/master
     pygments
     # requirements-dev.txt
     nose2

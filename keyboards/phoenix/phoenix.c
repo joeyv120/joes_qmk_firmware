@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "hal.h"
+=======
+#include <hal.h>
+>>>>>>> dontTouch/master
 #include "usb_main.h"
 #include "phoenix.h"
 

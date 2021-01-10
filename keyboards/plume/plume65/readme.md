@@ -1,7 +1,11 @@
 # Plume65
 
 ## Support
+<<<<<<< HEAD
 * Keyboard Maintainer: [maartenwut](https://github.com/maartenwut)
+=======
+* Keyboard Maintainer: [Evyd13](https://github.com/evyd13)
+>>>>>>> dontTouch/master
 * Hardware Supported: Plume65
 * Hardware Availability: N/A
 

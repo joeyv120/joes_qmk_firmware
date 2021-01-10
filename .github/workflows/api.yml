@@ -13,6 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     container: qmkfm/base_container
 
+<<<<<<< HEAD
+=======
+    # protect against those who develop with their fork on master
+    if: github.repository == 'qmk/qmk_firmware'
+
+>>>>>>> dontTouch/master
     steps:
     - uses: actions/checkout@v2
       with:

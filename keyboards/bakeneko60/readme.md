@@ -1,10 +1,18 @@
 # Bakeneko 60
 
+<<<<<<< HEAD
 An open source O-ring gasket mount keyboard
 
 * Keyboard Maintainer: [kkatano](https://github.com/kkatano)
 * Hardware Supported: Bakeneko 60
 * Hardware Availability: [Open source on GitHub](https://github.com/kkatano/bakeneko-60-pcb)
+=======
+A simple 60% keyboard
+
+* Keyboard Maintainer: [kkatano](https://github.com/kkatano)
+* Hardware Supported: Bakeneko 60
+* Hardware Availability: [Open source on GitHub](https://github.com/kkatano/bakeneko-60)
+>>>>>>> dontTouch/master
 
 Make example for this keyboard (after setting up your build environment):
 

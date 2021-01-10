@@ -15,7 +15,11 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include_next "mcuconf.h"
+=======
+#include_next <mcuconf.h>
+>>>>>>> dontTouch/master
 
 // #undef STM32_HSE_ENABLED
 // #define STM32_HSE_ENABLED FALSE

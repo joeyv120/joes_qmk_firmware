@@ -20,7 +20,12 @@ AUDIO_ENABLE = yes          # Audio output
 CUSTOM_MATRIX = yes
 DEBOUNCE_TYPE = custom
 SWAP_HANDS_ENABLE = yes
+<<<<<<< HEAD
 RGB_MATRIX_ENABLE = IS31FL3731
+=======
+RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_DRIVER = IS31FL3731
+>>>>>>> dontTouch/master
 #SERIAL_LINK_ENABLE = yes
 EEPROM_DRIVER = i2c
 

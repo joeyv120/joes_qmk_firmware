@@ -21,7 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0x4145 // "AE"
 #define PRODUCT_ID      0xA652 // AEboards EXT65 Rev2
 #define DEVICE_VER      0x0001
+<<<<<<< HEAD
 #define MANUFACTURER    AEboards
+=======
+#define MANUFACTURER    AEBoards
+>>>>>>> dontTouch/master
 #define PRODUCT         AEBoards Ext65 Rev2
 
 /* key matrix size */

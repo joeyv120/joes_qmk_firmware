@@ -16,8 +16,13 @@
  * generator plugin. Do not edit manually.
  */
 
+<<<<<<< HEAD
 #include "hal.h"
 #include "stm32_gpio.h"
+=======
+#include <hal.h>
+#include <stm32_gpio.h>
+>>>>>>> dontTouch/master
 
 /*===========================================================================*/
 /* Driver local definitions.                                                 */

@@ -4,9 +4,12 @@ MCU = atmega32u4
 # Processor frequency
 F_CPU = 8000000
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = caterina
 
+=======
+>>>>>>> dontTouch/master
 # Build Options
 #   change yes to no to disable
 #

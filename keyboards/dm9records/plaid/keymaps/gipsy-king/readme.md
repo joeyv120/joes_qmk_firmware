@@ -15,3 +15,8 @@ old machine.
 
 When any layer is active, the LEDs are "startled".
 
+<<<<<<< HEAD
+=======
+There is an autoclicker for minecraft.
+
+>>>>>>> dontTouch/master

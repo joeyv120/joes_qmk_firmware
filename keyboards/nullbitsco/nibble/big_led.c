@@ -15,6 +15,15 @@
  */
 #include "big_led.h"
 
+<<<<<<< HEAD
+=======
+void set_big_LED_rgb(uint8_t r_mode, uint8_t g_mode, uint8_t b_mode) {
+    set_big_LED_r(r_mode);
+    set_big_LED_g(g_mode);
+    set_big_LED_b(b_mode);
+}
+
+>>>>>>> dontTouch/master
 void set_big_LED_r(uint8_t mode) {
     switch(mode) {
         case LED_ON:
@@ -64,4 +73,8 @@ void set_big_LED_b(uint8_t mode) {
         default:
         break;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dontTouch/master

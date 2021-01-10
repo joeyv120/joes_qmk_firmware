@@ -6,6 +6,10 @@ The breaking change period is when we will merge PR's that change QMK in dangero
 
 ## What has been included in past Breaking Changes?
 
+<<<<<<< HEAD
+=======
+* [2020 Nov 28](ChangeLog/20201128.md)
+>>>>>>> dontTouch/master
 * [2020 Aug 29](ChangeLog/20200829.md)
 * [2020 May 30](ChangeLog/20200530.md)
 * [2020 Feb 29](ChangeLog/20200229.md)
@@ -13,6 +17,7 @@ The breaking change period is when we will merge PR's that change QMK in dangero
 
 ## When is the next Breaking Change?
 
+<<<<<<< HEAD
 The next Breaking Change is scheduled for November 28, 2020.
 
 ### Important Dates
@@ -23,6 +28,18 @@ The next Breaking Change is scheduled for November 28, 2020.
 * [ ] 2020 Nov 26 - `master` is locked, no PR's merged.
 * [ ] 2020 Nov 28 - Merge `develop` to `master`.
 * [ ] 2020 Nov 28 - `master` is unlocked. PR's can be merged again.
+=======
+The next Breaking Change is scheduled for February 27, 2021.
+
+### Important Dates
+
+* [x] 2020 Nov 28 - `develop` is created. Each push to `master` is subsequently merged to `develop`
+* [ ] 2021 Jan 30 - `develop` closed to new PR's.
+* [ ] 2021 Jan 30 - Call for testers.
+* [ ] 2021 Feb 25 - `master` is locked, no PR's merged.
+* [ ] 2021 Feb 27 - Merge `develop` to `master`.
+* [ ] 2021 Feb 27 - `master` is unlocked. PR's can be merged again.
+>>>>>>> dontTouch/master
 
 ## What changes will be included?
 
@@ -38,21 +55,6 @@ Criteria for acceptance:
 # Checklists
 
 This section documents various processes we use when running the Breaking Changes process.
-
-## Rebase `develop` from `master`
-
-This is run every Friday while `develop` is open.
-
-Process:
-
-```
-cd qmk_firmware
-git checkout master
-git pull --ff-only
-git checkout develop
-git rebase master
-git push --force
-```
 
 ## Creating the `develop` branch
 

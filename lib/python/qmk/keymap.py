@@ -3,6 +3,10 @@
 from pathlib import Path
 import json
 import subprocess
+<<<<<<< HEAD
+=======
+import sys
+>>>>>>> dontTouch/master
 
 from pygments.lexers.c_cpp import CLexer
 from pygments.token import Token
@@ -179,10 +183,17 @@ def write_json(keyboard, keymap, layout, layers):
 
         keymap
             The name of the keymap
+<<<<<<< HEAD
 
         layout
             The LAYOUT macro this keymap uses.
 
+=======
+
+        layout
+            The LAYOUT macro this keymap uses.
+
+>>>>>>> dontTouch/master
         layers
             An array of arrays describing the keymap. Each item in the inner array should be a string that is a valid QMK keycode.
     """
@@ -312,16 +323,29 @@ def list_keymaps(keyboard, c=True, json=True, additional_files=None, fullpath=Fa
     return sorted(names)
 
 
+<<<<<<< HEAD
 def _c_preprocess(path):
     """ Run a file through the C pre-processor
 
     Args:
         path: path of the keymap.c file
+=======
+def _c_preprocess(path, stdin=None):
+    """ Run a file through the C pre-processor
+
+    Args:
+        path: path of the keymap.c file (set None to use stdin)
+        stdin: stdin pipe (e.g. sys.stdin)
+>>>>>>> dontTouch/master
 
     Returns:
         the stdout of the pre-processor
     """
+<<<<<<< HEAD
     pre_processed_keymap = qmk.commands.run(['cpp', path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+=======
+    pre_processed_keymap = qmk.commands.run(['cpp', path] if path else ['cpp'], stdin=stdin, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+>>>>>>> dontTouch/master
     return pre_processed_keymap.stdout
 
 
@@ -451,17 +475,34 @@ def parse_keymap_c(keymap_file, use_cpp=True):
     Currently only cares about the keymaps array.
 
     Args:
+<<<<<<< HEAD
         keymap_file: path of the keymap.c file
+=======
+        keymap_file: path of the keymap.c file (or '-' to use stdin)
+>>>>>>> dontTouch/master
 
         use_cpp: if True, pre-process the file with the C pre-processor
 
     Returns:
         a dictionary containing the parsed keymap
     """
+<<<<<<< HEAD
     if use_cpp:
         keymap_file = _c_preprocess(keymap_file)
     else:
         keymap_file = keymap_file.read_text()
+=======
+    if keymap_file == '-':
+        if use_cpp:
+            keymap_file = _c_preprocess(None, sys.stdin)
+        else:
+            keymap_file = sys.stdin.read()
+    else:
+        if use_cpp:
+            keymap_file = _c_preprocess(keymap_file)
+        else:
+            keymap_file = keymap_file.read_text()
+>>>>>>> dontTouch/master
 
     keymap = dict()
     keymap['layers'] = _get_layers(keymap_file)

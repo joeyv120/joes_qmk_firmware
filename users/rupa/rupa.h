@@ -20,19 +20,70 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "version.h"
 #include "process_records.h"
 #include "unicode.h"
+<<<<<<< HEAD
 
 enum userspace_layers {
     _QWERTY = 0,
     _RAISE,
+=======
+#include "wrappers.h"
+
+enum userspace_layers {
+    _QWERTY = 0,
+    _LOWER,
+    _RAISE,
+    _ADJUST
+>>>>>>> dontTouch/master
 };
 
 enum userspace_custom_keycodes {
     VRSN = SAFE_RANGE,
+<<<<<<< HEAD
     LOD,
     RUPA,
     U_FRACT,
     U_MONOS,
     U_SCRPT,
+=======
+    BUGS,
+    CATS,
+    DANCE,
+    DICE,
+    DOMO,
+    FART,
+    FLIP,
+    HUGS,
+    JOY,
+    KISS,
+    LOD,
+    MUSIC,
+    RNDM,
+    RUPA,
+    SHRUG,
+    TADA,
+    U_FRACT,
+    U_ITALI,
+    U_MONOS,
+    U_NORML,
+    U_SANSI,
+    U_SANSN,
+    U_SCRPT,
+    WAT,
+    YUNO,
+    ZALGO,
+    ZZZZZ,
+    NEXT_SAFE_RANGE
+};
+
+enum userspace_font_choices {
+    F_FRACT = 0,
+    F_ITALI,
+    F_MONOS,
+    F_NORML,
+    F_SANSI,
+    F_SANSN,
+    F_SCRPT
+>>>>>>> dontTouch/master
 };
 
 typedef struct font_t {
@@ -41,6 +92,7 @@ typedef struct font_t {
     uint32_t zero_glyph;
 } font_t;
 
+<<<<<<< HEAD
 font_t fraktu_bold;
 font_t monosp_bold;
 font_t script_bold;
@@ -52,3 +104,8 @@ bool script_mode_translate(font_t *translator, bool is_shifted, uint32_t keycode
 #define OS_RALT OSM(MOD_RALT)
 #define OS_RCTL OSM(MOD_RCTL)
 #define OS_RSFT OSM(MOD_RSFT)
+=======
+const font_t* get_script_mode(void);
+bool set_script_mode(int fc);
+bool script_mode_translate(bool is_shifted, uint32_t keycode);
+>>>>>>> dontTouch/master

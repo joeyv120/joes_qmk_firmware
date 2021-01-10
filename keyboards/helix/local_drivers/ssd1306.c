@@ -8,7 +8,11 @@
 #ifndef LOCAL_GLCDFONT
 #include "common/glcdfont.c"
 #else
+<<<<<<< HEAD
 #include <helixfont.h>
+=======
+#include "helixfont.h"
+>>>>>>> dontTouch/master
 #endif
 #ifdef PROTOCOL_LUFA
 #include "lufa.h"

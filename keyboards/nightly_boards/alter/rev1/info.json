@@ -5,7 +5,11 @@
     "width": 20,
     "height": 5.25,
     "layouts": {
+<<<<<<< HEAD
         "LAYOUT": {
+=======
+        "LAYOUT_alice_split_bs": {
+>>>>>>> dontTouch/master
              "layout": [
 				{"x":0.5, "y":0}, 
 				{"x":2, "y":0}, 

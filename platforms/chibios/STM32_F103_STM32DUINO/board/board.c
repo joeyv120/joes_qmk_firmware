@@ -14,7 +14,11 @@
     limitations under the License.
 */
 
+<<<<<<< HEAD
 #include "hal.h"
+=======
+#include <hal.h>
+>>>>>>> dontTouch/master
 
 // Value to place in RTC backup register 10 for persistent bootloader mode
 #define RTC_BOOTLOADER_FLAG 0x424C
