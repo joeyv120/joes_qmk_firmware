@@ -106,7 +106,11 @@
 <<<<<<< HEAD
 =======
     * [LED インジケータ](ja/feature_led_indicators.md)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     * [Proton C 変換](ja/proton_c_conversion.md)
     * [PS/2 マウス](ja/feature_ps2_mouse.md)
     * [分割キーボード](ja/feature_split_keyboard.md)

@@ -217,7 +217,11 @@ report_pmw_t pmw_read_burst(void) {
     // data.dy = data.dy * -1;
 =======
     data.dy = data.dy * -1;
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     spi_stop();
 

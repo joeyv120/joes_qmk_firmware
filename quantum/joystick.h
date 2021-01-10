@@ -6,7 +6,11 @@
 
 #include <stdint.h>
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #ifndef JOYSTICK_BUTTON_COUNT
 #    define JOYSTICK_BUTTON_COUNT 8
 #endif
@@ -27,7 +31,11 @@
 #endif
 
 #define JOYSTICK_RESOLUTION ((1L << (JOYSTICK_AXES_RESOLUTION - 1)) - 1)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 // configure on input_pin of the joystick_axes array entry to JS_VIRTUAL_AXIS
 // to prevent it from being read from the ADC. This allows outputing forged axis value.

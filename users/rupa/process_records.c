@@ -21,7 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 font_t *translator = NULL;
 =======
 uint16_t processed_keycode;
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 __attribute__((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
@@ -159,7 +163,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     return false;
                 }
 #endif
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
             }
     }
     return process_record_keymap(keycode, record);

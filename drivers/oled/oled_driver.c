@@ -588,7 +588,11 @@ uint8_t oled_set_brightness(uint8_t level) {
 
 uint8_t oled_get_brightness(void) { return oled_brightness; }
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 // Set the specific 8 lines rows of the screen to scroll.
 // 0 is the default for start, and 7 for end, which is the entire
 // height of the screen.  For 128x32 screens, rows 4-7 are not used.

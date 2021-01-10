@@ -26,7 +26,11 @@ void keyboard_pre_init_kb(void) {
     setPinOutput(B5);
 
     keyboard_pre_init_user();
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 }
 
 bool led_update_kb(led_t led_state) {
@@ -35,7 +39,11 @@ bool led_update_kb(led_t led_state) {
 <<<<<<< HEAD
 =======
         writePin(B5, led_state.scroll_lock);
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     }
     return true;
 }

@@ -83,7 +83,11 @@ case $(uname -a) in
         echo
         echo "https://docs.qmk.fm/#/contributing"
         exit 1;;
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 esac
 
 if type _qmk_install_prepare &>/dev/null; then

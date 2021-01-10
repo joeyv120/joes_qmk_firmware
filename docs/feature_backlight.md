@@ -81,7 +81,11 @@ To configure the backlighting, `#define` these in your `config.h`:
 | `BREATHING_PERIOD`     | `6`           | The length of one backlight "breath" in seconds                                                                   |
 | `BACKLIGHT_ON_STATE`   | `1`           | The state of the backlight pin when the backlight is "on" - `1` for high, `0` for low                             |
 | `BACKLIGHT_LIMIT_VAL ` | `255`         | The maximum duty cycle of the backlight -- `255` allows for full brightness, any lower will decrease the maximum. |
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 Unless you are designing your own keyboard, you generally should not need to change the `BACKLIGHT_PIN` or `BACKLIGHT_ON_STATE`.
 

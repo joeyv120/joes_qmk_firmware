@@ -6,7 +6,11 @@
 =======
 #include <ch.h>
 #include <hal.h>
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #include "wait.h"
 
 /* This code should be checked whether it runs correctly on platforms */
@@ -41,7 +45,11 @@ extern uint32_t __ram0_end__;
 void bootloader_jump(void) {
 =======
 __attribute__((weak)) void bootloader_jump(void) {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     // For STM32 MCUs with dual-bank flash, and we're incapable of jumping to the bootloader. The first valid flash
     // bank is executed unconditionally after a reset, so it doesn't enter DFU unless BOOT0 is high. Instead, we do
     // it with hardware...in this case, we pull a GPIO high/low depending on the configuration, connects 3.3V to
@@ -71,7 +79,11 @@ extern uint32_t __ram0_end__;
 void bootloader_jump(void) {
 =======
 __attribute__((weak)) void bootloader_jump(void) {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     *MAGIC_ADDR = BOOTLOADER_MAGIC;  // set magic flag => reset handler will jump into boot loader
     NVIC_SystemReset();
 }

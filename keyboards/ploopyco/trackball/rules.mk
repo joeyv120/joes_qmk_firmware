@@ -9,7 +9,11 @@ F_CPU = 8000000
 BOOTLOADER = caterina
 
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 # Build Options
 #   change yes to no to disable
 #

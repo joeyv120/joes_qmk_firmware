@@ -11,7 +11,11 @@ from qmk.constants import QMK_FIRMWARE
 <<<<<<< HEAD
 from qmk.questions import yesno
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 from qmk.commands import run
 from qmk.os_helpers import CheckStatus, check_binaries, check_binary_versions, check_submodules, check_git_repo
 
@@ -226,7 +230,11 @@ def os_tests():
     """Determine our OS and run platform specific tests
     """
     platform_id = platform.platform().lower()
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     if 'darwin' in platform_id or 'macos' in platform_id:
         return os_test_macos()
@@ -342,4 +350,8 @@ def doctor(cli):
         cli.log.info('{fg_red}Major problems detected, please fix these problems before proceeding.')
         cli.log.info('{fg_blue}Check out the FAQ (https://docs.qmk.fm/#/faq_build) or join the QMK Discord (https://discord.gg/Uq7gcHh) for help.')
         return 2
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

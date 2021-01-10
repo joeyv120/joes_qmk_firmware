@@ -42,7 +42,11 @@ def info_json(keyboard):
     for layout_name, layout_json in _find_all_layouts(keyboard, rules).items():
 =======
     for layout_name, layout_json in _find_all_layouts(info_data, keyboard, rules).items():
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         if not layout_name.startswith('LAYOUT_kc'):
             info_data['layouts'][layout_name] = layout_json
 
@@ -119,7 +123,11 @@ def _extract_rules_mk(info_data):
         unknown_processor_rules(info_data, rules)
 =======
         return arm_processor_rules(info_data, rules)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     elif mcu in LUFA_PROCESSORS + VUSB_PROCESSORS:
         return avr_processor_rules(info_data, rules)
@@ -133,7 +141,11 @@ def _extract_rules_mk(info_data):
     return unknown_processor_rules(info_data, rules)
 
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 def _search_keyboard_h(path):
     current_path = Path('keyboards/')
     layouts = {}
@@ -151,7 +163,11 @@ def _search_keyboard_h(path):
 def _find_all_layouts(keyboard, rules):
 =======
 def _find_all_layouts(info_data, keyboard, rules):
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     """Looks for layout macros associated with this keyboard.
     """
     layouts = _search_keyboard_h(Path(keyboard))

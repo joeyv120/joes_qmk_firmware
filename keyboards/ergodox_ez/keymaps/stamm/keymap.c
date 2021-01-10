@@ -45,7 +45,11 @@
 #define R_MOUSE LT(_2_MOUSE, KC_R)
 
 #define ARROWS MO(_3_ARROW)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 enum custom_keycodes {
   RGB_SLD = EZ_SAFE_RANGE,
@@ -66,7 +70,11 @@ enum layers {
   _1_NUMBERS,
   _2_MOUSE,
   _3_ARROW,
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 };
 
 
@@ -84,7 +92,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   LCTL(KC_B),           LSFT_T(KC_A),         LCTL_T(KC_S),  LALT_T(KC_D),   LGUI_T(KC_F), KC_G,
   KC_BSLASH,            KC_Z,                 KC_X,          KC_C,           KC_V,         KC_B,      XXXXXXX,
   ALT_TAB,              XXXXXXX,              XXXXXXX,       MO(_1_NUMBERS), ARROWS,
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   KC_AUDIO_VOL_DOWN,    KC_AUDIO_VOL_UP,
   XXXXXXX,
   KC_ENTER,             KC_TAB,               KC_ESCAPE,
@@ -96,7 +108,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_DOWN,              KC_UP,                XXXXXXX,       XXXXXXX,       XXXXXXX,
 =======
   XXXXXXX,              XXXXXXX,              XXXXXXX,       XXXXXXX,       XXXXXXX,
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   KC_MEDIA_PLAY_PAUSE,  KC_MEDIA_NEXT_TRACK,
   XXXXXXX,
   KC_ESCAPE,            KC_BSPACE,            KC_SPACE
@@ -143,7 +159,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_3_NUMBERS] = LAYOUT_ergodox(
 =======
 [_1_NUMBERS] = LAYOUT_ergodox(
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   _______,  KC_F1,      KC_F2,    KC_F3,     KC_F4,    KC_F5,      _______,
   _______,  _______,    _______,  _______,   _______,  _______,    _______,
   _______,  _______,    _______,  _______,   _______,  _______,
@@ -166,7 +186,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_4_MOUSE] = LAYOUT_ergodox(
 =======
 [_2_MOUSE] = LAYOUT_ergodox(
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   _______, _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______,
@@ -210,7 +234,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______,
   _______,
   _______, _______, _______
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 ),
 };
 
@@ -221,7 +249,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void keyboard_post_init_user(void) {
   rgblight_disable();
 }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
@@ -282,7 +314,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       case _3_ARROW:
         ergodox_right_led_3_on();
         break;
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
       /* case 7: */
       /*   ergodox_right_led_1_on(); */
       /*   ergodox_right_led_2_on(); */
@@ -308,7 +344,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     case E_NUMBERS:
       return 200;
     case LT(_2_MOUSE, KC_R):
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
       return 200;
     /* case LGUI_T(KC_F): */
     /*   return 50; */
@@ -324,7 +364,11 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
 =======
     case E_NUMBERS:
     case R_MOUSE:
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     case LSFT_T(KC_A):
     case LCTL_T(KC_S):
     case LALT_T(KC_D):
@@ -338,7 +382,11 @@ bool get_ignore_mod_tap_interrupt(uint16_t keycode, keyrecord_t *record) {
     case RIGHT_MOUSE:
 =======
     case ARROWS:
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
       return true;
     default:
       return false;
@@ -354,7 +402,11 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
 =======
     case LT(_1_NUMBERS, KC_E):
     case R_MOUSE:
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     case LSFT_T(KC_A):
     case LCTL_T(KC_S):
     case LALT_T(KC_D):
@@ -368,7 +420,11 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     case RIGHT_MOUSE:
 =======
     case ARROWS:
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
       return false;
     default:
       return true;
@@ -401,7 +457,11 @@ void matrix_scan_user(void) {
     SEQ_ONE_KEY(KC_H) {
       SEND_STRING ("--help\n");
     }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     SEQ_TWO_KEYS(KC_D, KC_D) {
       SEND_STRING(SS_LGUI("ac"));
       /* SEND_STRING(SS_LGUI("a") SS_LGUI("c")); */

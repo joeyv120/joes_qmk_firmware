@@ -45,8 +45,20 @@ jobs:
           if [[ $KEYMAP_ONLY -gt 0 ]]; then
             echo "linting ${KB}"
 
+<<<<<<< HEAD
             qmk lint --keyboard ${KB} && qmk info -l --keyboard ${KB}
             exit_code=$(($exit_code + $?))
+=======
+<<<<<<< HEAD:.github/workflows/info.yml
+            # TODO: info info always returns 0 - right now the only way to know failure is to inspect log lines
+            qmk info -l -kb ${KB} 2>&1 | tee /tmp/$$
+            !(grep -cq ☒ /tmp/$$)
+            : $((exit_code = $exit_code + $?))
+=======
+            qmk lint --keyboard ${KB} && qmk info -l --keyboard ${KB}
+            exit_code=$(($exit_code + $?))
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:.github/workflows/lint.yml
+>>>>>>> UpdateQMK
           fi
         done
         if [[ $exit_code -gt 255 ]]; then

@@ -68,7 +68,11 @@ bool set_script_mode(int fc) {
 // Maps A-Z, a-z, and 0-9 to other unicode ranges. We also map space to EN
 // SPACE for some reason :)
 uint32_t map_alnum(const font_t *f, bool is_shifted, uint32_t keycode) {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     switch (keycode) {
         case KC_SPACE:
             return (is_shifted ? 0 : 0x2002); // EN SPACE
@@ -87,7 +91,11 @@ uint32_t map_alnum(const font_t *f, bool is_shifted, uint32_t keycode) {
 bool script_mode_translate(font_t *translator, bool is_shifted, uint32_t keycode) {
 =======
 bool script_mode_translate(bool is_shifted, uint32_t keycode) {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     uint32_t translated = map_alnum(translator, is_shifted, keycode);
     if (translated == 0) return true;
     dprintf("script_mode_translate: %u => %d\n", keycode, translated);
@@ -97,4 +105,8 @@ bool script_mode_translate(bool is_shifted, uint32_t keycode) {
 <<<<<<< HEAD
 =======
 #endif
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

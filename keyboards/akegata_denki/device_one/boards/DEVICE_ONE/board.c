@@ -17,12 +17,17 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "hal.h"
 #include "stm32_gpio.h"
 =======
 #include <hal.h>
 #include <stm32_gpio.h>
 >>>>>>> dontTouch/master
+=======
+#include <hal.h>
+#include <stm32_gpio.h>
+>>>>>>> UpdateQMK
 
 /*===========================================================================*/
 /* Driver local definitions.                                                 */

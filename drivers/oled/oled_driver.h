@@ -273,7 +273,11 @@ uint8_t oled_set_brightness(uint8_t level);
 // Gets the current brightness of the display
 uint8_t oled_get_brightness(void);
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 // Basically it's oled_render, but with timeout management and oled_task_user calling!
 void oled_task(void);
 

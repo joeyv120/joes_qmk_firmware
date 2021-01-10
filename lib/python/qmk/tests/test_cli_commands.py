@@ -2,7 +2,11 @@
 =======
 import platform
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 from subprocess import STDOUT, PIPE
 
 from qmk.commands import run
@@ -26,7 +30,11 @@ def check_subcommand_stdin(file_to_read, command, *args):
     with open(file_to_read) as my_file:
         cmd = ['bin/qmk', command, *args]
         result = run(cmd, stdin=my_file, stdout=PIPE, stderr=STDOUT, universal_newlines=True)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     return result
 
 
@@ -254,4 +262,8 @@ def test_generate_rgb_breathe_table():
     check_returncode(result)
     assert 'Breathing center: 1.2' in result.stdout
     assert 'Breathing max:    127' in result.stdout
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

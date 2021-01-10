@@ -108,7 +108,11 @@ static void autoshift_end(uint16_t keycode, uint16_t now, bool matrix_trigger) {
         if (elapsed < autoshift_timeout) {
             register_code(autoshift_lastkey);
             autoshift_flags.lastshifted = false;
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         } else {
             // Simulate pressing the shift key.
             add_weak_mods(MOD_BIT(KC_LSFT));
@@ -161,7 +165,11 @@ void autoshift_matrix_scan(void) {
             autoshift_end(autoshift_lastkey, now, true);
         }
     }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 }
 
 void autoshift_toggle(void) {
@@ -180,7 +188,11 @@ void autoshift_enable(void) { autoshift_flags.enabled = true; }
 void autoshift_disable(void) {
     autoshift_flags.enabled = false;
     del_weak_mods(MOD_BIT(KC_LSFT));
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 }
 
 #    ifndef AUTO_SHIFT_NO_SETUP
@@ -197,7 +209,11 @@ void autoshift_timer_report(void) {
 bool get_autoshift_state(void) { return autoshift_enabled; }
 =======
 bool get_autoshift_state(void) { return autoshift_flags.enabled; }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 uint16_t get_autoshift_timeout(void) { return autoshift_timeout; }
 
@@ -224,7 +240,11 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
             case KC_ASON:
                 autoshift_enable();
                 return true;
@@ -250,7 +270,11 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
     }
 
     switch (keycode) {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #    ifndef NO_AUTO_SHIFT_ALPHA
         case KC_A ... KC_Z:
 #    endif

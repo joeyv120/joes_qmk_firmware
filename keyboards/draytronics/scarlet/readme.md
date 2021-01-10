@@ -21,4 +21,8 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 =======
 
 VIA design config file avaliable [here](https://www.draytronics.co.uk/f_scarlet/draytronics_scarlet_via_config.json)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

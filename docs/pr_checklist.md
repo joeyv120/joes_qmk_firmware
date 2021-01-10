@@ -76,7 +76,11 @@ https://github.com/qmk/qmk_firmware/pulls?q=is%3Apr+is%3Aclosed+label%3Akeyboard
 <<<<<<< HEAD
 =======
     - prefer LED indicator [Configuration Options](https://docs.qmk.fm/#/feature_led_indicators?id=configuration-options) to custom `led_update_*()` implementations where possible
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 - `keyboard.h`
     - `#include "quantum.h"` appears at the top
     - `LAYOUT` macros should use standard definitions if applicable

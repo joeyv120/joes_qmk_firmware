@@ -18,7 +18,11 @@ jobs:
     # protect against those who develop with their fork on master
     if: github.repository == 'qmk/qmk_firmware'
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     steps:
     - uses: actions/checkout@v2
       with:

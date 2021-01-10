@@ -4,7 +4,11 @@ DYNAMIC_KEYMAP_ENABLE = no
 CONSOLE_ENABLE = yes
 COMMAND_ENABLE = yes
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 LTO_ENABLE = yes
 AUDIO_ENABLE = no
 

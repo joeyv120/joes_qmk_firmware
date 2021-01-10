@@ -21,7 +21,11 @@
 __attribute__((weak)) uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) { return TAPPING_TERM; };
 #endif
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 // ********** OBSOLETE DEFINES, STOP USING! (pls?) **********
 // Shift / paren setup
@@ -109,7 +113,11 @@ void perform_space_cadet(keyrecord_t *record, uint16_t sc_keycode, uint8_t holdM
         if (sc_last == holdMod && timer_elapsed(sc_timer) < TAPPING_TERM)
 #endif
         {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
             if (holdMod != tapMod) {
                 if (IS_MOD(holdMod)) {
                     unregister_mods(MOD_BIT(holdMod));

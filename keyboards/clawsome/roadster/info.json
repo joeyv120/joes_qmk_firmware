@@ -43,7 +43,11 @@
                 {"label":"K18 (D3,B3)", "x":8.5, "y":1},
                 {"label":"K19 (D3,B1)", "x":9.5, "y":1},
                 {"label":"K1B (D3,F6)", "x":10.5, "y":1, "w":1.5},
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
                 {"label":"K20 (D0,D4)", "x":0, "y":2},
                 {"label":"K21 (D0,C6)", "x":1, "y":2},
                 {"label":"K22 (D0,D7)", "x":2, "y":2},

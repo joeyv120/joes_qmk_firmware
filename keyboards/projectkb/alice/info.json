@@ -9,7 +9,11 @@
         "LAYOUT_alice": {
 =======
         "LAYOUT_alice_split_bs": {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
             "layout": [
                 {"label":"Esc", "x":0.5, "y":0},
                 {"label":"`", "x":1.75, "y":0.25},

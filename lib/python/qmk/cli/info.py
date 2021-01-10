@@ -43,7 +43,11 @@ def show_keymap(kb_info_json, title_caps=True):
             print(render_layout(kb_info_json['layouts'][layout_name]['layout'], layer))
 =======
             print(render_layout(kb_info_json['layouts'][layout_name]['layout'], cli.config.info.ascii, layer))
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 
 def show_layouts(kb_info_json, title_caps=True):
@@ -80,7 +84,11 @@ def show_matrix(kb_info_json, title_caps=True):
         print(render_layout(kb_info_json['layouts'][layout_name]['layout'], labels))
 =======
         print(render_layout(kb_info_json['layouts'][layout_name]['layout'], cli.config.info.ascii, labels))
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 
 def print_friendly_output(kb_info_json):

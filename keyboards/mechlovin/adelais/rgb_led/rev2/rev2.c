@@ -105,7 +105,11 @@ led_config_t g_led_config = { {
 =======
   {46,        NO_LED,      47,         48,          49,          50,        51,         52,         53,          54,        55,           56,           59,          60,         32},
   {61,        NO_LED,      62,     NO_LED,          63,      NO_LED,        64,     NO_LED,         65,      NO_LED,        66,       NO_LED,       NO_LED,          57,         67}
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     },
     {
   //LED Index to Physical Positon

@@ -429,7 +429,11 @@ void process_action(keyrecord_t *record, action_t action) {
 #    ifdef PS2_MOUSE_ENABLE
 =======
 #    if defined(PS2_MOUSE_ENABLE) || defined(POINTING_DEVICE_ENABLE)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
                     case KC_MS_BTN1:
                         register_button(true, MOUSE_BTN1);
                         break;
@@ -450,7 +454,11 @@ void process_action(keyrecord_t *record, action_t action) {
                         register_button(true, MOUSE_BTN5);
                         break;
 #    endif
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
                     default:
                         mousekey_send();
                         break;
@@ -462,7 +470,11 @@ void process_action(keyrecord_t *record, action_t action) {
 #    ifdef PS2_MOUSE_ENABLE
 =======
 #    if defined(PS2_MOUSE_ENABLE) || defined(POINTING_DEVICE_ENABLE)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
                     case KC_MS_BTN1:
                         register_button(false, MOUSE_BTN1);
                         break;

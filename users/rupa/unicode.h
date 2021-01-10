@@ -49,7 +49,11 @@ enum unicode_names {
     LELM, // ∈
     LEXI, // ∃
     LPRO, // ⊢
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     M4,   // ♩
     M8,   // ♪
     M8B,  // ♫
@@ -97,4 +101,8 @@ bool u_xp(bool is_shifted, const char * shifted, const char *plain);
 bool combined_text(uint16_t keycode);
 void cycle_combined_mode(void);
 combined_mode_t set_combined_mode(combined_mode_t mode);
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

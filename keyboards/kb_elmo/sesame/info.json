@@ -9,7 +9,11 @@
     "LAYOUT": {
 =======
     "LAYOUT_alice": {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
       "layout": [
         {"x":0, "y":0},
         {"x":1.25, "y":0},
@@ -286,7 +290,11 @@
         {"x":12.25, "y":4, "w":1.5},
         {"x":16.75, "y":4, "w":1.5}
       ]
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     }
   }
 }

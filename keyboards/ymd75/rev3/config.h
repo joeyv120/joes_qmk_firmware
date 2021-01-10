@@ -7,7 +7,11 @@
 <<<<<<< HEAD
 =======
 #define BACKLIGHT_PIN B6 // change the backlight pin that has since changed in Rev 3
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define DIODE_DIRECTION ROW2COL
 #define DEVICE_VER      0x0300
 #define RGBLIGHT_EFFECT_KNIGHT_OFFSET 4

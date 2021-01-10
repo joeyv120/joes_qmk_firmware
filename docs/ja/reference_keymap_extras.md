@@ -54,7 +54,11 @@ HID Keyboard/Keypad usage ページでは 256 未満の usage が定義されて
 <<<<<<< HEAD
 =======
 | Portuguese (macOS, ISO)     | `keymap_portuguese_osx_iso.h`    |
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 | Portuguese (Brazil)         | `keymap_br_abnt2.h`              |
 | Romanian                    | `keymap_romanian.h`              |
 | Russian*                    | `keymap_russian.h`               |

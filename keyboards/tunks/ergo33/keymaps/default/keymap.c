@@ -28,7 +28,11 @@
   *
   * You should have received a copy of the GNU General Public License
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   */
 
 #include QMK_KEYBOARD_H
@@ -80,7 +84,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 <<<<<<< HEAD
 #define HSV_OFF 0, 0, 0
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define HSV_CAPS HUE_PRIMARY, 255, 64
 #define HSV_LAYER_BASE HUE_PRIMARY, 255, 64
 #define HSV_LAYER_RGB 213, 255, 64

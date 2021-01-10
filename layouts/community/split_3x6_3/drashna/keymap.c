@@ -13,11 +13,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD:layouts/community/split_3x6_3/drashna/keymap.c
 
 #include "drashna.h"
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/crkbd/keymaps/drashna/keymap.c
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 extern uint8_t is_master;
+=======
+#include "drashna.h"
+>>>>>>> UpdateQMK
 
 =======
 >>>>>>> dontTouch/master

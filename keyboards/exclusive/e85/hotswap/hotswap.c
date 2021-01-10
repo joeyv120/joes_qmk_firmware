@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+/* Copyright 2019
+=======
 /* Copyright 2020 MechMerlin
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,9 +18,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/exclusive/e85/hotswap/hotswap.c
 #include "hotswap.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+=======
+#pragma once
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/atreus/feather/feather.h
+=======
+#include "hotswap.h"
+>>>>>>> UpdateQMK
 
 void keyboard_pre_init_kb(void) {
     setPinOutput(C7);
@@ -32,4 +46,8 @@ bool led_update_kb(led_t led_state) {
     }
     return true;
 }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

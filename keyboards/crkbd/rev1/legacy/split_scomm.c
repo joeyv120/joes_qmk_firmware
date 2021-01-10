@@ -24,10 +24,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdint.h>
 #include <stddef.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <split_scomm.h>
 =======
 #include "split_scomm.h"
 >>>>>>> dontTouch/master
+=======
+#include "split_scomm.h"
+>>>>>>> UpdateQMK
 #include "serial.h"
 #ifdef CONSOLE_ENABLE
   #include "debug.h"

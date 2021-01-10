@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 /* Copyright 2020 Naoto Takai
+=======
+<<<<<<< HEAD:keyboards/quark/keymaps/default/config.h
+/* Copyright 2020 Nathan Spears
+=======
+/* Copyright 2020 Naoto Takai
+>>>>>>> UpdateQMK:keyboards/choco60/rev1/rev1.h
+>>>>>>> UpdateQMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,4 +24,12 @@
 
 #pragma once
 
+<<<<<<< HEAD
 #include "quantum.h"
+=======
+<<<<<<< HEAD:keyboards/quark/keymaps/default/config.h
+#define TAPPING_TOGGLE 2
+=======
+#include "quantum.h"
+>>>>>>> UpdateQMK:keyboards/choco60/rev1/rev1.h
+>>>>>>> UpdateQMK

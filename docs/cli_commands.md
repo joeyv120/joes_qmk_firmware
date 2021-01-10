@@ -201,7 +201,11 @@ Do a basic lint check:
 
     qmk lint -kb rominronin/katana60/rev2
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 ## `qmk list-keyboards`
 
 This command lists all the keyboards currently defined in `qmk_firmware`

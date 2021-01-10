@@ -275,7 +275,11 @@ ifneq ($(findstring STM32F411, $(MCU)),)
 
   USE_FPU ?= yes
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
   # Options to pass to dfu-util when flashing
   DFU_ARGS ?= -d 0483:DF11 -a 0 -s 0x08000000:leave
@@ -350,7 +354,11 @@ ifneq ($(findstring STM32F411, $(MCU)),)
   DFU_SUFFIX_ARGS ?= -v 0483 -p DF11
 endif
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 ifneq (,$(filter $(MCU),atmega16u2 atmega32u2 atmega16u4 atmega32u4 at90usb646 at90usb647 at90usb1286 at90usb1287))
   PROTOCOL = LUFA
 

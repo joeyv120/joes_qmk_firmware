@@ -146,7 +146,11 @@ ifneq ($(strip $(SHOW_HELIX_OPTIONS)),)
 =======
      $(info -- SPLIT_KEYBOARD     = $(SPLIT_KEYBOARD))
      $(info -- LTO_ENABLE         = $(LTO_ENABLE))
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
      $(info )
   endif
 endif

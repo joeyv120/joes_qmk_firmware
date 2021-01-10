@@ -9,7 +9,11 @@
 #define MATRIX_COL_PINS { A10, A9, A8, B15, B14, B13, B12, B11, B10, B8, B4, B5, B3, C14, A7 }
 
 #define RGB_DI_PIN A15
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define RGBLED_NUM      23
 #define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_HUE_STEP 8
@@ -29,7 +33,11 @@
 #define DRIVER_ADDR_2 0b1110101
 =======
 #define DRIVER_ADDR_2 0b1110110
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define DRIVER_COUNT 2
 #define DRIVER_1_LED_TOTAL 32
 #define DRIVER_2_LED_TOTAL 36
@@ -53,4 +61,8 @@
 #define ENCODER_RESOLUTION 4
 
 #define TAP_CODE_DELAY 10
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

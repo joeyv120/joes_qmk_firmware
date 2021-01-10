@@ -30,7 +30,11 @@ AUDIO_ENABLE = no           # Audio output
 =======
 RGB_MATRIX_ENABLE = no
 RGB_MATRIX_DRIVER = IS31FL3733
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 LAYOUTS = tkl_ansi
 

@@ -24,7 +24,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_GRV,  KC_A,    KC_S,   KC_D,  KC_F, KC_G, KC_H,  KC_J, KC_K, KC_L,    KC_SCLN, KC_QUOT, KC_ENT,
 	KC_LSFT, KC_NO,   KC_Z,   KC_X,  KC_C, KC_V, KC_B,  KC_N, KC_M, KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, FNMS,
 	KC_LCTL, KC_LALT, KC_LCMD,                   KC_SPC,                     KC_SPC,  FNMS,    KC_RALT, KC_RCTL),
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 // Fn1 Layer
 [_FNMS] = LAYOUT_all(
@@ -37,7 +41,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_INS,  KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, RESET,
 	AG_TOGG, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_RGHT, KC_TRNS,
 	KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DOWN, KC_TRNS, KC_TRNS,
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 	KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
 
 };

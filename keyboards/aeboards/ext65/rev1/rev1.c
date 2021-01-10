@@ -33,4 +33,8 @@ layer_state_t layer_state_set_kb(layer_state_t state) {
       }
     return layer_state_set_user(state);
 }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

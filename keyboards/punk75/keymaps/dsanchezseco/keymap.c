@@ -23,7 +23,11 @@ enum layer_names {
 <<<<<<< HEAD
 =======
     _DVORAK_NUM,
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     _QWERTY,
     _FN
 };
@@ -46,7 +50,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_P1,    KC_P2,   KC_P3, KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_SFTENT,
         KC_LCTL, KC_LGUI, KC_LALT, _______, MO(_FN), KC_SPC,  KC_SPC,   KC_P0,   KC_BSPC, KC_BSPC, MO(_FN), _______, KC_RALT, KC_RGUI, KC_RCTL
     ),
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     [_QWERTY] = LAYOUT_ortho_5x15( /* QWERTY */
         KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_GRV,   KC_BSLS, KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MUTE,
@@ -69,7 +77,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LEFT, _______, _______, _______, _______,
         _______, _______, _______, KC_DOWN, KC_UP,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, MO(_FN), _______, _______, KC_NLCK, KC_DEL,  KC_DEL,  MO(_FN), _______, _______, _______, _______
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     )
 
 };

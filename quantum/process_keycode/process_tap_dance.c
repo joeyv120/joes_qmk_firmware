@@ -17,7 +17,11 @@
 <<<<<<< HEAD
 #include "action_tapping.h"
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 #ifndef NO_ACTION_ONESHOT
 uint8_t get_oneshot_mods(void);
@@ -178,7 +182,11 @@ void matrix_scan_tap_dance() {
 #else
             tap_user_defined = TAPPING_TERM;
 #endif
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         }
         if (action->state.count && timer_elapsed(action->state.timer) > tap_user_defined) {
             process_tap_dance_action_on_dance_finished(action);

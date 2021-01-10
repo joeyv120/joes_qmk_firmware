@@ -101,4 +101,8 @@
     { R24, R23, R22, R21, R20 }, \
     { ___, R33, R32, R31, R30 }, \
 }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

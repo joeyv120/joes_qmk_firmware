@@ -49,7 +49,11 @@ def json2c(cli):
     except json.decoder.JSONDecodeError as ex:
         cli.log.error('The JSON input does not appear to be valid.')
         cli.log.error(ex)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         return False
 
     # Environment processing

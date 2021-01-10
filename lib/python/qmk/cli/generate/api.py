@@ -40,7 +40,11 @@ def generate_api(cli):
         keyboard_info.write_text(json.dumps(kb_all['keyboards'][keyboard_name]))
 =======
         keyboard_info.write_text(json.dumps({'last_updated': current_datetime(), 'keyboards': {keyboard_name: kb_all['keyboards'][keyboard_name]}}))
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
         if keyboard_readme_src.exists():
             copyfile(keyboard_readme_src, keyboard_readme)

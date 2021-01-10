@@ -9,7 +9,11 @@ Each half can work standalone.
 <<<<<<< HEAD
 =======
 Last GB version is the rev2.
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 * Keyboard Maintainer: [KGOH](https://github.com/KGOH)
 * Hardware Supported: Jian PCB rev1, rev2, Pro Micro

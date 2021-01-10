@@ -9,7 +9,11 @@ The breaking change period is when we will merge PR's that change QMK in dangero
 <<<<<<< HEAD
 =======
 * [2020 Nov 28](ChangeLog/20201128.md)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 * [2020 Aug 29](ChangeLog/20200829.md)
 * [2020 May 30](ChangeLog/20200530.md)
 * [2020 Feb 29](ChangeLog/20200229.md)
@@ -39,7 +43,11 @@ The next Breaking Change is scheduled for February 27, 2021.
 * [ ] 2021 Feb 25 - `master` is locked, no PR's merged.
 * [ ] 2021 Feb 27 - Merge `develop` to `master`.
 * [ ] 2021 Feb 27 - `master` is unlocked. PR's can be merged again.
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 ## What changes will be included?
 

@@ -109,7 +109,11 @@
 <<<<<<< HEAD
 =======
     * [LED Indicators](feature_led_indicators.md)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     * [Proton C Conversion](proton_c_conversion.md)
     * [PS/2 Mouse](feature_ps2_mouse.md)
     * [Split Keyboard](feature_split_keyboard.md)
@@ -126,7 +130,11 @@
 <<<<<<< HEAD
 =======
       * [2020 Nov 28](ChangeLog/20201128.md)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
       * [2020 Aug 29](ChangeLog/20200829.md)
       * [2020 May 30](ChangeLog/20200530.md)
       * [2020 Feb 29](ChangeLog/20200229.md)

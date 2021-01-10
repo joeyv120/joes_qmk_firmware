@@ -64,7 +64,11 @@ susceptible to noise, you must choose a debounce method that will also mitigate 
 
 ## Types of debounce algorithms
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 1) Unit of time: Timestamp (milliseconds) vs Cycles (scans)
    * Debounce algorithms often have a 'debounce time' parameter, that specifies the maximum settling time of the switch contacts.
      This time might be measured in various units:
@@ -172,7 +176,11 @@ The following old names for existing algorithms will continue to be supported, h
 * sym_pk - old name for sym_defer_pk
 * eager_pr - old name for sym_eager_pr
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 * sym_g - old name for sym_defer_g
 * eager_pk - old name for sym_eager_pk

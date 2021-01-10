@@ -15,7 +15,11 @@ LTO_ENABLE = no  # if firmware size over limit, try this option
 <<<<<<< HEAD
 =======
 LED_ANIMATIONS = yes
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 # Helix Spacific Build Options
 # you can uncomment and edit follows 7 Variables

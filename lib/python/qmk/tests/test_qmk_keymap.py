@@ -67,7 +67,11 @@ def test_generate_json_pytest_has_template():
 
 def test_parse_keymap_c():
     parsed_keymap_c = qmk.keymap.parse_keymap_c('keyboards/handwired/pytest/basic/keymaps/default/keymap.c')
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     assert parsed_keymap_c == {'layers': [{'name': '0', 'layout': 'LAYOUT_ortho_1x1', 'keycodes': ['KC_A']}]}
 
 

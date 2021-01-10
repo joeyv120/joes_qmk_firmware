@@ -2,7 +2,11 @@
 /* Copyright 2019 Maarten Dekkers <maartenwut@gmail.com>
 =======
 /* Copyright 2019 Evy Dekkers
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

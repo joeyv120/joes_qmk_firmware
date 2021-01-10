@@ -156,7 +156,11 @@ bool led_update_kb(led_t led_state) {
         // flush the indicator to the buffer
         IS31FL3741_update_pwm_buffers(DRIVER_ADDR_1, DRIVER_ADDR_1);
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     }
     return true;
 }

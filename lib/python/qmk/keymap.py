@@ -6,7 +6,11 @@ import subprocess
 <<<<<<< HEAD
 =======
 import sys
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 from pygments.lexers.c_cpp import CLexer
 from pygments.token import Token
@@ -193,7 +197,11 @@ def write_json(keyboard, keymap, layout, layers):
         layout
             The LAYOUT macro this keymap uses.
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         layers
             An array of arrays describing the keymap. Each item in the inner array should be a string that is a valid QMK keycode.
     """
@@ -336,7 +344,11 @@ def _c_preprocess(path, stdin=None):
     Args:
         path: path of the keymap.c file (set None to use stdin)
         stdin: stdin pipe (e.g. sys.stdin)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     Returns:
         the stdout of the pre-processor
@@ -345,7 +357,11 @@ def _c_preprocess(path, stdin=None):
     pre_processed_keymap = qmk.commands.run(['cpp', path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 =======
     pre_processed_keymap = qmk.commands.run(['cpp', path] if path else ['cpp'], stdin=stdin, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     return pre_processed_keymap.stdout
 
 
@@ -479,7 +495,11 @@ def parse_keymap_c(keymap_file, use_cpp=True):
         keymap_file: path of the keymap.c file
 =======
         keymap_file: path of the keymap.c file (or '-' to use stdin)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
         use_cpp: if True, pre-process the file with the C pre-processor
 
@@ -502,7 +522,11 @@ def parse_keymap_c(keymap_file, use_cpp=True):
             keymap_file = _c_preprocess(keymap_file)
         else:
             keymap_file = keymap_file.read_text()
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     keymap = dict()
     keymap['layers'] = _get_layers(keymap_file)

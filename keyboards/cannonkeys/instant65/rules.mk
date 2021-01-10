@@ -26,4 +26,8 @@ OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
 
 # Wildcard to allow APM32 MCU 
 DFU_SUFFIX_ARGS = -p FFFF -v FFFF
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

@@ -329,7 +329,11 @@ const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] = {
             HID_RI_REPORT_COUNT(8, JOYSTICK_AXES_COUNT),
             HID_RI_REPORT_SIZE(8, 0x10),
      # endif
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
             HID_RI_INPUT(8, HID_IOF_DATA | HID_IOF_VARIABLE | HID_IOF_ABSOLUTE),
 #    endif
 

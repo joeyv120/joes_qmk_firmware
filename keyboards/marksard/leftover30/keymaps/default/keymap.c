@@ -103,7 +103,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 uint16_t get_tapping_term(uint16_t keycode) {
 =======
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   switch (keycode) {
     case KC_SPRA:
       return TAPPING_LAYER_TERM;

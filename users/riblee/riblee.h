@@ -25,7 +25,11 @@ enum preonic_layers {
 enum layer_names {
     _QWERTY,
     _HUNGARIAN,
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     _COLEMAK,
     _DVORAK,
     _LOWER,
@@ -40,7 +44,11 @@ enum preonic_keycodes {
 enum custom_keycodes {
     QWERTY = SAFE_RANGE,
     HUNGARIAN,
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     COLEMAK,
     DVORAK,
     BACKLIT

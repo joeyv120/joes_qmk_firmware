@@ -4,7 +4,11 @@ import json
 <<<<<<< HEAD
 import sys
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 from milc import cli
 
@@ -47,7 +51,11 @@ def c2json(cli):
             cli.log.error('C file does not exist!')
             cli.print_usage()
             return False
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     # Environment processing
     if cli.args.output == ('-'):
@@ -65,7 +73,11 @@ def c2json(cli):
         sys.exit(1)
 =======
         return False
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     if cli.args.output:
         cli.args.output.parent.mkdir(parents=True, exist_ok=True)

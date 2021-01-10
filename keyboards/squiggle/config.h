@@ -26,7 +26,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 #define VENDOR_ID       0x1209
 #define PRODUCT_ID      0x6969
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define MANUFACTURER    ibnuda
 #define PRODUCT         squiggle
 

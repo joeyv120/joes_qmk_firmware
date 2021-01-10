@@ -9,7 +9,11 @@ Everything works. However the scroll wheel has some issues and acts very odd.
 =======
 It's a DIY, QMK Powered Mouse!!!!
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 * Keyboard Maintainer: [PloopyCo](https://github.com/ploopyco), [Drashna Jael're](https://github.com/drashna/), [Germ](https://github.com/germ/)
 * Hardware Supported: ATMega32u4 8MHz(3.3v)  
@@ -31,7 +35,11 @@ While the defaults are designed so that it can be plugged in and used right away
 # Customzing your PloopyCo Mouse
 
 While the defaults are designed so that it can be plugged in and used right away, there are a number of things that you may want to change.  Such as adding DPI control, or to use the ball to scroll while holding a button.   To allow for this sort of control, there is a callback for both the scroll wheel and the mouse sensor. 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 The default behavior for this is:
 
@@ -88,4 +96,8 @@ Original (Caterina) settings:
 | High     | `0xD8`           |
 | Extended | `0xFE`           |
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

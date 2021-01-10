@@ -28,7 +28,11 @@ ENCODER_ENABLE = yes
 <<<<<<< HEAD
 =======
 RGB_MATRIX_DRIVER = IS31FL3737
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 LAYOUTS = ortho_4x12 planck_mit
 LAYOUTS_HAS_RGB = no

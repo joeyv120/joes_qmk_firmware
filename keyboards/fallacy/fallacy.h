@@ -25,7 +25,11 @@
 #define LAYOUT_all( \
 =======
 #define LAYOUT_alice_split_bs( \
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     K100,   K000, K001, K002, K003, K004, K005, K006,       K007, K008, K009, K010, K011, K012, K013, K014, \
     K200,   K101, K102, K103, K104, K105, K106,       K107, K108, K109, K110, K111, K112, K113, K114, \
     K300,   K201, K202, K203, K204, K205, K206,       K207, K208, K209, K210, K211, K212,       K214, \
@@ -47,7 +51,11 @@
 #define LAYOUT_default( \
 =======
 #define LAYOUT_alice( \
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     K100,   K000, K001, K002, K003, K004, K005, K006,       K007, K008, K009, K010, K011, K012,       K014, \
     K200,   K101, K102, K103, K104, K105, K106,       K107, K108, K109, K110, K111, K112, K113, K114, \
     K300,   K201, K202, K203, K204, K205, K206,       K207, K208, K209, K210, K211, K212,       K214, \
@@ -65,4 +73,8 @@
 
 #define LAYOUT_default LAYOUT_alice
 #define LAYOUT_all LAYOUT_alice_split_bs
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

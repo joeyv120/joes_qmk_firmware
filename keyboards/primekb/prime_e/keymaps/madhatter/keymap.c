@@ -44,7 +44,11 @@ enum ilpse_keycodes {
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define GUBS RGUI_T(KC_BSPC)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT(
@@ -55,7 +59,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCTL, KC_LALT,          LOWER,  KC_LCMD,    KC_SPC,  RAISE,          KC_RGUI, KC_RCTL
 =======
     KC_LCTL, KC_LALT,          LOWER,  GUBS,      KC_SPC,  RAISE,          KC_RGUI, KC_RCTL
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   ),
 
   [_LOWER] = LAYOUT(
@@ -66,7 +74,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS,                     LOWER, KC_TRNS,   KC_TRNS,   RAISE,          KC_TRNS, KC_TRNS
 =======
     KC_TRNS, KC_TRNS,                  KC_TRNS, KC_TRNS,   KC_TRNS,  KC_TRNS,          KC_TRNS, KC_TRNS
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   ),
 
   [_RAISE] = LAYOUT(
@@ -84,7 +96,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     AG_TOGG, KC_TRNS,                   KC_TRNS, KC_TRNS,   KC_TRNS,   KC_TRNS,          KC_TRNS, KC_TRNS
 =======
     RESET,   KC_TRNS,                  KC_TRNS, KC_TRNS,   KC_TRNS,  KC_TRNS,          KC_TRNS, KC_TRNS
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   )
 };
 

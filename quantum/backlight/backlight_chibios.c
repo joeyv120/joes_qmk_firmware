@@ -10,7 +10,11 @@
 #    define BACKLIGHT_LIMIT_VAL 255
 #endif
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 // GPIOV2 && GPIOV3
 #ifndef BACKLIGHT_PAL_MODE
 #    define BACKLIGHT_PAL_MODE 2
@@ -73,7 +77,11 @@ static uint32_t rescale_limit_val(uint32_t val) {
     return (val * (BACKLIGHT_LIMIT_VAL + 1)) / 256;
 }
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 void backlight_init_ports(void) {
 #ifdef USE_GPIOV1
     palSetPadMode(PAL_PORT(BACKLIGHT_PIN), PAL_PAD(BACKLIGHT_PIN), PAL_MODE_STM32_ALTERNATE_PUSHPULL);
@@ -105,7 +113,11 @@ void backlight_set(uint8_t level) {
         uint32_t duty = (uint32_t)(cie_lightness(0xFFFF * (uint32_t)level / BACKLIGHT_LEVELS));
 =======
         uint32_t duty = (uint32_t)(cie_lightness(rescale_limit_val(0xFFFF * (uint32_t)level / BACKLIGHT_LEVELS)));
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         pwmEnableChannel(&BACKLIGHT_PWM_DRIVER, BACKLIGHT_PWM_CHANNEL - 1, PWM_FRACTION_TO_WIDTH(&BACKLIGHT_PWM_DRIVER, 0xFFFF, duty));
     }
 }
@@ -153,7 +165,11 @@ void breathing_callback(PWMDriver *pwmp) {
     uint32_t duty                     = cie_lightness(scale_backlight(breathing_table[index] * 256));
 =======
     uint32_t duty                     = cie_lightness(rescale_limit_val(scale_backlight(breathing_table[index] * 256)));
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
     chSysLockFromISR();
     pwmEnableChannelI(pwmp, BACKLIGHT_PWM_CHANNEL - 1, PWM_FRACTION_TO_WIDTH(&BACKLIGHT_PWM_DRIVER, 0xFFFF, duty));

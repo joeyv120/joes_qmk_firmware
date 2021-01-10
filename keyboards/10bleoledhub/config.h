@@ -30,7 +30,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 #define MATRIX_ROW_PINS { F6, F5, F4, F1 }
 =======
 #define MATRIX_ROW_PINS { F0, F5, F4, F6 }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define MATRIX_COL_PINS { D6, D7, B5 }
 #define UNUSED_PINS
 

@@ -30,7 +30,11 @@ BOX_DRAWING_CHARACTERS = {
     },
 }
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 base_path = os.path.join(os.getcwd(), "keyboards") + os.path.sep
 
 

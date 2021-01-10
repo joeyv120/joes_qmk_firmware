@@ -99,7 +99,11 @@ static uint8_t peek_matrix_intersection(pin_t out_pin, pin_t in_pin) {
     matrix_io_delay(); // Wait for the pull-up to go HIGH.
 =======
     matrix_io_delay();  // Wait for the pull-up to go HIGH.
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     return pin_state;
 }
 #endif
@@ -122,7 +126,11 @@ __attribute__((weak)) bool is_keyboard_left(void) {
 #    else
     return !peek_matrix_intersection(SPLIT_HAND_MATRIX_GRID);
 #    endif
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #elif defined(EE_HANDS)
     return eeconfig_read_handedness();
 #elif defined(MASTER_RIGHT)

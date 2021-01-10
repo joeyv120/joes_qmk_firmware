@@ -9,9 +9,12 @@ LTO_ENABLE = yes
 BACKLIGHT_ENABLE = no
 BOOTMAGIC_ENABLE = lite  # Virtual DIP switch configuration
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## (Note that for BOOTMAGIC on Teensy LC you have to use a custom .ld script.)
 =======
 >>>>>>> dontTouch/master
+=======
+>>>>>>> UpdateQMK
 MOUSEKEY_ENABLE = no # Mouse keys
 EXTRAKEY_ENABLE = yes # Audio control and System control
 CONSOLE_ENABLE = no  # Console for debug

@@ -23,10 +23,18 @@ SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 ifeq ($(strip $(KEYBOARD)), crkbd/rev1)
     OLED_DRIVER_ENABLE = yes
 <<<<<<< HEAD
+<<<<<<< HEAD
     RGB_MATRIX_ENABLE = WS2812
 =======
     RGB_MATRIX_ENABLE = yes
 >>>>>>> dontTouch/master
+=======
+<<<<<<< HEAD:layouts/community/split_3x6_3/drashna/rules.mk
+    RGB_MATRIX_ENABLE = WS2812
+=======
+    RGB_MATRIX_ENABLE = yes
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/crkbd/keymaps/drashna/rules.mk
+>>>>>>> UpdateQMK
     HAPTIC_ENABLE = SOLENOID
     BOOTLOADER = qmk-dfu
 endif

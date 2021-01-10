@@ -28,4 +28,8 @@ AUDIO_ENABLE = no           # Audio output
 LAYOUTS = alice
 =======
 LAYOUTS = alice alice_split_bs
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

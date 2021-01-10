@@ -20,12 +20,17 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "hal.h"
 #include "stm32_gpio.h"
 =======
 #include <hal.h>
 #include <stm32_gpio.h>
 >>>>>>> dontTouch/master
+=======
+#include <hal.h>
+#include <stm32_gpio.h>
+>>>>>>> UpdateQMK
 
 /*===========================================================================*/
 /* Driver local definitions.                                                 */
@@ -207,13 +212,21 @@ static void stm32_gpio_init(void) {
 /* Driver exported functions.                                                */
 /*===========================================================================*/
 
+<<<<<<< HEAD
+__attribute__((weak)) void enter_bootloader_mode_if_requested(void) {}
+
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /**
  * @brief   Early initialization code.
  * @details GPIO ports and system clocks are initialized before everything
  *          else.
  */
 void __early_init(void) {
+<<<<<<< HEAD
+=======
   extern void enter_bootloader_mode_if_requested(void);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   enter_bootloader_mode_if_requested();
 
   stm32_gpio_init();

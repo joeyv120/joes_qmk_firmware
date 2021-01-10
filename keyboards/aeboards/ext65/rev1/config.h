@@ -2,7 +2,11 @@
 /* Copyright 2020 Harrison Chan (Xelus)
 =======
 /* Copyright 2018 Jason Williams (Wilba)
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -52,4 +56,8 @@
 
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

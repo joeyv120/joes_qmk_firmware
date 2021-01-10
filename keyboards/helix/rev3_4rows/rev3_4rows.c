@@ -39,7 +39,11 @@ void set_mac_mode(bool macmode) {
      */
     keymap_config.swap_lalt_lgui = keymap_config.swap_ralt_rgui = !macmode;
     eeconfig_update_keymap(keymap_config.raw);
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 }
 
 void dip_switch_update_kb(uint8_t index, bool active) {

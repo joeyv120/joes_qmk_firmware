@@ -75,7 +75,11 @@ static const __attribute__((unused)) cRGB turq  = {.r = 0, .g = BRIGHT, .b = BRI
 static const __attribute__((unused)) cRGB lturq = {.r = 0, .g = DIM, .b = DIM};
 
 static const __attribute__((unused)) cRGB white = {.r = BRIGHT, .g = BRIGHT, .b = BRIGHT};
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 static led_t   led_state;
 static uint8_t layer;

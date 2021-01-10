@@ -197,7 +197,11 @@ bool process_record_kb(uint16_t keycode, keyrecord_t* record) {
             currentReport.buttons |= 1 << (keycode - KC_MS_BTN1);
         } else {
             currentReport.buttons &= ~(1 << (keycode - KC_MS_BTN1));
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         }
         pointing_device_set_report(currentReport);
         pointing_device_send();
@@ -205,7 +209,11 @@ bool process_record_kb(uint16_t keycode, keyrecord_t* record) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #endif
 
     return true;

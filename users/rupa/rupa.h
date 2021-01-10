@@ -33,7 +33,11 @@ enum userspace_layers {
     _LOWER,
     _RAISE,
     _ADJUST
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 };
 
 enum userspace_custom_keycodes {
@@ -83,7 +87,11 @@ enum userspace_font_choices {
     F_SANSI,
     F_SANSN,
     F_SCRPT
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 };
 
 typedef struct font_t {
@@ -108,4 +116,8 @@ bool script_mode_translate(font_t *translator, bool is_shifted, uint32_t keycode
 const font_t* get_script_mode(void);
 bool set_script_mode(int fc);
 bool script_mode_translate(bool is_shifted, uint32_t keycode);
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

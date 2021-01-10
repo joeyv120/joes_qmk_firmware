@@ -32,7 +32,11 @@
 #define MATRIX_COL_PINS { B10, B1, B0, B15, A8, B3, B4, B5, B6, B7, B8, B9 }
 =======
 #define MATRIX_COL_PINS { B10, B1, B0, B15, A8, B3, B4, B5, B14, A0, B8, B9 }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define UNUSED_PINS
 
 #define DIODE_DIRECTION COL2ROW
@@ -48,4 +52,8 @@
 #define TAPPING_TERM 175
 
 #define OLED_DISPLAY_128X64
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

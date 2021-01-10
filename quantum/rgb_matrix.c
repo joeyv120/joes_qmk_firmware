@@ -574,7 +574,11 @@ void rgb_matrix_step_reverse_helper(bool write_to_eeprom) {
 void rgb_matrix_step_reverse_noeeprom(void) { rgb_matrix_step_reverse_helper(false); }
 void rgb_matrix_step_reverse(void) { rgb_matrix_step_reverse_helper(true); }
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 void rgb_matrix_sethsv_eeprom_helper(uint16_t hue, uint8_t sat, uint8_t val, bool write_to_eeprom) {
     if (!rgb_matrix_config.enable) {
         return;

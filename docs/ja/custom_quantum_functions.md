@@ -7,7 +7,11 @@
 =======
   original document: 0.10.52:docs/custom_quantum_functions.md
   git diff 0.10.52 HEAD -- docs/custom_quantum_functions.md | cat
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 -->
 
 多くの人にとって、カスタムキーボードはボタンの押下をコンピュータに送信するだけではありません。単純なボタンの押下やマクロよりも複雑なことを実行できるようにしたいでしょう。QMK にはコードを挿入したり、機能を上書きしたり、様々な状況でキーボードの挙動をカスタマイズできるフックがあります。
@@ -256,7 +260,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 特定のレイヤーの状態を確認するには、 `IS_LAYER_ON_STATE(state, layer)` と `IS_LAYER_OFF_STATE(state, layer)` マクロを使います。
 =======
 特定のレイヤーの状態を確認するには、`IS_LAYER_ON_STATE(state, layer)` と `IS_LAYER_OFF_STATE(state, layer)` マクロを使います。
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 `layer_state_set_*` 関数の外では、グローバルなレイヤー状態を確認するために `IS_LAYER_ON(layer)` と `IS_LAYER_OFF(layer)` マクロを使えます。
 

@@ -30,7 +30,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <<<<<<< HEAD
 #define BACKLIGHT_PIN D4
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define BACKLIGHT_LEVELS 12
 
 #define RGB_DI_PIN E2

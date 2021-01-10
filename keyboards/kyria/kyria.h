@@ -82,4 +82,8 @@
     { KC_NO, KC_NO, R34,   R35,   R36,   R37,   R38,   R39   }, \
     { R45,   R46,   R47,   R48,   R49,   KC_NO, KC_NO, KC_NO }, \
 }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

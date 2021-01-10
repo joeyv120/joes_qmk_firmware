@@ -52,4 +52,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* reduce VIA layer count because of EEPROM size */
 #define DYNAMIC_KEYMAP_LAYER_COUNT 2
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

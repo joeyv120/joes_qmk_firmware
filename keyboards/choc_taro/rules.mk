@@ -14,8 +14,18 @@ BOOTLOADER = atmel-dfu
 # Build Options
 #   change yes to no to disable
 #
+<<<<<<< HEAD
 BOOTMAGIC_ENABLE = lite       # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = yes       # Mouse keys
+=======
+<<<<<<< HEAD:keyboards/evyd13/eon95/rules.mk
+BOOTMAGIC_ENABLE = lite     # Virtual DIP switch configuration
+MOUSEKEY_ENABLE = no        # Mouse keys
+=======
+BOOTMAGIC_ENABLE = lite       # Virtual DIP switch configuration
+MOUSEKEY_ENABLE = yes       # Mouse keys
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/choc_taro/rules.mk
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = yes        # Console for debug
 COMMAND_ENABLE = yes        # Commands for debug and configuration

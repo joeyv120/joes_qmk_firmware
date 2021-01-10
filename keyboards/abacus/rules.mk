@@ -32,7 +32,11 @@ FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 <<<<<<< HEAD
 UNICODEMAP_ENABLE = yes
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 ENCODER_ENABLE = yes
 DIP_SWITCH_ENABLE = yes
 LTO_ENABLE = yes

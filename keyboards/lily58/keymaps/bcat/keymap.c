@@ -44,7 +44,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       KC_LGUI,  KC_LCTL,  LY_LWR,   KC_SPC,   KC_ENT,   LY_RSE,   KC_RALT,  KC_APP
 =======
                                       KC_LALT,  KC_LCTL,  LY_LWR,   KC_SPC,   KC_ENT,   LY_RSE,   KC_RALT,  KC_RGUI
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     ),
 
     /* Lower layer: http://www.keyboard-layout-editor.com/#/gists/19ad0d3b5d745fbb2818db09740f5a11 */

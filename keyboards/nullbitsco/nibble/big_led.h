@@ -19,7 +19,11 @@
 #include "quantum.h" 
 =======
 #include "quantum.h"
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 /* Optional big LED pins */
 #define BIG_LED_R_PIN D7
@@ -42,4 +46,8 @@ void
   set_big_LED_r(uint8_t mode),
   set_big_LED_g(uint8_t mode),
   set_big_LED_b(uint8_t mode);
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

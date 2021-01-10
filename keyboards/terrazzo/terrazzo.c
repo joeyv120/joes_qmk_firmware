@@ -23,7 +23,11 @@
     #include <print.h>
 =======
     #include "print.h"
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     #include "quantum.h"
 
 const is31_led g_is31_leds[LED_DRIVER_LED_COUNT] = {

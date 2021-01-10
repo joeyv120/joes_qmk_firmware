@@ -1,5 +1,13 @@
 /*
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/basekeys/slice/rev1/keymaps/via/config.h
 Copyright 2020 2Moons
+=======
+Copyright 2019 Ryota Goto
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/ai03/polaris/keymaps/mekberg/config.h
+=======
+Copyright 2020 2Moons
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -14,9 +22,24 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+<<<<<<< HEAD
+
 #pragma once
 
+<<<<<<< HEAD:keyboards/basekeys/slice/rev1/keymaps/via/config.h
+=======
+#pragma once
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* Select hand configuration */
 
 #define TAPPING_FORCE_HOLD
 #define TAPPING_TERM 180
+<<<<<<< HEAD
+=======
+// Define some configuration for modtap behavior
+// #define TAPPING_TERM 150
+#define PERMISSIVE_HOLD
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/ai03/polaris/keymaps/mekberg/config.h
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

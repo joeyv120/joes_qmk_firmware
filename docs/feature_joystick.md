@@ -149,7 +149,11 @@ By default, the resolution of each axis is 8 bit, giving a range of -127 to +127
 
 Note that the supported AVR MCUs have a 10-bit ADC, and 12-bit for most STM32 MCUs.
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 ### Triggering Joystick Buttons
 
 Joystick buttons are normal Quantum keycodes, defined as `JS_BUTTON0` to `JS_BUTTON31`, depending on the number of buttons you have configured.

@@ -127,7 +127,11 @@ else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/$(BOARD)/configs/chconf.h)"
 =======
 else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/common/configs/chconf.h)","")
     CHCONFDIR = $(TOP_DIR)/platforms/chibios/common/configs
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 endif
 
 ifneq ("$(wildcard $(KEYBOARD_PATH_5)/halconf.h)","")
@@ -146,7 +150,11 @@ else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/$(BOARD)/configs/halconf.h)
 =======
 else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/common/configs/halconf.h)","")
     HALCONFDIR = $(TOP_DIR)/platforms/chibios/common/configs
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 endif
 
 # HAL-OSAL files (optional).
@@ -199,7 +207,11 @@ else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/ld/$(MCU_LDSCRIPT).ld)","")
 =======
 else ifneq ("$(wildcard $(TOP_DIR)/platforms/chibios/common/ld/$(MCU_LDSCRIPT).ld)","")
     LDSCRIPT = $(TOP_DIR)/platforms/chibios/common/ld/$(MCU_LDSCRIPT).ld
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 else ifneq ("$(wildcard $(STARTUPLD_CONTRIB)/$(MCU_LDSCRIPT).ld)","")
     LDSCRIPT = $(STARTUPLD_CONTRIB)/$(MCU_LDSCRIPT).ld
     USE_CHIBIOS_CONTRIB = yes
@@ -228,7 +240,11 @@ EXTRAINCDIRS += $(CHIBIOS)/os/license $(CHIBIOS)/os/oslib/include \
 =======
          $(TOP_DIR)/platforms/chibios/common/configs \
          $(HALCONFDIR) $(CHCONFDIR) \
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
          $(STARTUPINC) $(KERNINC) $(PORTINC) $(OSALINC) \
          $(HALINC) $(PLATFORMINC) $(BOARDINC) $(TESTINC) \
          $(STREAMSINC) $(CHIBIOS)/os/various $(COMMON_VPATH)

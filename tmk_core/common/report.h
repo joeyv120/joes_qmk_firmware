@@ -200,7 +200,11 @@ typedef struct {
 #    else
     int8_t axes[JOYSTICK_AXES_COUNT];
 #    endif
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #endif
 
 #if JOYSTICK_BUTTON_COUNT > 0

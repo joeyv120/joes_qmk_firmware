@@ -18,7 +18,11 @@
 <<<<<<< HEAD
 =======
 #include "mousekey.h"
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 
 enum plaid_layers {
@@ -41,7 +45,11 @@ static bool autoclick = false;
 static bool autoclick_state = false;
 static uint16_t autoclick_timer = 0;
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 #define XMONAD LM(_XMONAD, MOD_LGUI)
 #define SPC_LWR LT(_LOWER, KC_SPACE)
 #define ENT_RSE LT(_RAISE, KC_ENT)
@@ -107,7 +115,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 =======
     _______, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, _______, AUTOCLICK
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 )
 };
 
@@ -197,7 +209,11 @@ void matrix_scan_user(void) {
     autoclick_state = !autoclick_state;
     autoclick_timer = timer_read();
   }
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -231,4 +247,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 };
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

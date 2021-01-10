@@ -22,7 +22,11 @@ Zadig should automatically detect the bootloader device, but you may sometimes n
 If the arrow appears green, select the driver, and click **Install Driver**. The `libusb-win32` driver will usually work for AVR, and `WinUSB` for ARM, but if you still cannot flash the board, try installing a different driver from the list. USBAspLoader devices must use the `libusbK` driver.
 =======
 If the arrow appears green, select the driver, and click **Install Driver**. See the [list of known bootloaders](#list-of-known-bootloaders) for the correct driver to install.
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 ![Zadig with a bootloader driver correctly installed](https://i.imgur.com/b8VgXzx.png)
 

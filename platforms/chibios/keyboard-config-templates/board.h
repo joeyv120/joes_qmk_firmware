@@ -19,6 +19,10 @@
 #include_next "board.h"
 =======
 #include_next <board.h>
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 // #undef STM32_HSE_BYPASS

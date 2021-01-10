@@ -33,7 +33,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
    * Thank you to imchipwood/dumbpad for defining this. 
    */
 =======
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   if (index == 0) {
     switch (get_highest_layer(layer_state)) {
       case 1:
@@ -47,7 +51,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
           tap_code(KC_BRIGHTNESS_UP);
         } else {
           tap_code(KC_BRIGHTNESS_DOWN);
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         }
         break;
 
@@ -62,7 +70,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
           tap_code(KC_AUDIO_VOL_UP);
         } else {
           tap_code(KC_AUDIO_VOL_DOWN);
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         }
         break;
     }

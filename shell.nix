@@ -43,7 +43,11 @@ let
     doCheck = false;
   };
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
   pythonEnv = pkgs.python3.withPackages (p: with p; [
     # requirements.txt
     appdirs
@@ -53,7 +57,11 @@ let
 <<<<<<< HEAD
 =======
     milc
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     pygments
     # requirements-dev.txt
     nose2

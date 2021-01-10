@@ -19,7 +19,11 @@
 =======
 #include "raw_hid.h"
 #include <string.h>
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 
 const uint8_t shift = MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT);
 
@@ -163,7 +167,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
             break;
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
         case BACKLIT:
             if (record->event.pressed) {
                 register_code(keycode_config(KC_LGUI));
@@ -236,4 +244,8 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
 #endif
 
 #endif
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK

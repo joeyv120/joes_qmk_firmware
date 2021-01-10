@@ -200,7 +200,11 @@ bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
 }
 ```
 
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
 ## Why do we include the key record for the per key functions?
 
 One thing that you may notice is that we include the key record for all of the "per key" functions, and may be wondering why we do that.
