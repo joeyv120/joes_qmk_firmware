@@ -43,19 +43,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
+<<<<<<< HEAD:keyboards/tkc/m0lly/config.h
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/m0lly/config.h
 #define LED_NUM_LOCK_PIN D2
 #define LED_CAPS_LOCK_PIN D3
 #define LED_SCROLL_LOCK_PIN D4
 
+<<<<<<< HEAD:keyboards/tkc/m0lly/config.h
 <<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/m0lly/config.h
 #define BACKLIGHT_PIN B6
 #define BACKLIGHT_BREATHING
 #define BACKLIGHT_LEVELS 3

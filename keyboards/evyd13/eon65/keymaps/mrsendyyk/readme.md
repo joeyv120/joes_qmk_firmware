@@ -34,5 +34,9 @@
 ## Build The Firmware
 You will need to build the firmware. To do so go to your terminal window and run the compile command:
 
+<<<<<<< HEAD
     qmk compile -kb maartenwut/eon65 -km mrsendyyk
+=======
+    qmk compile -kb evyd13/eon65 -km mrsendyyk
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 See [The Complete Newbs Guide To QMK](https://docs.qmk.fm/#/newbs).

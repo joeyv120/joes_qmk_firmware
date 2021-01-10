@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdbool.h>
 #include <stdint.h>
 #include <stddef.h>
+<<<<<<< HEAD:keyboards/crkbd/rev1/legacy/split_scomm.c
 <<<<<<< HEAD
 <<<<<<< HEAD
 #include <split_scomm.h>
@@ -32,6 +33,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 #include "split_scomm.h"
 >>>>>>> UpdateQMK
+=======
+#include "split_scomm.h"
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/crkbd/rev1/split_scomm.c
 #include "serial.h"
 #ifdef CONSOLE_ENABLE
   #include "debug.h"

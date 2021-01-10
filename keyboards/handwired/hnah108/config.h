@@ -115,6 +115,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define NO_ACTION_FUNCTION
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 1
 
@@ -127,3 +128,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+/* Bootmagic Lite key configuration */
+//#define BOOTMAGIC_LITE_ROW 0
+//#define BOOTMAGIC_LITE_COLUMN 0
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

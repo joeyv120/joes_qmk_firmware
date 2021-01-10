@@ -69,6 +69,7 @@ __attribute__((weak)) void i2c_init(void) {
         chThdSleepMilliseconds(10);
 #if defined(USE_GPIOV1)
 <<<<<<< HEAD
+<<<<<<< HEAD
     palSetPadMode(I2C1_SCL_BANK, I2C1_SCL, I2C1_SCL_PAL_MODE);
     palSetPadMode(I2C1_SDA_BANK, I2C1_SDA, I2C1_SDA_PAL_MODE);
 =======
@@ -79,6 +80,10 @@ __attribute__((weak)) void i2c_init(void) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        palSetPadMode(I2C1_SCL_BANK, I2C1_SCL, I2C1_SCL_PAL_MODE);
+        palSetPadMode(I2C1_SDA_BANK, I2C1_SDA, I2C1_SDA_PAL_MODE);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #else
         palSetPadMode(I2C1_SCL_BANK, I2C1_SCL, PAL_MODE_ALTERNATE(I2C1_SCL_PAL_MODE) | PAL_STM32_OTYPE_OPENDRAIN);
         palSetPadMode(I2C1_SDA_BANK, I2C1_SDA, PAL_MODE_ALTERNATE(I2C1_SDA_PAL_MODE) | PAL_STM32_OTYPE_OPENDRAIN);

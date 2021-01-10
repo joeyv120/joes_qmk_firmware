@@ -4,7 +4,10 @@
 #include "debug.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 // Maximum duty cycle limit
 #ifndef BACKLIGHT_LIMIT_VAL
 #    define BACKLIGHT_LIMIT_VAL 255
@@ -71,17 +74,23 @@ static uint16_t cie_lightness(uint16_t v) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 static uint32_t rescale_limit_val(uint32_t val) {
     // rescale the supplied backlight value to be in terms of the value limit
     return (val * (BACKLIGHT_LIMIT_VAL + 1)) / 256;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 void backlight_init_ports(void) {
 #ifdef USE_GPIOV1
     palSetPadMode(PAL_PORT(BACKLIGHT_PIN), PAL_PAD(BACKLIGHT_PIN), PAL_MODE_STM32_ALTERNATE_PUSHPULL);
@@ -110,6 +119,7 @@ void backlight_set(uint8_t level) {
     } else {
         // Turn backlight on
 <<<<<<< HEAD
+<<<<<<< HEAD
         uint32_t duty = (uint32_t)(cie_lightness(0xFFFF * (uint32_t)level / BACKLIGHT_LEVELS));
 =======
         uint32_t duty = (uint32_t)(cie_lightness(rescale_limit_val(0xFFFF * (uint32_t)level / BACKLIGHT_LEVELS)));
@@ -118,6 +128,9 @@ void backlight_set(uint8_t level) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        uint32_t duty = (uint32_t)(cie_lightness(rescale_limit_val(0xFFFF * (uint32_t)level / BACKLIGHT_LEVELS)));
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         pwmEnableChannel(&BACKLIGHT_PWM_DRIVER, BACKLIGHT_PWM_CHANNEL - 1, PWM_FRACTION_TO_WIDTH(&BACKLIGHT_PWM_DRIVER, 0xFFFF, duty));
     }
 }
@@ -162,6 +175,7 @@ void breathing_callback(PWMDriver *pwmp) {
     breathing_counter                 = (breathing_counter + 1) % (breathing_period * 256);
     uint8_t  index                    = breathing_counter / interval % BREATHING_STEPS;
 <<<<<<< HEAD
+<<<<<<< HEAD
     uint32_t duty                     = cie_lightness(scale_backlight(breathing_table[index] * 256));
 =======
     uint32_t duty                     = cie_lightness(rescale_limit_val(scale_backlight(breathing_table[index] * 256)));
@@ -170,6 +184,9 @@ void breathing_callback(PWMDriver *pwmp) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    uint32_t duty                     = cie_lightness(rescale_limit_val(scale_backlight(breathing_table[index] * 256)));
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     chSysLockFromISR();
     pwmEnableChannelI(pwmp, BACKLIGHT_PWM_CHANNEL - 1, PWM_FRACTION_TO_WIDTH(&BACKLIGHT_PWM_DRIVER, 0xFFFF, duty));

@@ -5,6 +5,7 @@ QMK_FIRMWARE_UTIL_DIR=$QMK_FIRMWARE_DIR/util
 
 case $(uname -a) in
 <<<<<<< HEAD
+<<<<<<< HEAD
 	*Darwin*)
 		exec "${util_dir}/macos_install.sh"
 	;;
@@ -26,6 +27,8 @@ case $(uname -a) in
 		exit 1
 	;;
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     *Darwin*)
         . "$QMK_FIRMWARE_UTIL_DIR/install/macos.sh";;
     *FreeBSD*)
@@ -84,10 +87,13 @@ case $(uname -a) in
         echo "https://docs.qmk.fm/#/contributing"
         exit 1;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 esac
 
 if type _qmk_install_prepare &>/dev/null; then

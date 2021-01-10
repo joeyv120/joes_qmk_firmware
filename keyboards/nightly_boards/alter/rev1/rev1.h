@@ -27,6 +27,7 @@
  * represents the switch matrix.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define LAYOUT( \
 =======
 #define LAYOUT_alice_split_bs( \
@@ -35,6 +36,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define LAYOUT_alice_split_bs( \
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
        K00,   K10, K01, K11, K02, K12, K03, K13,         K04, K14, K05, K15, K06, K16, K17, K07,     \
       K20,  K30,    K21,  K31, K22, K32, K23,          K24, K34, K25, K35,  K26, K36, K27, K37,      \
      K40,  K50,     K51,   K42, K52, K43, K53,          K44, K54, K45, K55,    K46, K56, K47,        \
@@ -53,6 +57,7 @@
     { K90,   KC_NO, K92,   KC_NO, KC_NO, K95,   KC_NO, KC_NO }, \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 #define LAYOUT LAYOUT_alice_split_bs
@@ -61,3 +66,7 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+
+#define LAYOUT LAYOUT_alice_split_bs
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

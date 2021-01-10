@@ -145,7 +145,10 @@ static void dance_oled_finished(qk_tap_dance_state_t *state, void *user_data) {
             }
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         case 4:
             if (!state->pressed) {
                 // quadruple tap - step through brightness levels
@@ -153,10 +156,13 @@ static void dance_oled_finished(qk_tap_dance_state_t *state, void *user_data) {
             }
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         default:
             break;
     }

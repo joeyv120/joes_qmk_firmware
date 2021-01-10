@@ -83,7 +83,10 @@
     { ___, R33, R32, R31, R30 }, \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 #define LAYOUT_thumbrow(\
   L00, L01, L02, L03, L04,                     R00, R01, R02, R03, R04, \
@@ -102,7 +105,10 @@
     { ___, R33, R32, R31, R30 }, \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

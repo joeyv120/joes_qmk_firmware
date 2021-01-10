@@ -40,6 +40,7 @@ def show_keymap(kb_info_json, title_caps=True):
                 cli.echo('{fg_cyan}layer_%s{fg_reset}:', layer_num)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             print(render_layout(kb_info_json['layouts'][layout_name]['layout'], layer))
 =======
             print(render_layout(kb_info_json['layouts'][layout_name]['layout'], cli.config.info.ascii, layer))
@@ -48,6 +49,9 @@ def show_keymap(kb_info_json, title_caps=True):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+            print(render_layout(kb_info_json['layouts'][layout_name]['layout'], cli.config.info.ascii, layer))
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 
 def show_layouts(kb_info_json, title_caps=True):
@@ -81,6 +85,7 @@ def show_matrix(kb_info_json, title_caps=True):
             cli.echo('{fg_blue}matrix_%s{fg_reset}:', layout_name)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         print(render_layout(kb_info_json['layouts'][layout_name]['layout'], labels))
 =======
         print(render_layout(kb_info_json['layouts'][layout_name]['layout'], cli.config.info.ascii, labels))
@@ -89,6 +94,9 @@ def show_matrix(kb_info_json, title_caps=True):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        print(render_layout(kb_info_json['layouts'][layout_name]['layout'], cli.config.info.ascii, labels))
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 
 def print_friendly_output(kb_info_json):

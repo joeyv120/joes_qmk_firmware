@@ -51,24 +51,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     k00,  k10,  k20,  k30, \
     k01,  k11,  k21,  k31, \
 <<<<<<< HEAD
+<<<<<<< HEAD
     k02,  k12,  k22,\
     k03,  k13,  k23,  k33, \
     k04,  k14,  k24, \
     k05,        k25,  k35 \
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     k02,  k12,  k22, \
     k03,  k13,  k23,  k32, \
     k04,  k14,  k24, \
     k05,        k25,  k34 \
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 ) { \
     { k00, k01, k02, k03, k04, k05 }, \
     { k10, k11, k12, k13, k14, XXX }, \
     { k20, k21, k22, k23, k24, k25 }, \
+<<<<<<< HEAD
 <<<<<<< HEAD
     { k30, k31, XXX, k33, XXX, k35 } \
 =======
@@ -78,6 +85,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    { k30, k31, k32, XXX, k34, XXX } \
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 }
 
 #define LAYOUT LAYOUT_ortho_4x6

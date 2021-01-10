@@ -28,6 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         YMD75 / MT84
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define BACKLIGHT_PIN D4
 =======
 <<<<<<< HEAD
@@ -35,6 +36,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define BACKLIGHT_LEVELS 12
 
 #define RGB_DI_PIN E2

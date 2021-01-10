@@ -20,6 +20,7 @@ AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 LAYOUTS = alice alice_split_bs
 
@@ -28,4 +29,8 @@ LAYOUTS = alice alice_split_bs
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+LAYOUTS = alice alice_split_bs
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 DEFAULT_FOLDER = mechlovin/adelais/standard_led/rev2

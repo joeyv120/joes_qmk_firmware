@@ -27,6 +27,7 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 RGB_MATRIX_ENABLE = no
 RGB_MATRIX_DRIVER = IS31FL3733
@@ -35,6 +36,10 @@ RGB_MATRIX_DRIVER = IS31FL3733
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+RGB_MATRIX_ENABLE = no
+RGB_MATRIX_DRIVER = IS31FL3733
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 LAYOUTS = tkl_ansi
 

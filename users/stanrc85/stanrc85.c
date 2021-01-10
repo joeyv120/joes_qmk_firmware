@@ -45,7 +45,10 @@ void ctl_copy_reset (qk_tap_dance_state_t *state, void *user_data) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #if defined(HAS_ROTARY)
   void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) { /* First encoder */
@@ -59,10 +62,13 @@ void ctl_copy_reset (qk_tap_dance_state_t *state, void *user_data) {
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #if defined(HAS_INDICATORS)
   static uint8_t led_user = 0;
 #endif
@@ -75,6 +81,7 @@ void lock_unlock (qk_tap_dance_state_t *state, void *user_data) {
     #if defined(HAS_INDICATORS)
       led_user = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       #if defined(KEYBOARD_sneakbox_aliceclone)
         led_user = 1;
@@ -84,6 +91,11 @@ void lock_unlock (qk_tap_dance_state_t *state, void *user_data) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+      #if defined(KEYBOARD_sneakbox_aliceclone)
+        led_user = 1;
+      #endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
       writePin(INDICATOR_PIN_0, !led_user);
       wait_ms(200);
       writePin(INDICATOR_PIN_1, !led_user);
@@ -98,6 +110,7 @@ void lock_unlock (qk_tap_dance_state_t *state, void *user_data) {
     #if defined(HAS_INDICATORS)
       led_user = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       #if defined(KEYBOARD_sneakbox_aliceclone)
         led_user = 0;
@@ -107,6 +120,11 @@ void lock_unlock (qk_tap_dance_state_t *state, void *user_data) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+      #if defined(KEYBOARD_sneakbox_aliceclone)
+        led_user = 0;
+      #endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
       writePin(INDICATOR_PIN_2, !led_user);
       wait_ms(200);
       writePin(INDICATOR_PIN_1, !led_user);

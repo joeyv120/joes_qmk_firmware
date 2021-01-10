@@ -32,6 +32,7 @@ layer-switch keys to correct mistakes.
 (almost all of which use HHKB-style split backspace).
 
 * The Esc key is next to the home row for convenience in Vim.
+<<<<<<< HEAD:layouts/community/split_3x6_3/bcat/readme.md
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:keyboards/crkbd/keymaps/bcat/readme.md
@@ -41,6 +42,8 @@ layer-switch keys to correct mistakes.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:layouts/community/split_3x6_3/bcat/readme.md
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/crkbd/keymaps/bcat/readme.md
 
 * There are two Shift keys, although I generally use Left Shift. (I've
 considered replacing Right Shift with another key, but haven't chosen one.)
@@ -52,6 +55,7 @@ right thumbs, respectively.
 
 * Ctrl is on the left for ease of chording, especially one-handed use of common
 shortcuts like Ctrl+T and Ctrl+W. This puts Alt on the right by the process of
+<<<<<<< HEAD:layouts/community/split_3x6_3/bcat/readme.md
 <<<<<<< HEAD
 elimination. (I would really like one more 1U thumb key on each half to allow
 for a redundant Alt key on the left and a dedicated Super key on the right.)
@@ -63,6 +67,10 @@ elimination. (I would really like one more 1U thumb key on each half to allow
 for a redundant Alt key on the left and a dedicated Super key on the right.)
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:layouts/community/split_3x6_3/bcat/readme.md
 >>>>>>> UpdateQMK
+=======
+elimination. (I would really like one more 1U thumb key on each half to allow
+for a redundant Alt key on the left and a dedicated Super key on the right.)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/crkbd/keymaps/bcat/readme.md
 
 ## Lower layer
 
@@ -89,6 +97,7 @@ And yup, the shifted versions are above the unshifted versions.
 
 * Remaining keys from a TKL are placed out of the way on the bottom row of the
 left half.
+<<<<<<< HEAD:layouts/community/split_3x6_3/bcat/readme.md
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:keyboards/crkbd/keymaps/bcat/readme.md
@@ -114,6 +123,16 @@ autocomplete) is hard to press in its natural location.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:layouts/community/split_3x6_3/bcat/readme.md
 >>>>>>> UpdateQMK
+=======
+
+* The home row on the left half contains handy shortcuts for zooming and browser
+navigation.
+
+* Lower+Esc is bound to Ctrl+Space because the Ctrl and Space keys are both on
+the left thumb, so this key combination (which I use for tmux prefix and editor
+autocomplete) is hard to press in its natural location.
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/crkbd/keymaps/bcat/readme.md
 * Lower+Tab is bound to a custom Alt+Tab macro that keeps the Alt modifier held
 as long as the Lower key is held down. This means that window switching is on
 Lower+Tab immediately next to browser tab switching (Ctrl+Tab).

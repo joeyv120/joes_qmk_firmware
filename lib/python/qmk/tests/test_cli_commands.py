@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import platform
 
@@ -7,6 +8,10 @@ import platform
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+import platform
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 from subprocess import STDOUT, PIPE
 
 from qmk.commands import run
@@ -16,9 +21,12 @@ is_windows = 'windows' in platform.platform().lower()
 
 def check_subcommand(command, *args):
 <<<<<<< HEAD
+<<<<<<< HEAD
     cmd = ['bin/qmk', command] + list(args)
     result = run(cmd, stdout=PIPE, stderr=STDOUT, universal_newlines=True)
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     cmd = ['bin/qmk', command, *args]
     result = run(cmd, stdout=PIPE, stderr=STDOUT, universal_newlines=True)
     return result
@@ -31,10 +39,13 @@ def check_subcommand_stdin(file_to_read, command, *args):
         cmd = ['bin/qmk', command, *args]
         result = run(cmd, stdin=my_file, stdout=PIPE, stderr=STDOUT, universal_newlines=True)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     return result
 
 
@@ -60,11 +71,14 @@ def test_compile():
 
 def test_compile_json():
     result = check_subcommand('compile', '-kb', 'handwired/pytest/basic', '-km', 'default_json', '-n')
+<<<<<<< HEAD
     check_returncode(result)
 
 
 def test_compile_json():
     result = check_subcommand('compile', '-kb', 'handwired/onekey/pytest', '-km', 'default_json')
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     check_returncode(result)
 
 
@@ -218,6 +232,7 @@ def test_info_matrix_render():
 
 def test_c2json():
 <<<<<<< HEAD
+<<<<<<< HEAD
     result = check_subcommand("c2json", "-kb", "handwired/onekey/pytest", "-km", "default", "keyboards/handwired/onekey/keymaps/default/keymap.c")
     check_returncode(result)
     assert result.stdout.strip() == '{"keyboard": "handwired/onekey/pytest", "documentation": "This file is a keymap.json file for handwired/onekey/pytest", "keymap": "default", "layout": "LAYOUT_ortho_1x1", "layers": [["KC_A"]]}'
@@ -228,6 +243,8 @@ def test_c2json_nocpp():
     check_returncode(result)
     assert result.stdout.strip() == '{"keyboard": "handwired/onekey/pytest", "documentation": "This file is a keymap.json file for handwired/onekey/pytest", "keymap": "default", "layout": "LAYOUT", "layers": [["KC_ENTER"]]}'
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     result = check_subcommand("c2json", "-kb", "handwired/pytest/has_template", "-km", "default", "keyboards/handwired/pytest/has_template/keymaps/default/keymap.c")
     check_returncode(result)
     assert result.stdout.strip() == '{"keyboard": "handwired/pytest/has_template", "documentation": "This file is a keymap.json file for handwired/pytest/has_template", "keymap": "default", "layout": "LAYOUT_ortho_1x1", "layers": [["KC_A"]]}'
@@ -263,7 +280,10 @@ def test_generate_rgb_breathe_table():
     assert 'Breathing center: 1.2' in result.stdout
     assert 'Breathing max:    127' in result.stdout
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

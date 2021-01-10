@@ -22,7 +22,11 @@
 #define VENDOR_ID       0x4705
 #define PRODUCT_ID      0x7BFF
 #define DEVICE_VER      0x0001
+<<<<<<< HEAD
 #define MANUFACTURER    Maartenwut
+=======
+#define MANUFACTURER    Evyd13
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define PRODUCT         Solheim68
 
 /* key matrix size */

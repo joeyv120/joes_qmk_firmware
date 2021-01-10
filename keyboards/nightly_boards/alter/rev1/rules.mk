@@ -29,6 +29,7 @@ MIDI_ENABLE = no            # MIDI support
 BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
 <<<<<<< HEAD
+<<<<<<< HEAD
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 =======
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
@@ -39,3 +40,8 @@ LAYOUTS = alice_split_bs
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
+
+LAYOUTS = alice_split_bs
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

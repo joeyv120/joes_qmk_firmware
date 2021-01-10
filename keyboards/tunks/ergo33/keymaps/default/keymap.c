@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Copyright 2020 Mika Kuitunen 
   * 
   * This program is free software: you can redistribute it and/or modify 
@@ -14,6 +15,8 @@
   * You should have received a copy of the GNU General Public License 
   * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* Copyright 2020 Mika Kuitunen
   *
   * This program is free software: you can redistribute it and/or modify
@@ -29,10 +32,13 @@
   * You should have received a copy of the GNU General Public License
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   */
 
 #include QMK_KEYBOARD_H
@@ -82,6 +88,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 #ifdef RGBLIGHT_LAYERS
 #define HUE_PRIMARY 10
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define HSV_OFF 0, 0, 0
 =======
 <<<<<<< HEAD
@@ -89,6 +96,8 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define HSV_CAPS HUE_PRIMARY, 255, 64
 #define HSV_LAYER_BASE HUE_PRIMARY, 255, 64
 #define HSV_LAYER_RGB 213, 255, 64

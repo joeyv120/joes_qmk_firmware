@@ -25,6 +25,7 @@ The time it takes for the switch to settle might vary with switch type, age, and
 If the device chooses not to mitigate contact bounce, then often actions that happen when the switch is pressed are repeated
 multiple times.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 There are many ways to handle contact bounce ("Debouncing"). Some include employing additional hardware, for example an RC filter,
 while there are various ways to do debouncing in software too, often called debounce algorithms. This page discusses software
@@ -46,6 +47,9 @@ susceptible to noise, you must choose a debounce method that will also mitigate 
 
 =======
 
+=======
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 There are many ways to handle contact bounce ("Debouncing"). Some include employing additional hardware, for example an RC filter,
 while there are various ways to do debouncing in software too, often called debounce algorithms. This page discusses software
 debouncing methods available in QMK.
@@ -65,10 +69,13 @@ susceptible to noise, you must choose a debounce method that will also mitigate 
 ## Types of debounce algorithms
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 1) Unit of time: Timestamp (milliseconds) vs Cycles (scans)
    * Debounce algorithms often have a 'debounce time' parameter, that specifies the maximum settling time of the switch contacts.
      This time might be measured in various units:
@@ -170,6 +177,7 @@ You have the option to implement you own debouncing algorithm. To do this:
 ### Old names
 The following old names for existing algorithms will continue to be supported, however it is recommended to use the new names instead.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 * sym_g - old name for sym_defer_g
 * eager_pk - old name for sym_eager_pk
@@ -181,6 +189,8 @@ The following old names for existing algorithms will continue to be supported, h
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 * sym_g - old name for sym_defer_g
 * eager_pk - old name for sym_eager_pk

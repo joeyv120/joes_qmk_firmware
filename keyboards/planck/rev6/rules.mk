@@ -24,6 +24,7 @@ API_SYSEX_ENABLE = no
 SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # RGB_MATRIX_ENABLE = WS2812
 =======
 RGB_MATRIX_ENABLE = no
@@ -33,6 +34,10 @@ RGB_MATRIX_DRIVER = WS2812
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+RGB_MATRIX_ENABLE = no
+RGB_MATRIX_DRIVER = WS2812
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 # SERIAL_LINK_ENABLE = yes
 ENCODER_ENABLE = yes
 DIP_SWITCH_ENABLE = yes

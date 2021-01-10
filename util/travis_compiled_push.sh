@@ -12,6 +12,7 @@ if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]] ; the
 
 git checkout master
 <<<<<<< HEAD
+<<<<<<< HEAD
 git diff --diff-filter=AM --name-only -n 1 -z ${TRAVIS_COMMIT_RANGE} | xargs -0 dos2unix
 git diff --diff-filter=AM --name-only -n 1 -z ${TRAVIS_COMMIT_RANGE} '*.c' '*.h' '*.cpp' | grep -z -e '^drivers' -e '^quantum' -e '^tests' -e '^tmk_core' | grep -zv -e 'quantum/template' -e 'tmk_core/protocol/usb_hid' -e 'platforms/chibios' | xargs -0 clang-format-7 -i
 git diff --diff-filter=AM --name-only -n 1 -z ${TRAVIS_COMMIT_RANGE} | xargs -0 git add
@@ -30,6 +31,8 @@ increment_version ()
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 git diff --name-only -n 1 ${TRAVIS_COMMIT_RANGE}
 

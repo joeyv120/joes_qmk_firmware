@@ -29,6 +29,7 @@
 
 #define MATRIX_ROW_PINS { A6, A5, A4, A3, A2 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MATRIX_COL_PINS { B10, B1, B0, B15, A8, B3, B4, B5, B6, B7, B8, B9 }
 =======
 #define MATRIX_COL_PINS { B10, B1, B0, B15, A8, B3, B4, B5, B14, A0, B8, B9 }
@@ -37,6 +38,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define MATRIX_COL_PINS { B10, B1, B0, B15, A8, B3, B4, B5, B14, A0, B8, B9 }
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define UNUSED_PINS
 
 #define DIODE_DIRECTION COL2ROW
@@ -46,6 +50,7 @@
 
 #define MOUSEKEY_INTERVAL 32
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #define TAPPING_TERM 175
 =======
@@ -57,3 +62,8 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define TAPPING_TERM 175
+
+#define OLED_DISPLAY_128X64
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

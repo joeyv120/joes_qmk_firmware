@@ -26,6 +26,7 @@ SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 # SERIAL_LINK_ENABLE = yes
 ENCODER_ENABLE = yes
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 RGB_MATRIX_DRIVER = IS31FL3737
 <<<<<<< HEAD
@@ -33,6 +34,9 @@ RGB_MATRIX_DRIVER = IS31FL3737
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+RGB_MATRIX_DRIVER = IS31FL3737
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 LAYOUTS = ortho_4x12 planck_mit
 LAYOUTS_HAS_RGB = no

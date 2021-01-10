@@ -2,6 +2,7 @@
     "keyboard_name": "Plume65", 
     "url": "", 
 <<<<<<< HEAD
+<<<<<<< HEAD
     "maintainer": "maartenwut", 
 =======
     "maintainer": "evyd13", 
@@ -10,6 +11,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    "maintainer": "evyd13", 
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     "width": 16, 
     "height": 5, 
     "layouts": {

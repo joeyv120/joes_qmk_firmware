@@ -68,6 +68,7 @@ extern host_driver_t lufa_driver;
 #    define MIDI_SYSEX_BUFFER (API_SYSEX_MAX_SIZE + API_SYSEX_MAX_SIZE / 7 + (API_SYSEX_MAX_SIZE % 7 ? 1 : 0))
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #endif
 =======
@@ -76,3 +77,5 @@ extern host_driver_t lufa_driver;
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -16,6 +16,7 @@
 
 #include "riblee.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #include "raw_hid.h"
 #include <string.h>
@@ -24,6 +25,10 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#include "raw_hid.h"
+#include <string.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 const uint8_t shift = MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT);
 
@@ -160,7 +165,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         case HUNGARIAN:
             if (record->event.pressed) {
                 set_single_persistent_default_layer(_HUNGARIAN);
@@ -168,10 +176,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
             break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         case BACKLIT:
             if (record->event.pressed) {
                 register_code(keycode_config(KC_LGUI));
@@ -187,7 +198,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 #ifdef OLED_DRIVER_ENABLE
 
@@ -243,9 +257,13 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
 
 #endif
 
+<<<<<<< HEAD
 #endif
 <<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

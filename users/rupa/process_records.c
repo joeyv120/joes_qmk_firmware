@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "rupa.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 font_t *translator = NULL;
 =======
 uint16_t processed_keycode;
@@ -26,6 +27,9 @@ uint16_t processed_keycode;
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+uint16_t processed_keycode;
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 __attribute__((weak))
 bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
@@ -33,6 +37,7 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     bool is_shifted = get_mods()&MOD_MASK_SHIFT;
     bool is_pressed = record->event.pressed;
@@ -76,6 +81,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (is_pressed && translator != NULL) {
                 return script_mode_translate(translator, is_shifted, keycode);
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     if (record->event.pressed) {
 
         processed_keycode = keycode;
@@ -164,10 +171,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
             }
     }
     return process_record_keymap(keycode, record);

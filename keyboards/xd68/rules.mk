@@ -32,6 +32,7 @@ FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 UNICODE_ENABLE = no         # Unicode
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 LAYOUTS = 65_ansi 65_iso
 =======
 LAYOUTS = 65_ansi 65_ansi_split_bs 65_iso
@@ -40,3 +41,6 @@ LAYOUTS = 65_ansi 65_ansi_split_bs 65_iso
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+LAYOUTS = 65_ansi 65_ansi_split_bs 65_iso
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

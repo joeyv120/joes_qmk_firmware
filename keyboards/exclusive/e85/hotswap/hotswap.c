@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Copyright 2019
+=======
+/* Copyright 2020 MechMerlin
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 =======
 /* Copyright 2020 MechMerlin
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
@@ -19,6 +23,7 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:keyboards/exclusive/e85/hotswap/hotswap.c
 #include "hotswap.h"
 <<<<<<< HEAD
@@ -31,6 +36,9 @@
 =======
 #include "hotswap.h"
 >>>>>>> UpdateQMK
+=======
+#include "hotswap.h"
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 void keyboard_pre_init_kb(void) {
     setPinOutput(C7);
@@ -47,7 +55,10 @@ bool led_update_kb(led_t led_state) {
     return true;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

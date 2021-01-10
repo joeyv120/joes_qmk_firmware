@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2017 Mathias Andersson <wraul@dbox.se>
+=======
+/* Copyright 2020 Matthew Tso (zoo)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "m0lly.h"
+<<<<<<< HEAD
 <<<<<<< HEAD
 #include "led.h"
 
@@ -77,6 +82,24 @@ void led_set_kb(uint8_t usb_led) {
 }
 =======
 
+=======
+
+<<<<<<< HEAD:keyboards/zoo/wampus/wampus.c
+#include "wampus.h"
+#ifdef OLED_DRIVER_ENABLE
+
+void board_init(void) {
+    SYSCFG->CFGR1 |= SYSCFG_CFGR1_I2C1_DMA_RMP;
+    SYSCFG->CFGR1 &= ~(SYSCFG_CFGR1_SPI2_DMA_RMP);
+}
+
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    return OLED_ROTATION_180;
+}
+
+#endif
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 void keyboard_pre_init_kb(void) {
     setPinInputHigh(D0);
     setPinInputHigh(D1);
@@ -87,7 +110,11 @@ void keyboard_pre_init_kb(void) {
     keyboard_pre_init_user();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/tkc/m0lly/m0lly.c
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

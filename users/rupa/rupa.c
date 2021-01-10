@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "rupa.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols
 font_t script_bold = {0x1D4D0, 0x1D4EA, 0x1D7CE}; // with bold numbers
 font_t fraktu_bold = {0x1D56C, 0x1D586, 0x1D7D8}; // with doublestruck numbers
@@ -28,6 +29,8 @@ font_t monosp_bold = {0x1D670, 0x1D68A, 0x1D7F6};
 // SPACE for some reason :)
 uint32_t map_alnum(font_t *f, bool is_shifted, uint32_t keycode) {
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #if defined(UNICODE_SCRIPT_MODE_ENABLE)
 const font_t * translator = NULL;
 
@@ -69,10 +72,13 @@ bool set_script_mode(int fc) {
 // SPACE for some reason :)
 uint32_t map_alnum(const font_t *f, bool is_shifted, uint32_t keycode) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     switch (keycode) {
         case KC_SPACE:
             return (is_shifted ? 0 : 0x2002); // EN SPACE
@@ -88,6 +94,7 @@ uint32_t map_alnum(const font_t *f, bool is_shifted, uint32_t keycode) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 bool script_mode_translate(font_t *translator, bool is_shifted, uint32_t keycode) {
 =======
 bool script_mode_translate(bool is_shifted, uint32_t keycode) {
@@ -96,12 +103,16 @@ bool script_mode_translate(bool is_shifted, uint32_t keycode) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+bool script_mode_translate(bool is_shifted, uint32_t keycode) {
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     uint32_t translated = map_alnum(translator, is_shifted, keycode);
     if (translated == 0) return true;
     dprintf("script_mode_translate: %u => %d\n", keycode, translated);
     register_unicode(translated);
     return false;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #endif
@@ -110,3 +121,6 @@ bool script_mode_translate(bool is_shifted, uint32_t keycode) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

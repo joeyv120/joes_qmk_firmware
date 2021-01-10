@@ -176,10 +176,13 @@ Creates a keymap.json from a keymap.c.
 
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 qmk c2json [--no-cpp] [-o OUTPUT] filename
 ```
 
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 qmk c2json -km KEYMAP -kb KEYBOARD [-q] [--no-cpp] [-o OUTPUT] filename
 ```
 
@@ -202,10 +205,13 @@ Do a basic lint check:
     qmk lint -kb rominronin/katana60/rev2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 ## `qmk list-keyboards`
 
 This command lists all the keyboards currently defined in `qmk_firmware`

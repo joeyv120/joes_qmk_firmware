@@ -16,7 +16,10 @@
 #include "big_led.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 void set_big_LED_rgb(uint8_t r_mode, uint8_t g_mode, uint8_t b_mode) {
     set_big_LED_r(r_mode);
     set_big_LED_g(g_mode);
@@ -24,10 +27,13 @@ void set_big_LED_rgb(uint8_t r_mode, uint8_t g_mode, uint8_t b_mode) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 void set_big_LED_r(uint8_t mode) {
     switch(mode) {
         case LED_ON:
@@ -78,6 +84,7 @@ void set_big_LED_b(uint8_t mode) {
         break;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
@@ -86,3 +93,6 @@ void set_big_LED_b(uint8_t mode) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+}
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -1,6 +1,7 @@
 #include "bootloader.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "ch.h"
 #include "hal.h"
 =======
@@ -11,6 +12,10 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#include <ch.h>
+#include <hal.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #include "wait.h"
 
 /* This code should be checked whether it runs correctly on platforms */
@@ -39,6 +44,7 @@
 #        define STM32_BOOTLOADER_DUAL_BANK_DELAY 100000
 #    endif
 
+<<<<<<< HEAD
 extern uint32_t __ram0_end__;
 
 <<<<<<< HEAD
@@ -84,6 +90,37 @@ __attribute__((weak)) void bootloader_jump(void) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+extern uint32_t __ram0_end__;
+
+__attribute__((weak)) void bootloader_jump(void) {
+    // For STM32 MCUs with dual-bank flash, and we're incapable of jumping to the bootloader. The first valid flash
+    // bank is executed unconditionally after a reset, so it doesn't enter DFU unless BOOT0 is high. Instead, we do
+    // it with hardware...in this case, we pull a GPIO high/low depending on the configuration, connects 3.3V to
+    // BOOT0's RC charging circuit, lets it charge the capacitor, and issue a system reset. See the QMK discord
+    // #hardware channel pins for an example circuit.
+    palSetPadMode(PAL_PORT(STM32_BOOTLOADER_DUAL_BANK_GPIO), PAL_PAD(STM32_BOOTLOADER_DUAL_BANK_GPIO), PAL_MODE_OUTPUT_PUSHPULL);
+#    if STM32_BOOTLOADER_DUAL_BANK_POLARITY
+    palSetPad(PAL_PORT(STM32_BOOTLOADER_DUAL_BANK_GPIO), PAL_PAD(STM32_BOOTLOADER_DUAL_BANK_GPIO));
+#    else
+    palClearPad(PAL_PORT(STM32_BOOTLOADER_DUAL_BANK_GPIO), PAL_PAD(STM32_BOOTLOADER_DUAL_BANK_GPIO));
+#    endif
+
+    // Wait for a while for the capacitor to charge
+    wait_ms(100);
+
+    // Issue a system reset to get the ROM bootloader to execute, with BOOT0 high
+    NVIC_SystemReset();
+}
+
+void enter_bootloader_mode_if_requested(void) {}  // not needed at all, but if anybody attempts to invoke it....
+
+#elif defined(STM32_BOOTLOADER_ADDRESS)  // STM32_BOOTLOADER_DUAL_BANK
+
+extern uint32_t __ram0_end__;
+
+__attribute__((weak)) void bootloader_jump(void) {
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     *MAGIC_ADDR = BOOTLOADER_MAGIC;  // set magic flag => reset handler will jump into boot loader
     NVIC_SystemReset();
 }

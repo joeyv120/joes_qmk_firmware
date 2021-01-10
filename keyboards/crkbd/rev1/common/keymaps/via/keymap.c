@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   [0] = LAYOUT_split_3x6_3( \
 =======
   [0] = LAYOUT_split_3x6_3(
@@ -28,6 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+  [0] = LAYOUT_split_3x6_3(
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -41,6 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   [1] = LAYOUT_split_3x6_3( \
 =======
   [1] = LAYOUT_split_3x6_3(
@@ -49,6 +54,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+  [1] = LAYOUT_split_3x6_3(
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -57,22 +65,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
 <<<<<<< HEAD
+<<<<<<< HEAD
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT\
                                       //`--------------------------'  `--------------------------'
   ),
 
   [2] = LAYOUT_split_3x6_3( \
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
 
   [2] = LAYOUT_split_3x6_3(
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -85,6 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   [3] = LAYOUT_split_3x6_3( \
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
@@ -95,6 +110,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT\
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         RESET, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -105,10 +122,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
                                       //`--------------------------'  `--------------------------'
   )
 };
@@ -128,6 +148,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 
 void oled_render_layer_state(void) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     oled_write_P("Layer: ", false);
     switch (layer_state) {
         case L_BASE:
@@ -139,6 +160,8 @@ void oled_render_layer_state(void) {
         case L_RAISE:
             oled_write_ln_P("Raise", false);
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     oled_write_P(PSTR("Layer: "), false);
     switch (layer_state) {
         case L_BASE:
@@ -150,15 +173,19 @@ void oled_render_layer_state(void) {
         case L_RAISE:
             oled_write_ln_P(PSTR("Raise"), false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
             break;
         case L_ADJUST:
         case L_ADJUST|L_LOWER:
         case L_ADJUST|L_RAISE:
         case L_ADJUST|L_LOWER|L_RAISE:
+<<<<<<< HEAD
 <<<<<<< HEAD
             oled_write_ln_P("Adjust", false);
 =======
@@ -168,12 +195,16 @@ void oled_render_layer_state(void) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+            oled_write_ln_P(PSTR("Adjust"), false);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
             break;
     }
 }
 
 
 char keylog_str[24] = {};
+<<<<<<< HEAD
 <<<<<<< HEAD
 char keylogs_str[21] = {};
 int keylogs_str_idx = 0;
@@ -183,6 +214,8 @@ int keylogs_str_idx = 0;
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 const char code_to_name[60] = {
     ' ', ' ', ' ', ' ', 'a', 'b', 'c', 'd', 'e', 'f',
@@ -205,6 +238,7 @@ void set_keylog(uint16_t keycode, keyrecord_t *record) {
            record->event.key.row, record->event.key.col,
            keycode, name);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // update keylogs
   if (keylogs_str_idx == sizeof(keylogs_str) - 1) {
@@ -222,11 +256,14 @@ void set_keylog(uint16_t keycode, keyrecord_t *record) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 }
 
 void oled_render_keylog(void) {
     oled_write(keylog_str, false);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 void oled_render_keylogs(void) {
     oled_write(keylogs_str, false);
@@ -237,6 +274,8 @@ void oled_render_keylogs(void) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 void render_bootmagic_status(bool status) {
     /* Show Ctrl-Gui Swap options */
@@ -267,6 +306,7 @@ void oled_task_user(void) {
         oled_render_layer_state();
         oled_render_keylog();
 <<<<<<< HEAD
+<<<<<<< HEAD
         // oled_render_keylogs();
         // oled_renger_bootmagic_icon(keymap_config.swap_lalt_lgui);
 =======
@@ -275,6 +315,8 @@ void oled_task_user(void) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     } else {
         oled_render_logo();
     }
@@ -284,6 +326,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
     set_keylog(keycode, record);
 <<<<<<< HEAD
+<<<<<<< HEAD
     // set_timelog();
 =======
 <<<<<<< HEAD
@@ -291,6 +334,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   }
   return true;
 }

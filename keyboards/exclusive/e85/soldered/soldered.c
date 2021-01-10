@@ -18,24 +18,31 @@
 
 void keyboard_pre_init_kb(void) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   setPinOutput(C7);
   
   keyboard_pre_init_user();
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     setPinOutput(C7);
     setPinOutput(B5);
 
     keyboard_pre_init_user();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 }
 
 bool led_update_kb(led_t led_state) {
     if (led_update_user(led_state)) {
         writePin(C7, led_state.caps_lock);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         writePin(B5, led_state.scroll_lock);
@@ -44,6 +51,9 @@ bool led_update_kb(led_t led_state) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        writePin(B5, led_state.scroll_lock);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     }
     return true;
 }

@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define VENDOR_ID       0x7844   // "XD"
 #define PRODUCT_ID      0x7575
 #define DEVICE_VER      0x0001
@@ -28,16 +29,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT         XD75
 #define DESCRIPTION     XD75Re 15x5 ortholinear keyboard
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define VENDOR_ID    0x7844  // "XD"
 #define PRODUCT_ID   0x7575
 #define DEVICE_VER   0x0001
 #define MANUFACTURER xiudi
 #define PRODUCT      XD75
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -151,6 +157,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_FUNCTION
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // ws2812 options
 #define RGB_DI_PIN F6 // pin the DI on the ws2812 is hooked-up to
 #define RGBLIGHT_ANIMATIONS // run RGB animations
@@ -190,3 +197,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+/* Bootmagic Lite key configuration */
+//#define BOOTMAGIC_LITE_ROW 0
+//#define BOOTMAGIC_LITE_COLUMN 0
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

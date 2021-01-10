@@ -1,7 +1,12 @@
 {
     "keyboard_name": "GH80-1800", 
+<<<<<<< HEAD
     "url": "https://github.com/Maartenwut/gh80-series/tree/master/GH80-1800", 
     "maintainer": "Maartenwut", 
+=======
+    "url": "https://github.com/evyd13/gh80-series/tree/master/GH80-1800", 
+    "maintainer": "evyd13", 
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     "width": 19.5, 
     "height": 7.25, 
     "layouts": {

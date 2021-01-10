@@ -25,6 +25,7 @@ AUDIO_ENABLE = no           # Audio output
 
 LAYOUTS = ortho_5x12
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 OLED_DRIVER_ENABLE = yes
@@ -34,3 +35,8 @@ RAW_ENABLE = yes
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+
+OLED_DRIVER_ENABLE = yes
+RAW_ENABLE = yes
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -15,10 +15,13 @@ ifeq ($(strip $(KEYBOARD)), projectkb/alice/rev2)
   SRC += startup_fanfare.c
   OPT_DEFS += -DHAS_INDICATORS
 <<<<<<< HEAD
+<<<<<<< HEAD
   VIA_ENABLE = yes
   LTO_ENABLE = no
   VELOCIKEY_ENABLE=yes
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   VIA_ENABLE = yes
   LTO_ENABLE = no
   VELOCIKEY_ENABLE=yes
@@ -31,10 +34,13 @@ ifeq ($(strip $(KEYBOARD)), sneakbox/aliceclone)
   VIA_ENABLE = yes
   LTO_ENABLE = no
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 endif
 ifeq ($(strip $(KEYBOARD)), tkc/osav2)
   SRC += rgblight_layers_osa.c

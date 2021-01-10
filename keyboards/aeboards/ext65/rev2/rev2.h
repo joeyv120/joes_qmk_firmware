@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<<< HEAD:keyboards/aeboards/ext65/rev2/rev2.h
+<<<<<<< HEAD
 #pragma once
 
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* Copyright 2020 Harrison Chan (Xelus)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -18,6 +22,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
+========
+>>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/aeboards/ext65/ext65.h
 #pragma once
 
 #include "ext65.h"
@@ -26,6 +33,17 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+#include "quantum.h"
+
+#if defined(KEYBOARD_aeboards_ext65_rev1)
+    #include "rev1.h"
+#elif defined(KEYBOARD_aeboards_ext65_rev2)
+    #include "rev2.h"
+#endif
+=======
+#pragma once
+
+#include "ext65.h"
 #include "quantum.h"
 
 #define ____ KC_NO
@@ -48,3 +66,4 @@
   { K800, K801, K802, K803, ____, K805, ____, K807, K808, ____ }, \
   { K900, K901, K902, ____, ____, ____, K906, ____, K908, K909 } \
 }
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

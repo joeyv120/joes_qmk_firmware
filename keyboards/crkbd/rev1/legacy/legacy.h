@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "rev1.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 extern uint8_t is_master;
@@ -28,3 +29,7 @@ extern uint8_t is_master;
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+
+extern uint8_t is_master;
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

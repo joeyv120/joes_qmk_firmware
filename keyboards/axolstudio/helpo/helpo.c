@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/axolstudio/helpo/helpo.c
 /* Copyright 2020 kb-elmo
+=======
+/* Copyright 2019
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/atreus/feather/feather.h
+=======
+/* Copyright 2020 kb-elmo
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,4 +22,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/axolstudio/helpo/helpo.c
 #include "helpo.h"
+=======
+#pragma once
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/atreus/feather/feather.h
+=======
+#include "helpo.h"
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

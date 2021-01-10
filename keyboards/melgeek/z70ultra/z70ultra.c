@@ -152,6 +152,7 @@ bool led_update_kb(led_t led_state) {
             IS31FL3741_set_pwm_buffer(&g_is31_indicator_leds[5], 0x00, 0x00, 0x00);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         // flush the indicator to the buffer
         IS31FL3741_update_pwm_buffers(DRIVER_ADDR_1, DRIVER_ADDR_1);
@@ -161,6 +162,8 @@ bool led_update_kb(led_t led_state) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     }
     return true;
 }

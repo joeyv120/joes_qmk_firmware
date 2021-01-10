@@ -5,6 +5,7 @@
 It's a DIY, QMK Powered Trackball!!!!
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Everything works. However the scroll wheel has some issues and acts very odd.
 
 =======
@@ -13,6 +14,8 @@ Everything works. However the scroll wheel has some issues and acts very odd.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 * Keyboard Maintainer: [PloopyCo](https://github.com/ploopyco), [Drashna Jael're](https://github.com/drashna/), [Germ](https://github.com/germ/)
 * Hardware Supported: ATMega32u4 8MHz(3.3v)  
 * Hardware Availability: [Store](https://ploopy.co), [GitHub](https://github.com/ploopyco)
@@ -37,6 +40,7 @@ The PCB should indicate which revision this is.
 # Customzing your PloopyCo Trackball
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 While the defaults are designed so that it can be plugged in and used right away, there are a number of things that you may want to change.  Such as adding DPI control, or to use the ball to scroll while holding a button.   To allow for this sort of control, there is a callback for both the scroll wheel and the mouse censor. 
 =======
 While the defaults are designed so that it can be plugged in and used right away, there are a number of things that you may want to change.  Such as adding DPI control, or to use the ball to scroll while holding a button.   To allow for this sort of control, there is a callback for both the scroll wheel and the mouse sensor. 
@@ -45,6 +49,9 @@ While the defaults are designed so that it can be plugged in and used right away
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+While the defaults are designed so that it can be plugged in and used right away, there are a number of things that you may want to change.  Such as adding DPI control, or to use the ball to scroll while holding a button.   To allow for this sort of control, there is a callback for both the scroll wheel and the mouse sensor. 
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 The default behavior for this is:
 
@@ -76,6 +83,7 @@ The `PLOOPY_DPI_OPTIONS` array sets the values that you want to be able to cycle
 
 The `DPI_CONFIG` macro will cycle through the values in the array, each time you hit it.  And it stores this value in persistent memory, so it will load it the next time the device powers up. 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Programming QMK-DFU onto the PloopyCo Trackball
 
@@ -105,3 +113,5 @@ Original (Caterina) settings:
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -40,3 +41,6 @@ DEFAULT_FOLDER = choco60/rev1
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+DEFAULT_FOLDER = choco60/rev1
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

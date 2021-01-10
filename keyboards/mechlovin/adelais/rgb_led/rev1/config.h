@@ -4,6 +4,7 @@
 #define PRODUCT_ID   0xAEC1
 #define PRODUCT      Adelais En Ciel
 
+<<<<<<< HEAD:keyboards/mechlovin/adelais/rgb_led/rev1/config.h
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -14,6 +15,8 @@
 #define PRODUCT      Adelais En Ciel
 
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/mechlovin/adelais/rgb_led/config.h
 #define MATRIX_ROW_PINS { B1, A0, C13, A1, A2}
 #define MATRIX_COL_PINS { A10, A9, A8, B15, B14, B13, B12, B11, B10, B8, B4, B5, B3, C14, A15 }
 #define UNUSED_PINS

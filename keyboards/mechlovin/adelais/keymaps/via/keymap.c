@@ -48,6 +48,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         if (clockwise) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             tap_code(KC_VOLU);
         } else {
             tap_code(KC_VOLD);
@@ -60,6 +61,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+            tap_code(KC_VOLD);
+        } else {
+            tap_code(KC_VOLU);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         }
     }
     else if (index == 1) {

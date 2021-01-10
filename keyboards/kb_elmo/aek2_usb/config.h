@@ -48,6 +48,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 /* reduce VIA layer count because of EEPROM size */
@@ -57,3 +58,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+
+/* reduce VIA layer count because of EEPROM size */
+#define DYNAMIC_KEYMAP_LAYER_COUNT 2
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

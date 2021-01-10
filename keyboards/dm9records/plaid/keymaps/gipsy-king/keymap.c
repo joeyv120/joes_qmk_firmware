@@ -16,6 +16,7 @@
 
 #include QMK_KEYBOARD_H
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #include "mousekey.h"
 <<<<<<< HEAD
@@ -23,6 +24,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#include "mousekey.h"
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 
 enum plaid_layers {
@@ -34,10 +38,13 @@ enum plaid_layers {
 
 enum plaid_keycodes {
 <<<<<<< HEAD
+<<<<<<< HEAD
   QWERTY = SAFE_RANGE
 };
 
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   AUTOCLICK = SAFE_RANGE
 };
 
@@ -46,10 +53,13 @@ static bool autoclick_state = false;
 static uint16_t autoclick_timer = 0;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define XMONAD LM(_XMONAD, MOD_LGUI)
 #define SPC_LWR LT(_LOWER, KC_SPACE)
 #define ENT_RSE LT(_RAISE, KC_ENT)
@@ -112,6 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, MU_MOD,  AU_ON,   AU_OFF,  _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, RESET,
     _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  TERM_ON, TERM_OFF,_______, _______, _______,
 <<<<<<< HEAD
+<<<<<<< HEAD
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 =======
     _______, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, _______, AUTOCLICK
@@ -120,6 +131,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, XXXXXXX, _______, AUTOCLICK
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 )
 };
 
@@ -198,7 +212,10 @@ void matrix_scan_user(void) {
       }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   if (autoclick && timer_elapsed(autoclick_timer) > (autoclick_state ? 20 : 100)) {
     if (!autoclick_state) {
       mousekey_on(KC_MS_BTN1);
@@ -210,10 +227,13 @@ void matrix_scan_user(void) {
     autoclick_timer = timer_read();
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 }
 
 layer_state_t layer_state_set_user(layer_state_t state) {
@@ -234,7 +254,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
   return state;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -248,7 +271,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

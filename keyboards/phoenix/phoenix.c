@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "hal.h"
 =======
 #include <hal.h>
@@ -7,6 +8,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#include <hal.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #include "usb_main.h"
 #include "phoenix.h"
 

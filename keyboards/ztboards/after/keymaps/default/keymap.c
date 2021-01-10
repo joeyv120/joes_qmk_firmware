@@ -22,6 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void encoder_update_user(uint8_t index, bool clockwise) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   /*  Custom encoder control - handles CW/CCW turning of encoder
    *  Default behavior:
    *    main layer:
@@ -38,11 +39,14 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   if (index == 0) {
     switch (get_highest_layer(layer_state)) {
       case 1:
         // main layer - move mouse right (CW) and left (CCW)
         if (clockwise) {
+<<<<<<< HEAD
 <<<<<<< HEAD
           tap_code(KC_MS_R);
         } else {
@@ -56,12 +60,18 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+          tap_code(KC_BRIGHTNESS_UP);
+        } else {
+          tap_code(KC_BRIGHTNESS_DOWN);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         }
         break;
 
       default:
         // other layers - =/+ (quals/plus) (CW) and -/_ (minus/underscore) (CCW)
         if (clockwise) {
+<<<<<<< HEAD
 <<<<<<< HEAD
           tap_code(KC_EQL);
         } else {
@@ -75,6 +85,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+          tap_code(KC_AUDIO_VOL_UP);
+        } else {
+          tap_code(KC_AUDIO_VOL_DOWN);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         }
         break;
     }

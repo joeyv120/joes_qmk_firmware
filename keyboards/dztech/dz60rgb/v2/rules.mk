@@ -30,6 +30,7 @@ BLUETOOTH_ENABLE = no          # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no              # Audio output on port C6
 FAUXCLICKY_ENABLE = no         # Use buzzer to emulate clicky switches
 <<<<<<< HEAD
+<<<<<<< HEAD
 RGB_MATRIX_ENABLE = IS31FL3733 # Use RGB matrix
 =======
 RGB_MATRIX_ENABLE = yes        # Use RGB matrix
@@ -39,4 +40,8 @@ RGB_MATRIX_DRIVER = IS31FL3733
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+RGB_MATRIX_ENABLE = yes        # Use RGB matrix
+RGB_MATRIX_DRIVER = IS31FL3733
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 NO_USB_STARTUP_CHECK = no      # Disable initialization only when usb is plugged in

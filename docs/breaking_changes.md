@@ -7,6 +7,7 @@ The breaking change period is when we will merge PR's that change QMK in dangero
 ## What has been included in past Breaking Changes?
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 * [2020 Nov 28](ChangeLog/20201128.md)
 <<<<<<< HEAD
@@ -14,6 +15,9 @@ The breaking change period is when we will merge PR's that change QMK in dangero
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+* [2020 Nov 28](ChangeLog/20201128.md)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 * [2020 Aug 29](ChangeLog/20200829.md)
 * [2020 May 30](ChangeLog/20200530.md)
 * [2020 Feb 29](ChangeLog/20200229.md)
@@ -21,6 +25,7 @@ The breaking change period is when we will merge PR's that change QMK in dangero
 
 ## When is the next Breaking Change?
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 The next Breaking Change is scheduled for November 28, 2020.
 
@@ -37,6 +42,12 @@ The next Breaking Change is scheduled for February 27, 2021.
 
 ### Important Dates
 
+=======
+The next Breaking Change is scheduled for February 27, 2021.
+
+### Important Dates
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 * [x] 2020 Nov 28 - `develop` is created. Each push to `master` is subsequently merged to `develop`
 * [ ] 2021 Jan 30 - `develop` closed to new PR's.
 * [ ] 2021 Jan 30 - Call for testers.
@@ -44,10 +55,13 @@ The next Breaking Change is scheduled for February 27, 2021.
 * [ ] 2021 Feb 27 - Merge `develop` to `master`.
 * [ ] 2021 Feb 27 - `master` is unlocked. PR's can be merged again.
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 ## What changes will be included?
 

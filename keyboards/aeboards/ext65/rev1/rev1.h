@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #pragma once
 
 #include "quantum.h"
@@ -9,6 +10,8 @@
     #include "rev2.h"
 #endif
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* Copyright 2020 Harrison Chan (Xelus)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -51,7 +54,10 @@
   { K900, K901, K902, ____, ____, ____, K906, ____, K908, K909 } \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

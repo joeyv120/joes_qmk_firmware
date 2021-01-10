@@ -22,6 +22,7 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
 SPLIT_KEYBOARD = yes
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 RGB_MATRIX_ENABLE = no
 RGB_MATRIX_DRIVER = WS2812
@@ -30,6 +31,10 @@ RGB_MATRIX_DRIVER = WS2812
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+RGB_MATRIX_ENABLE = no
+RGB_MATRIX_DRIVER = WS2812
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 DEFAULT_FOLDER = marksard/rhymestone/rev1
 

@@ -39,6 +39,7 @@ def info_json(keyboard):
 
     # Populate layout data
 <<<<<<< HEAD
+<<<<<<< HEAD
     for layout_name, layout_json in _find_all_layouts(keyboard, rules).items():
 =======
     for layout_name, layout_json in _find_all_layouts(info_data, keyboard, rules).items():
@@ -47,6 +48,9 @@ def info_json(keyboard):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    for layout_name, layout_json in _find_all_layouts(info_data, keyboard, rules).items():
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         if not layout_name.startswith('LAYOUT_kc'):
             info_data['layouts'][layout_name] = layout_json
 
@@ -115,6 +119,7 @@ def _extract_rules_mk(info_data):
 
     if mcu in CHIBIOS_PROCESSORS:
 <<<<<<< HEAD
+<<<<<<< HEAD
         arm_processor_rules(info_data, rules)
     elif mcu in LUFA_PROCESSORS + VUSB_PROCESSORS:
         avr_processor_rules(info_data, rules)
@@ -128,11 +133,15 @@ def _extract_rules_mk(info_data):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        return arm_processor_rules(info_data, rules)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     elif mcu in LUFA_PROCESSORS + VUSB_PROCESSORS:
         return avr_processor_rules(info_data, rules)
 
     msg = "Unknown MCU: " + str(mcu)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -146,6 +155,14 @@ def _extract_rules_mk(info_data):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+
+    _log_warning(info_data, msg)
+
+    return unknown_processor_rules(info_data, rules)
+
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 def _search_keyboard_h(path):
     current_path = Path('keyboards/')
     layouts = {}
@@ -160,6 +177,7 @@ def _search_keyboard_h(path):
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 def _find_all_layouts(keyboard, rules):
 =======
 def _find_all_layouts(info_data, keyboard, rules):
@@ -168,6 +186,9 @@ def _find_all_layouts(info_data, keyboard, rules):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+def _find_all_layouts(info_data, keyboard, rules):
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     """Looks for layout macros associated with this keyboard.
     """
     layouts = _search_keyboard_h(Path(keyboard))

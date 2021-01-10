@@ -21,11 +21,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "process_records.h"
 #include "unicode.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 enum userspace_layers {
     _QWERTY = 0,
     _RAISE,
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #include "wrappers.h"
 
 enum userspace_layers {
@@ -34,14 +37,18 @@ enum userspace_layers {
     _RAISE,
     _ADJUST
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 };
 
 enum userspace_custom_keycodes {
     VRSN = SAFE_RANGE,
+<<<<<<< HEAD
 <<<<<<< HEAD
     LOD,
     RUPA,
@@ -49,6 +56,8 @@ enum userspace_custom_keycodes {
     U_MONOS,
     U_SCRPT,
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     BUGS,
     CATS,
     DANCE,
@@ -88,10 +97,13 @@ enum userspace_font_choices {
     F_SANSN,
     F_SCRPT
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 };
 
 typedef struct font_t {
@@ -100,6 +112,7 @@ typedef struct font_t {
     uint32_t zero_glyph;
 } font_t;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 font_t fraktu_bold;
 font_t monosp_bold;
@@ -121,3 +134,8 @@ bool script_mode_translate(bool is_shifted, uint32_t keycode);
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+const font_t* get_script_mode(void);
+bool set_script_mode(int fc);
+bool script_mode_translate(bool is_shifted, uint32_t keycode);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

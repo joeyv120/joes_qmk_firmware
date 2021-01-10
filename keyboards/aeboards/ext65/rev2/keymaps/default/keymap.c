@@ -1,4 +1,4 @@
-/* Copyright 2018 Jason Williams (Wilba)
+/* Copyright 2020 Harrison Chan (Xelus)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -38,10 +38,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [1] = LAYOUT_ext65(
+<<<<<<< HEAD:keyboards/aeboards/ext65/rev2/keymaps/default/keymap.c
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RESET  , KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS,
+=======
+    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RESET,
+    KC_TRNS, RGB_TOG, RGB_MOD, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          EEP_RST,
+    KC_TRNS, RGB_HUI, RGB_SAI, RGB_VAI, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   DEBUG,
+    KC_TRNS, RGB_HUD, RGB_SAD, RGB_VAD, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS,
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/aeboards/ext65/keymaps/default/keymap.c
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                            KC_TRNS,                   KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS, KC_TRNS
   ),
 
@@ -63,6 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 #ifdef OLED_DRIVER_ENABLE
+<<<<<<< HEAD:keyboards/aeboards/ext65/rev2/keymaps/default/keymap.c
 
 void render_layer_state(void) {
     oled_write_ln(PSTR("LAYER"), false);
@@ -95,4 +103,38 @@ void oled_task_user(void) {
     render_mod_status(get_mods()|get_oneshot_mods());
 }
 
+=======
+
+void render_layer_state(void) {
+    oled_write_ln(PSTR("LAYER"), false);
+    oled_write_ln(PSTR("L1"), layer_state_is(1));
+    oled_write_ln(PSTR("L2"), layer_state_is(2));
+    oled_write_ln(PSTR("L3"), layer_state_is(3));
+    oled_write_ln(PSTR(" "), false);
+}
+
+void render_keylock_status(led_t led_state) {
+    oled_write_ln(PSTR("Lock:"), false);
+    oled_write(PSTR("N"), led_state.num_lock);
+    oled_write(PSTR("C"), led_state.caps_lock);
+    oled_write_ln(PSTR("S"), led_state.scroll_lock);
+    oled_write_ln(PSTR(" "), false);
+}
+
+void render_mod_status(uint8_t modifiers) {
+    oled_write_ln(PSTR("Mods:"), false);
+    oled_write(PSTR("S"), (modifiers & MOD_MASK_SHIFT));
+    oled_write(PSTR("C"), (modifiers & MOD_MASK_CTRL));
+    oled_write(PSTR("A"), (modifiers & MOD_MASK_ALT));
+    oled_write_ln(PSTR("G"), (modifiers & MOD_MASK_GUI));
+    oled_write_ln(PSTR(" "), false);
+}
+
+void oled_task_user(void) {
+    render_layer_state();
+    render_keylock_status(host_keyboard_led_state());
+    render_mod_status(get_mods()|get_oneshot_mods());
+}
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/aeboards/ext65/keymaps/default/keymap.c
 #endif

@@ -32,6 +32,7 @@ AUDIO_ENABLE = no           # Audio output
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 LTO_ENABLE = yes            # Reduces compile size
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 LAYOUTS = alice alice_split_bs
@@ -40,3 +41,7 @@ LAYOUTS = alice alice_split_bs
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+
+LAYOUTS = alice alice_split_bs
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -13,7 +13,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+<<<<<<< HEAD
+#include "m0lly.h"
 
+<<<<<<< HEAD:keyboards/zoo/wampus/wampus.c
+=======
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #include "wampus.h"
 #ifdef OLED_DRIVER_ENABLE
 
@@ -27,3 +33,17 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 }
 
 #endif
+<<<<<<< HEAD
+=======
+void keyboard_pre_init_kb(void) {
+    setPinInputHigh(D0);
+    setPinInputHigh(D1);
+
+    setPinOutput(B7);
+    writePinHigh(B7);
+
+    keyboard_pre_init_user();
+}
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/tkc/m0lly/m0lly.c
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

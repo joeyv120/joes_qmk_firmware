@@ -15,6 +15,7 @@ BOOTLOADER = atmel-dfu
 #   change yes to no to disable
 #
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:keyboards/evyd13/eon95/rules.mk
 BOOTMAGIC_ENABLE = lite     # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no        # Mouse keys
@@ -22,6 +23,10 @@ MOUSEKEY_ENABLE = no        # Mouse keys
 BOOTMAGIC_ENABLE = lite       # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = yes       # Mouse keys
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/choc_taro/rules.mk
+=======
+BOOTMAGIC_ENABLE = lite     # Virtual DIP switch configuration
+MOUSEKEY_ENABLE = no        # Mouse keys
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 =======
 BOOTMAGIC_ENABLE = lite     # Virtual DIP switch configuration
 MOUSEKEY_ENABLE = no        # Mouse keys
@@ -37,6 +42,7 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 MIDI_ENABLE = no            # MIDI support
 <<<<<<< HEAD
+<<<<<<< HEAD
 BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no           # Audio output
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
@@ -44,8 +50,13 @@ FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 CUSTOM_MATRIX = lite
 SRC += matrix.c
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 UNICODE_ENABLE = no         # Unicode
 BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
+<<<<<<< HEAD
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+=======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -45,6 +45,7 @@ jobs:
           if [[ $KEYMAP_ONLY -gt 0 ]]; then
             echo "linting ${KB}"
 
+<<<<<<< HEAD:.github/workflows/lint.yml
 <<<<<<< HEAD
             qmk lint --keyboard ${KB} && qmk info -l --keyboard ${KB}
             exit_code=$(($exit_code + $?))
@@ -59,6 +60,10 @@ jobs:
             exit_code=$(($exit_code + $?))
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:.github/workflows/lint.yml
 >>>>>>> UpdateQMK
+=======
+            qmk lint --keyboard ${KB} && qmk info -l --keyboard ${KB}
+            exit_code=$(($exit_code + $?))
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:.github/workflows/info.yml
           fi
         done
         if [[ $exit_code -gt 255 ]]; then

@@ -48,6 +48,7 @@ static cRGB led[RGBLED_NUM] = {{255, 255, 255}, {255, 255, 255}, {255, 255, 255}
 static const cRGB black = {.r = 0, .g = 0, .b = 0};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 static const cRGB green  = {.r = 0, .g = BRIGHT, .b = 0};
 static const cRGB lgreen = {.r = 0, .g = DIM, .b = 0};
 
@@ -62,6 +63,8 @@ static const cRGB lturq = {.r = 0, .g = DIM, .b = DIM};
 
 static const cRGB white = {.r = BRIGHT, .g = BRIGHT, .b = BRIGHT};
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 static const __attribute__((unused)) cRGB green  = {.r = 0, .g = BRIGHT, .b = 0};
 static const __attribute__((unused)) cRGB lgreen = {.r = 0, .g = DIM, .b = 0};
 
@@ -76,10 +79,13 @@ static const __attribute__((unused)) cRGB lturq = {.r = 0, .g = DIM, .b = DIM};
 
 static const __attribute__((unused)) cRGB white = {.r = BRIGHT, .g = BRIGHT, .b = BRIGHT};
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 static led_t   led_state;
 static uint8_t layer;

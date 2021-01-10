@@ -10,7 +10,10 @@ from qmk.c_parse import parse_config_h_file
 from qmk.makefile import parse_rules_mk_file
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 BOX_DRAWING_CHARACTERS = {
     "unicode": {
         "tl": "┌",
@@ -31,10 +34,13 @@ BOX_DRAWING_CHARACTERS = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 base_path = os.path.join(os.getcwd(), "keyboards") + os.path.sep
 
 

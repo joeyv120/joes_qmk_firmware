@@ -8,6 +8,7 @@ MCU = STM32F072
 LTO_ENABLE = yes
 BACKLIGHT_ENABLE = no
 BOOTMAGIC_ENABLE = lite  # Virtual DIP switch configuration
+<<<<<<< HEAD:keyboards/tkc/candybar/lefty/rules.mk
 <<<<<<< HEAD
 <<<<<<< HEAD
 ## (Note that for BOOTMAGIC on Teensy LC you have to use a custom .ld script.)
@@ -15,6 +16,8 @@ BOOTMAGIC_ENABLE = lite  # Virtual DIP switch configuration
 >>>>>>> dontTouch/master
 =======
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/candybar/righty/rules.mk
 MOUSEKEY_ENABLE = no # Mouse keys
 EXTRAKEY_ENABLE = yes # Audio control and System control
 CONSOLE_ENABLE = no  # Console for debug

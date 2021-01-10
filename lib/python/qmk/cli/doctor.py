@@ -9,6 +9,7 @@ from milc.questions import yesno
 from qmk import submodules
 from qmk.constants import QMK_FIRMWARE
 <<<<<<< HEAD
+<<<<<<< HEAD
 from qmk.questions import yesno
 =======
 <<<<<<< HEAD
@@ -16,10 +17,13 @@ from qmk.questions import yesno
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 from qmk.commands import run
 from qmk.os_helpers import CheckStatus, check_binaries, check_binary_versions, check_submodules, check_git_repo
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 def _udev_rule(vid, pid=None, *args):
@@ -235,6 +239,12 @@ def os_tests():
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+def os_tests():
+    """Determine our OS and run platform specific tests
+    """
+    platform_id = platform.platform().lower()
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     if 'darwin' in platform_id or 'macos' in platform_id:
         return os_test_macos()
@@ -295,8 +305,11 @@ def doctor(cli):
     if git_ok == CheckStatus.WARNING:
         cli.log.warning("QMK home does not appear to be a Git repository! (no .git folder)")
         status = CheckStatus.WARNING
+<<<<<<< HEAD
 
     cli.log.info('QMK home: {fg_cyan}%s', QMK_FIRMWARE)
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     # Make sure the basic CLI tools we need are available and can be executed.
     bin_ok = check_binaries()
@@ -342,6 +355,7 @@ def doctor(cli):
         return 1
     else:
 <<<<<<< HEAD
+<<<<<<< HEAD
         cli.log.info('{fg_yellow}Problems detected, please fix these problems before proceeding.')
         # FIXME(skullydazed/unclaimed): Link to a document about troubleshooting, or discord or something
 
@@ -355,3 +369,8 @@ def doctor(cli):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        cli.log.info('{fg_red}Major problems detected, please fix these problems before proceeding.')
+        cli.log.info('{fg_blue}Check out the FAQ (https://docs.qmk.fm/#/faq_build) or join the QMK Discord (https://discord.gg/Uq7gcHh) for help.')
+        return 2
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

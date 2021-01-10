@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "quantum.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define LAYOUT_all( \
 =======
 #define LAYOUT_all LAYOUT_alice_split_bs
@@ -30,6 +31,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define LAYOUT_all LAYOUT_alice_split_bs
+
+#define LAYOUT_alice_split_bs( \
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 	K020,   K000, K001, K002, K003, K004, K005, K006,       K010, K011, K012, K013, K014, K015, K016, K017, \
 	K040,   K021,       K022, K023, K024, K025, K026,       K030, K031, K032, K033, K034, K035, K036, K037, \
 	K060,   K041,       K042, K043, K044, K045, K046,       K050, K051, K052, K053, K054, K055,       K056, \
@@ -48,7 +54,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	{ KC_NO, K091,  KC_NO, K093,  KC_NO, KC_NO, KC_NO, K097 }  \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 #define LAYOUT_alice( \
     K020,   K000, K001, K002, K003, K004, K005, K006,       K010, K011, K012, K013, K014, K015,       K016, \
@@ -69,7 +78,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     { KC_NO, K091,  KC_NO, K093,  KC_NO, KC_NO, KC_NO, K097 }  \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

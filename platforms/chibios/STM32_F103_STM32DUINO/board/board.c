@@ -14,6 +14,7 @@
     limitations under the License.
 */
 
+<<<<<<< HEAD:platforms/chibios/STM32_F103_STM32DUINO/board/board.c
 <<<<<<< HEAD
 <<<<<<< HEAD
 #include "hal.h"
@@ -23,6 +24,9 @@
 =======
 #include <hal.h>
 >>>>>>> UpdateQMK
+=======
+#include <hal.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:drivers/boards/STM32_F103_STM32DUINO/board.c
 
 // Value to place in RTC backup register 10 for persistent bootloader mode
 #define RTC_BOOTLOADER_FLAG 0x424C

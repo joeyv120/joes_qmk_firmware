@@ -31,6 +31,7 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 <<<<<<< HEAD
+<<<<<<< HEAD
 HD44780_ENABLE = no         # Enable support for HD44780 based LCDs
 =======
 <<<<<<< HEAD
@@ -38,6 +39,8 @@ HD44780_ENABLE = no         # Enable support for HD44780 based LCDs
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 LTO_ENABLE = yes
 
 # custom matrix setup

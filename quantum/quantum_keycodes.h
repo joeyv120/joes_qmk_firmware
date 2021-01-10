@@ -555,7 +555,10 @@ enum quantum_keycodes {
     JS_BUTTON_MAX = JS_BUTTON31,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #if defined(SEQUENCER_ENABLE)
     SQ_ON,
     SQ_OFF,
@@ -588,10 +591,13 @@ enum quantum_keycodes {
 #endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     // always leave at the end
     SAFE_RANGE
 };

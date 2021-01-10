@@ -660,6 +660,7 @@ led_instruction_t led_instructions[] = {
     //LEDs are normally inactive, no processing is performed on them
     //Flags are used in matching criteria for an LED to be active and indicate how to color it
 <<<<<<< HEAD
+<<<<<<< HEAD
     //Flags can be found in tmk_core/protocol/arm_atsam/led_matrix.h (prefixed with LED_FLAG_)
 =======
     //Flags can be found in tmk_core/protocol/arm_atsam/md_rgb_matrix.h (prefixed with LED_FLAG_)
@@ -668,6 +669,9 @@ led_instruction_t led_instructions[] = {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    //Flags can be found in tmk_core/protocol/arm_atsam/md_rgb_matrix.h (prefixed with LED_FLAG_)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     //LED IDs can be found in config_led.h in the keyboard's directory
     //Examples are below
 

@@ -22,20 +22,26 @@
 #include <stdbool.h>
 #include <string.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "hal.h"
 #include "timer.h"
 #include "wait.h"
 #include "printf.h"
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #include <hal.h>
 #include "timer.h"
 #include "wait.h"
 #include "print.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #include "matrix.h"
 #include "action.h"
 #include "keycode.h"

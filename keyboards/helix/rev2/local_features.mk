@@ -181,6 +181,7 @@ ifneq ($(strip $(SHOW_HELIX_OPTIONS)),)
      $(info -- CONSOLE_ENABLE     = $(CONSOLE_ENABLE))
      $(info -- OPT_DEFS           = $(OPT_DEFS))
 <<<<<<< HEAD
+<<<<<<< HEAD
      $(info -- LTO_ENABLE = $(LTO_ENABLE))
 =======
      $(info -- SPLIT_KEYBOARD     = $(SPLIT_KEYBOARD))
@@ -190,6 +191,10 @@ ifneq ($(strip $(SHOW_HELIX_OPTIONS)),)
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+     $(info -- SPLIT_KEYBOARD     = $(SPLIT_KEYBOARD))
+     $(info -- LTO_ENABLE         = $(LTO_ENABLE))
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
      $(info )
   endif
 endif

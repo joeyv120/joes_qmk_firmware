@@ -150,6 +150,7 @@
 #define CA_DEG  ALGR(CA_SCLN) // °
 // Row 4
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define CA_LDAQ ALGR(CA_X)    // «
 #define CA_RDAQ ALGR(CA_C)    // »
 =======
@@ -160,6 +161,10 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define CA_LDAQ ALGR(CA_Z)    // «
+#define CA_RDAQ ALGR(CA_X)    // »
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define CA_LABK ALGR(CA_COMM) // <
 #define CA_RABK ALGR(CA_DOT)  // >
 

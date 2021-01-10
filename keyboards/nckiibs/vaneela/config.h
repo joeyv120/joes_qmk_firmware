@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:keyboards/chili/config.h
 #define VENDOR_ID       0x5945 // "YE"
@@ -52,6 +53,36 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define VENDOR_ID 0x9906
+=======
+#define VENDOR_ID 0x9906
+<<<<<<< HEAD:keyboards/nckiibs/vaneelaex/config.h
+#define PRODUCT_ID 0x0002
+#define DEVICE_VER 0x0001
+#define MANUFACTURER nckiibs
+#define PRODUCT VaneelaEx
+
+/* key matrix size */
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 12
+
+/*
+ * Keyboard Matrix Assignments
+ *
+ * Change this to how you wired your keyboard
+ * COLS: AVR pins used for columns, left to right
+ * ROWS: AVR pins used for rows, top to bottom
+ * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
+ *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
+ *
+ */
+#define MATRIX_ROW_PINS { D3, D2, D1, D0, B2, B6 }
+#define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3, B5, B4, E6, D7, C6, D4 }
+//#define UNUSED_PINS
+
+/* COL2ROW, ROW2COL*/
+#define DIODE_DIRECTION COL2ROW
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define PRODUCT_ID 0x0001
 #define DEVICE_VER 0x0001
 #define MANUFACTURER noclew
@@ -79,6 +110,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DIODE_DIRECTION COL2ROW
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -86,6 +121,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* define if matrix has ghost (lacks anti-ghosting diodes) */
 //#define MATRIX_HAS_GHOST
 
+<<<<<<< HEAD
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
 
@@ -108,14 +144,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:keyboards/chili/config.h
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* If defined, GRAVE_ESC will always act as ESC when CTRL is held.
@@ -123,8 +164,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 // #define GRAVE_ESC_CTRL_OVERRIDE
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+=======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 /*
@@ -218,6 +262,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:keyboards/chili/config.h
 /*
@@ -244,6 +289,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MIDI_TONE_KEYCODE_OCTAVES 1
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
@@ -252,6 +299,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define BOOTMAGIC_LITE_ROW 0
 // #define BOOTMAGIC_LITE_COLUMN 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+=======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -19,6 +19,7 @@ NKRO_ENABLE = yes           # USB Nkey Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 <<<<<<< HEAD
+<<<<<<< HEAD
 RGB_MATRIX_ENABLE = yes     # Use RGB per key light
 =======
 RGB_MATRIX_ENABLE = yes     # Use RGB matrix
@@ -28,6 +29,10 @@ RGB_MATRIX_DRIVER = IS31FL3731
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+RGB_MATRIX_ENABLE = yes     # Use RGB matrix
+RGB_MATRIX_DRIVER = IS31FL3731
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 LTO_ENABLE = yes            # Reducing firmware size
 

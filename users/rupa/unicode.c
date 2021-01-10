@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "unicode.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #if defined(UNICODEMAP_ENABLE)
 const uint32_t PROGMEM unicode_map[] = {
     [CHEK] = 0x2713, // ✓
@@ -42,6 +43,8 @@ const uint32_t PROGMEM unicode_map[] = {
 };
 #endif
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 combined_mode_t combined_mode = CM_NULL;
 bool _seeded = false;
 
@@ -195,7 +198,10 @@ combined_mode_t set_combined_mode(combined_mode_t mode) {
     return combined_mode;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright 2020 Maarten Dekkers <maartenwut@gmail.com>
+=======
+/* Copyright 2020 Evy Dekkers
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +26,11 @@
 #define VENDOR_ID       0x4705
 #define PRODUCT_ID      0x8B23
 #define DEVICE_VER      0x0001
+<<<<<<< HEAD
 #define MANUFACTURER    Maartenwut
+=======
+#define MANUFACTURER    Evyd13
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define PRODUCT         GH80 1800
 
 /* key matrix size */

@@ -1,7 +1,12 @@
 {
     "keyboard_name": "Solheim68", 
+<<<<<<< HEAD
     "url": "https://github.com/Maartenwut/solheim68", 
     "maintainer": "maartenwut", 
+=======
+    "url": "https://github.com/evyd13/solheim68", 
+    "maintainer": "evyd13", 
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     "width": 17.25, 
     "height": 5, 
     "layouts": {

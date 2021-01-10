@@ -176,6 +176,7 @@ void ps2_mouse_set_sample_rate(ps2_mouse_sample_rate_t sample_rate);
 
 void ps2_mouse_moved_user(report_mouse_t *mouse_report);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #endif
 =======
@@ -184,3 +185,5 @@ void ps2_mouse_moved_user(report_mouse_t *mouse_report);
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

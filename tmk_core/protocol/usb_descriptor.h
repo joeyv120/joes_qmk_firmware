@@ -240,6 +240,7 @@ enum usb_endpoints {
 #    else
     MIDI_STREAM_OUT_EPNUM = NEXT_EPNUM,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #    endif
 <<<<<<< HEAD
@@ -247,11 +248,15 @@ enum usb_endpoints {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#    endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #endif
 
 #ifdef VIRTSER_ENABLE
     CDC_NOTIFICATION_EPNUM = NEXT_EPNUM,
     CDC_IN_EPNUM           = NEXT_EPNUM,
+<<<<<<< HEAD
 <<<<<<< HEAD
     CDC_OUT_EPNUM          = NEXT_EPNUM,
 #endif
@@ -259,6 +264,8 @@ enum usb_endpoints {
     JOYSTICK_IN_EPNUM  = NEXT_EPNUM,
     JOYSTICK_OUT_EPNUM = NEXT_EPNUM,
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #    if STM32_USB_USE_OTG1
 #        define CDC_OUT_EPNUM CDC_IN_EPNUM
 #    else
@@ -273,10 +280,13 @@ enum usb_endpoints {
     JOYSTICK_OUT_EPNUM    = NEXT_EPNUM,
 #    endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #endif
 };
 

@@ -20,8 +20,11 @@ let
     doCheck = false;
   };
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     doCheck = false;
   };
 
@@ -44,16 +47,20 @@ let
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
   pythonEnv = pkgs.python3.withPackages (p: with p; [
     # requirements.txt
     appdirs
     argcomplete
     colorama
     hjson
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     milc
@@ -62,6 +69,9 @@ let
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    milc
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     pygments
     # requirements-dev.txt
     nose2

@@ -5,6 +5,7 @@
     "height": 5, 
     "layouts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "LAYOUT_all": {
 =======
         "LAYOUT_alice_split_bs": {
@@ -13,6 +14,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        "LAYOUT_alice_split_bs": {
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
             "layout": [
                 {"label":"Esc", "x":0.5, "y":0},
                 {"label":"~", "x":1.75, "y":0},
@@ -83,6 +87,7 @@
             ]
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         "LAYOUT_default": {
 =======
         "LAYOUT_alice": {
@@ -91,6 +96,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        "LAYOUT_alice": {
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
             "layout": [
                 {"label":"Esc", "x":0.5, "y":0},
                 {"label":"~", "x":1.75, "y":0},

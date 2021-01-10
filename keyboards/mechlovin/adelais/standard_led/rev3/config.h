@@ -7,6 +7,7 @@
 #define ENCODER_RESOLUTION 4
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #define TAP_CODE_DELAY 10
 <<<<<<< HEAD
@@ -14,3 +15,6 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define TAP_CODE_DELAY 10
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

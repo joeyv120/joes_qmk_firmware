@@ -426,6 +426,7 @@ void process_action(keyrecord_t *record, action_t action) {
                 mousekey_on(action.key.code);
                 switch (action.key.code) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 #    ifdef PS2_MOUSE_ENABLE
 =======
 #    if defined(PS2_MOUSE_ENABLE) || defined(POINTING_DEVICE_ENABLE)
@@ -434,6 +435,9 @@ void process_action(keyrecord_t *record, action_t action) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#    if defined(PS2_MOUSE_ENABLE) || defined(POINTING_DEVICE_ENABLE)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
                     case KC_MS_BTN1:
                         register_button(true, MOUSE_BTN1);
                         break;
@@ -445,7 +449,10 @@ void process_action(keyrecord_t *record, action_t action) {
                         break;
 #    endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #    ifdef POINTING_DEVICE_ENABLE
                     case KC_MS_BTN4:
                         register_button(true, MOUSE_BTN4);
@@ -455,10 +462,13 @@ void process_action(keyrecord_t *record, action_t action) {
                         break;
 #    endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
                     default:
                         mousekey_send();
                         break;
@@ -466,6 +476,7 @@ void process_action(keyrecord_t *record, action_t action) {
             } else {
                 mousekey_off(action.key.code);
                 switch (action.key.code) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 #    ifdef PS2_MOUSE_ENABLE
 =======
@@ -475,6 +486,9 @@ void process_action(keyrecord_t *record, action_t action) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#    if defined(PS2_MOUSE_ENABLE) || defined(POINTING_DEVICE_ENABLE)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
                     case KC_MS_BTN1:
                         register_button(false, MOUSE_BTN1);
                         break;

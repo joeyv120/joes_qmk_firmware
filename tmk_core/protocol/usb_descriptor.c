@@ -313,11 +313,14 @@ const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] = {
 #    endif
 #    if JOYSTICK_AXES_COUNT >= 1
 <<<<<<< HEAD
+<<<<<<< HEAD
             HID_RI_LOGICAL_MINIMUM(8, -127),
             HID_RI_LOGICAL_MAXIMUM(8, 127),
             HID_RI_REPORT_COUNT(8, JOYSTICK_AXES_COUNT),
             HID_RI_REPORT_SIZE(8, 0x08),
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
      # if JOYSTICK_AXES_RESOLUTION == 8
             HID_RI_LOGICAL_MINIMUM(8, -JOYSTICK_RESOLUTION),
             HID_RI_LOGICAL_MAXIMUM(8, JOYSTICK_RESOLUTION),
@@ -330,10 +333,13 @@ const USB_Descriptor_HIDReport_Datatype_t PROGMEM JoystickReport[] = {
             HID_RI_REPORT_SIZE(8, 0x10),
      # endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
             HID_RI_INPUT(8, HID_IOF_DATA | HID_IOF_VARIABLE | HID_IOF_ABSOLUTE),
 #    endif
 

@@ -15,6 +15,7 @@
  */
 #include "quantum.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "action_tapping.h"
 =======
 <<<<<<< HEAD
@@ -22,6 +23,8 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 #ifndef NO_ACTION_ONESHOT
 uint8_t get_oneshot_mods(void);
@@ -175,18 +178,24 @@ void matrix_scan_tap_dance() {
             tap_user_defined = action->custom_tapping_term;
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             tap_user_defined = get_tapping_term(action->state.keycode, NULL);
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #ifdef TAPPING_TERM_PER_KEY
             tap_user_defined = get_tapping_term(action->state.keycode, NULL);
 #else
             tap_user_defined = TAPPING_TERM;
 #endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         }
         if (action->state.count && timer_elapsed(action->state.timer) > tap_user_defined) {
             process_tap_dance_action_on_dance_finished(action);

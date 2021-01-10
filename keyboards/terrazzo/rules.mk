@@ -27,6 +27,7 @@ AUDIO_ENABLE = no
 RGBLIGHT_ENABLE = no
 BACKLIGHT_ENABLE = no  # Enable keyboard backlight functionality
 <<<<<<< HEAD
+<<<<<<< HEAD
 LED_MATRIX_ENABLE = IS31FL3731
 =======
 LED_MATRIX_ENABLE = yes
@@ -36,6 +37,10 @@ LED_MATRIX_DRIVER = IS31FL3731
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+LED_MATRIX_ENABLE = yes
+LED_MATRIX_DRIVER = IS31FL3731
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 ENCODER_ENABLE = yes
 WPM_ENABLE = yes
 

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<<< HEAD:keyboards/aeboards/ext65/rev1/config.h
+<<<<<<< HEAD
 /* Copyright 2020 Harrison Chan (Xelus)
 =======
 /* Copyright 2018 Jason Williams (Wilba)
@@ -7,6 +9,12 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+========
+/* Copyright 2020 Harrison Chan (Xelus)
+>>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/aeboards/ext65/config.h
+=======
+/* Copyright 2018 Jason Williams (Wilba)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,8 +31,12 @@
  */
 
 <<<<<<< HEAD
+<<<<<<<< HEAD:keyboards/aeboards/ext65/rev1/config.h
+<<<<<<< HEAD
 #include "config_common.h"
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #pragma once
 
 #include "config_common.h"
@@ -57,7 +69,13 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+========
+#include "config_common.h"
+>>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/aeboards/ext65/config.h
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

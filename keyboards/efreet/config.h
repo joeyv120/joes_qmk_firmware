@@ -136,6 +136,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
+=======
+
+/* disable these deprecated features by default */
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 <<<<<<< HEAD
 =======

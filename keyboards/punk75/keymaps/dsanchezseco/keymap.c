@@ -21,6 +21,7 @@
 enum layer_names {
     _DVORAK,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     _DVORAK_NUM,
 <<<<<<< HEAD
@@ -28,6 +29,9 @@ enum layer_names {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    _DVORAK_NUM,
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     _QWERTY,
     _FN
 };
@@ -42,7 +46,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LGUI, KC_LALT, _______, MO(_FN), KC_SPC,  KC_SPC,   KC_MPRV, KC_BSPC, KC_BSPC, MO(_FN), _______, KC_RALT, KC_RGUI, KC_RCTL
     ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     [_DVORAK_NUM] = LAYOUT_ortho_5x15( /* DVORAK with center NUMPAD*/
         KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_GRV,   KC_BSLS, KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MUTE,
         KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_P7,    KC_P8,   KC_P9, KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_SLSH,
@@ -51,10 +58,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LGUI, KC_LALT, _______, MO(_FN), KC_SPC,  KC_SPC,   KC_P0,   KC_BSPC, KC_BSPC, MO(_FN), _______, KC_RALT, KC_RGUI, KC_RCTL
     ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     [_QWERTY] = LAYOUT_ortho_5x15( /* QWERTY */
         KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_GRV,   KC_BSLS, KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MUTE,
@@ -66,22 +76,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_FN] = LAYOUT_ortho_5x15( /* FUNCTION */
 <<<<<<< HEAD
+<<<<<<< HEAD
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   DF(_QWERTY), _______, DF(_DVORAK), KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_RIGHT, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LEFT, _______, _______, _______, _______,
         _______, _______, _______, KC_DOWN, KC_UP,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, MO(_FN), _______, _______, _______, KC_DEL,  KC_DEL,  MO(_FN), _______, _______, _______, _______
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   DF(_QWERTY), DF(_DVORAK_NUM), DF(_DVORAK), KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_RIGHT, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LEFT, _______, _______, _______, _______,
         _______, _______, _______, KC_DOWN, KC_UP,   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, MO(_FN), _______, _______, KC_NLCK, KC_DEL,  KC_DEL,  MO(_FN), _______, _______, _______, _______
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     )
 
 };

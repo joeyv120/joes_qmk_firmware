@@ -48,9 +48,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DIODE_DIRECTION COL2ROW
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define BACKLIGHT_PIN D4
 #define BACKLIGHT_LEVELS 3
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 //#define LED_NUM_LOCK_PIN D0
 //#define LED_CAPS_LOCK_PIN D1
 //#define LED_SCROLL_LOCK_PIN D6
@@ -58,10 +61,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_PIN D4
 //#define BACKLIGHT_LEVELS 3
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 //#define BACKLIGHT_BREATHING
 
 #define RGBLED_NUM 16

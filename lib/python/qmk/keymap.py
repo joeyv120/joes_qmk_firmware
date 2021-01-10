@@ -4,6 +4,7 @@ from pathlib import Path
 import json
 import subprocess
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import sys
 <<<<<<< HEAD
@@ -11,6 +12,9 @@ import sys
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+import sys
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 from pygments.lexers.c_cpp import CLexer
 from pygments.token import Token
@@ -53,12 +57,21 @@ def template_json(keyboard):
 
     return template
 
+<<<<<<< HEAD
 
 def template_c(keyboard):
     """Returns a `keymap.c` template for a keyboard.
 
     If a template exists in `keyboards/<keyboard>/templates/keymap.c` that text will be used instead of an empty dictionary.
 
+=======
+
+def template_c(keyboard):
+    """Returns a `keymap.c` template for a keyboard.
+
+    If a template exists in `keyboards/<keyboard>/templates/keymap.c` that text will be used instead of an empty dictionary.
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     Args:
         keyboard
             The keyboard to return a template for.
@@ -188,6 +201,7 @@ def write_json(keyboard, keymap, layout, layers):
         keymap
             The name of the keymap
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         layout
             The LAYOUT macro this keymap uses.
@@ -202,6 +216,12 @@ def write_json(keyboard, keymap, layout, layers):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+
+        layout
+            The LAYOUT macro this keymap uses.
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         layers
             An array of arrays describing the keymap. Each item in the inner array should be a string that is a valid QMK keycode.
     """
@@ -332,12 +352,15 @@ def list_keymaps(keyboard, c=True, json=True, additional_files=None, fullpath=Fa
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 def _c_preprocess(path):
     """ Run a file through the C pre-processor
 
     Args:
         path: path of the keymap.c file
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 def _c_preprocess(path, stdin=None):
     """ Run a file through the C pre-processor
 
@@ -345,14 +368,18 @@ def _c_preprocess(path, stdin=None):
         path: path of the keymap.c file (set None to use stdin)
         stdin: stdin pipe (e.g. sys.stdin)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     Returns:
         the stdout of the pre-processor
     """
+<<<<<<< HEAD
 <<<<<<< HEAD
     pre_processed_keymap = qmk.commands.run(['cpp', path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 =======
@@ -362,6 +389,9 @@ def _c_preprocess(path, stdin=None):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    pre_processed_keymap = qmk.commands.run(['cpp', path] if path else ['cpp'], stdin=stdin, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     return pre_processed_keymap.stdout
 
 
@@ -492,6 +522,7 @@ def parse_keymap_c(keymap_file, use_cpp=True):
 
     Args:
 <<<<<<< HEAD
+<<<<<<< HEAD
         keymap_file: path of the keymap.c file
 =======
         keymap_file: path of the keymap.c file (or '-' to use stdin)
@@ -500,6 +531,9 @@ def parse_keymap_c(keymap_file, use_cpp=True):
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+        keymap_file: path of the keymap.c file (or '-' to use stdin)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
         use_cpp: if True, pre-process the file with the C pre-processor
 
@@ -507,11 +541,14 @@ def parse_keymap_c(keymap_file, use_cpp=True):
         a dictionary containing the parsed keymap
     """
 <<<<<<< HEAD
+<<<<<<< HEAD
     if use_cpp:
         keymap_file = _c_preprocess(keymap_file)
     else:
         keymap_file = keymap_file.read_text()
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     if keymap_file == '-':
         if use_cpp:
             keymap_file = _c_preprocess(None, sys.stdin)
@@ -523,10 +560,13 @@ def parse_keymap_c(keymap_file, use_cpp=True):
         else:
             keymap_file = keymap_file.read_text()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     keymap = dict()
     keymap['layers'] = _get_layers(keymap_file)

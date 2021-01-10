@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define VENDOR_ID       0x6955
 #define PRODUCT_ID      0x2073
 =======
@@ -31,6 +32,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define VENDOR_ID       0x1209
+#define PRODUCT_ID      0x6969
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define MANUFACTURER    ibnuda
 #define PRODUCT         squiggle
 

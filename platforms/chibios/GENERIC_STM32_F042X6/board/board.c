@@ -1,5 +1,6 @@
 /*
     ChibiOS - Copyright (C) 2006..2018 Giovanni Di Sirio
+<<<<<<< HEAD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -7,6 +8,12 @@
 
         http://www.apache.org/licenses/LICENSE-2.0
 
+=======
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+        http://www.apache.org/licenses/LICENSE-2.0
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,16 +27,33 @@
  */
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:keyboards/akegata_denki/device_one/boards/DEVICE_ONE/board.c
+<<<<<<< HEAD
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+<<<<<<< HEAD
 #include "hal.h"
 #include "stm32_gpio.h"
 =======
 #include <hal.h>
 #include <stm32_gpio.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> dontTouch/master
+=======
+#include <hal.h>
+#include <stm32_gpio.h>
+>>>>>>> UpdateQMK
+=======
+#include <hal.h>
+#include <stm32_gpio.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:platforms/chibios/GENERIC_STM32_F042X6/board/board.c
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 /*===========================================================================*/
 /* Driver local definitions.                                                 */
@@ -165,11 +189,16 @@ static void stm32_gpio_init(void) {
   /* Enabling GPIO-related clocks, the mask comes from the
      registry header file.*/
 <<<<<<< HEAD
+<<<<<<< HEAD
   rccResetAHB(STM32_GPIO_EN_MASK);
   rccEnableAHB(STM32_GPIO_EN_MASK, true);
 =======
   rccResetAHB1(STM32_GPIO_EN_MASK);
   rccEnableAHB1(STM32_GPIO_EN_MASK, true);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+=======
+  rccResetAHB(STM32_GPIO_EN_MASK);
+  rccEnableAHB(STM32_GPIO_EN_MASK, true);
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
   /* Initializing all the defined GPIO ports.*/
@@ -224,7 +253,14 @@ __attribute__((weak)) void enter_bootloader_mode_if_requested(void) {}
  *          else.
  */
 void __early_init(void) {
+<<<<<<< HEAD
   enter_bootloader_mode_if_requested();
+=======
+<<<<<<< HEAD:keyboards/akegata_denki/device_one/boards/DEVICE_ONE/board.c
+=======
+  enter_bootloader_mode_if_requested();
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:platforms/chibios/GENERIC_STM32_F042X6/board/board.c
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
   stm32_gpio_init();
   stm32_clock_init();

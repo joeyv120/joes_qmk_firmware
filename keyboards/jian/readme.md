@@ -7,6 +7,7 @@ You can assemble the keyboard without a mounting plate.
 Jian also supports RGB LED underglow (with a strip like WS2812B) and single color in-switch LED backlight.
 Each half can work standalone.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Last GB version is the rev2.
 <<<<<<< HEAD
@@ -14,6 +15,9 @@ Last GB version is the rev2.
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+Last GB version is the rev2.
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 * Keyboard Maintainer: [KGOH](https://github.com/KGOH)
 * Hardware Supported: Jian PCB rev1, rev2, Pro Micro

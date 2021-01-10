@@ -214,6 +214,7 @@ report_pmw_t pmw_read_burst(void) {
     data.dx = data.dx * -1;
     data.dy |= (data.mdy << 8);
 <<<<<<< HEAD
+<<<<<<< HEAD
     // data.dy = data.dy * -1;
 =======
     data.dy = data.dy * -1;
@@ -222,6 +223,9 @@ report_pmw_t pmw_read_burst(void) {
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    data.dy = data.dy * -1;
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     spi_stop();
 

@@ -22,6 +22,7 @@
  * - Split Right Shift
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define LAYOUT_all( \
 =======
 #define LAYOUT_alice_split_bs( \
@@ -30,6 +31,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define LAYOUT_alice_split_bs( \
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     K100,   K000, K001, K002, K003, K004, K005, K006,       K007, K008, K009, K010, K011, K012, K013, K014, \
     K200,   K101, K102, K103, K104, K105, K106,       K107, K108, K109, K110, K111, K112, K113, K114, \
     K300,   K201, K202, K203, K204, K205, K206,       K207, K208, K209, K210, K211, K212,       K214, \
@@ -48,6 +52,7 @@
  * - Full size Right Shift
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define LAYOUT_default( \
 =======
 #define LAYOUT_alice( \
@@ -56,6 +61,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#define LAYOUT_alice( \
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     K100,   K000, K001, K002, K003, K004, K005, K006,       K007, K008, K009, K010, K011, K012,       K014, \
     K200,   K101, K102, K103, K104, K105, K106,       K107, K108, K109, K110, K111, K112, K113, K114, \
     K300,   K201, K202, K203, K204, K205, K206,       K207, K208, K209, K210, K211, K212,       K214, \
@@ -69,6 +77,7 @@
     { KC_NO, K401,  KC_NO, K403,  KC_NO, K405,  K406,  KC_NO, K408,  KC_NO, K410,  KC_NO, KC_NO, KC_NO, K414 }  \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 #define LAYOUT_default LAYOUT_alice
@@ -78,3 +87,8 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+
+#define LAYOUT_default LAYOUT_alice
+#define LAYOUT_all LAYOUT_alice_split_bs
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

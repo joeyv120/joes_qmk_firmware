@@ -63,8 +63,11 @@
       "x": 13,
       "y": 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
       "w": 2
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
       "w": 1
     },
     {
@@ -72,10 +75,13 @@
       "y": 0,
       "w": 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     },
     {
       "x": 0,

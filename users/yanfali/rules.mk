@@ -1,6 +1,7 @@
 BOOTMAGIC_ENABLE = lite
 DYNAMIC_KEYMAP_ENABLE = no
 <<<<<<< HEAD
+<<<<<<< HEAD
 CONSOLE_ENABLE = yes
 COMMAND_ENABLE = yes
 =======
@@ -9,6 +10,8 @@ COMMAND_ENABLE = yes
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 LTO_ENABLE = yes
 AUDIO_ENABLE = no
 

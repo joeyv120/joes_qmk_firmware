@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:keyboards/quark/keymaps/default/config.h
 /* Copyright 2020 Nathan Spears
 =======
@@ -7,6 +8,9 @@
 =======
 /* Copyright 2020 Nathan Spears
 >>>>>>> UpdateQMK
+=======
+/* Copyright 2020 Nathan Spears
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,6 +29,7 @@
 #pragma once
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:keyboards/quark/keymaps/default/config.h
 #define TAPPING_TOGGLE 2
 =======
@@ -33,3 +38,6 @@
 =======
 #define TAPPING_TOGGLE 2
 >>>>>>> UpdateQMK
+=======
+#define TAPPING_TOGGLE 2
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

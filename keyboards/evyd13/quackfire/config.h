@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
 Copyright 2020 Maarten Dekkers <maartenwut@gmail.com>
+=======
+Copyright 2020 Evy Dekkers
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,7 +27,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0x4705
 #define PRODUCT_ID      0x87C9
 #define DEVICE_VER      0x0001
+<<<<<<< HEAD
 #define MANUFACTURER    Maartenwut
+=======
+#define MANUFACTURER    Evyd13
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define PRODUCT         Quackfire
 
 /* key matrix size */

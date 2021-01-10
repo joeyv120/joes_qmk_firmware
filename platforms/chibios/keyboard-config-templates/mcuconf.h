@@ -16,6 +16,7 @@
 #pragma once
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include_next "mcuconf.h"
 =======
 #include_next <mcuconf.h>
@@ -24,6 +25,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#include_next <mcuconf.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 // #undef STM32_HSE_ENABLED
 // #define STM32_HSE_ENABLED FALSE

@@ -64,7 +64,10 @@
     { R45,   R46,   R47,   R48,   R49,   KC_NO, KC_NO, KC_NO }, \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 #define LAYOUT_split_3x6_5( \
     L00, L01, L02, L03, L04, L05,                     R06, R07, R08, R09, R10, R11, \
@@ -83,7 +86,10 @@
     { R45,   R46,   R47,   R48,   R49,   KC_NO, KC_NO, KC_NO }, \
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

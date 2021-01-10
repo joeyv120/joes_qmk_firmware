@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Copyright 2020 Naoto Takai
 =======
 <<<<<<< HEAD:keyboards/quark/keymaps/default/config.h
@@ -7,6 +8,9 @@
 /* Copyright 2020 Naoto Takai
 >>>>>>> UpdateQMK:keyboards/choco60/rev1/rev1.h
 >>>>>>> UpdateQMK
+=======
+/* Copyright 2020 Naoto Takai
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,6 +29,7 @@
 #pragma once
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "quantum.h"
 =======
 <<<<<<< HEAD:keyboards/quark/keymaps/default/config.h
@@ -33,3 +38,6 @@
 #include "quantum.h"
 >>>>>>> UpdateQMK:keyboards/choco60/rev1/rev1.h
 >>>>>>> UpdateQMK
+=======
+#include "quantum.h"
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

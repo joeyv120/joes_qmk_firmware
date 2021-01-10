@@ -19,6 +19,7 @@
  * generator plugin. Do not edit manually.
  */
 
+<<<<<<< HEAD:keyboards/chavdai40/boards/GENERIC_STM32_F042X6/board.c
 <<<<<<< HEAD
 #include "hal.h"
 #include "stm32_gpio.h"
@@ -30,6 +31,10 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#include <hal.h>
+#include <stm32_gpio.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/at_at/660m/boards/ST_STM32F072B_DISCOVERY/board.c
 
 /*===========================================================================*/
 /* Driver local definitions.                                                 */

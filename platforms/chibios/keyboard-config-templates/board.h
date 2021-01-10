@@ -16,6 +16,7 @@
 #pragma once
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include_next "board.h"
 =======
 #include_next <board.h>
@@ -24,5 +25,8 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+#include_next <board.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 // #undef STM32_HSE_BYPASS

@@ -107,6 +107,7 @@
     * [Haptic Feedback](feature_haptic_feedback.md)
     * [Joystick](feature_joystick.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     * [LED Indicators](feature_led_indicators.md)
 <<<<<<< HEAD
@@ -114,6 +115,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+    * [LED Indicators](feature_led_indicators.md)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     * [Proton C Conversion](proton_c_conversion.md)
     * [PS/2 Mouse](feature_ps2_mouse.md)
     * [Split Keyboard](feature_split_keyboard.md)
@@ -128,6 +132,7 @@
     * [My Pull Request Was Flagged](breaking_changes_instructions.md)
     * History
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       * [2020 Nov 28](ChangeLog/20201128.md)
 <<<<<<< HEAD
@@ -135,6 +140,9 @@
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+      * [2020 Nov 28](ChangeLog/20201128.md)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
       * [2020 Aug 29](ChangeLog/20200829.md)
       * [2020 May 30](ChangeLog/20200530.md)
       * [2020 Feb 29](ChangeLog/20200229.md)

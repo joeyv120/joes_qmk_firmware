@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #if defined(UNICODEMAP_ENABLE)
 enum unicode_names {
 <<<<<<< HEAD
+<<<<<<< HEAD
     CHEK,
     /*
     DI1, // ⚀
@@ -34,6 +35,8 @@ enum unicode_names {
     IBNG, // ‽
     IRNY, // ⸮
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     CCIR, // COMBINING  ⃝
     CENT, // ¢
     CHEK, // ✓
@@ -50,14 +53,18 @@ enum unicode_names {
     LEXI, // ∃
     LPRO, // ⊢
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     M4,   // ♩
     M8,   // ♪
     M8B,  // ♫
     M16,  // ♬
+<<<<<<< HEAD
 <<<<<<< HEAD
     OM,   // ॐ
     STB,  // ★
@@ -65,6 +72,8 @@ enum unicode_names {
 };
 #endif
 =======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     NEG,  // COMBINING  ⃠
     NOPE, // 🚫
     NUM,  // №
@@ -102,7 +111,10 @@ bool combined_text(uint16_t keycode);
 void cycle_combined_mode(void);
 combined_mode_t set_combined_mode(combined_mode_t mode);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dontTouch/master
 =======
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 >>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
