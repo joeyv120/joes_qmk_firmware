@@ -192,7 +192,15 @@ typedef struct {
 
 typedef struct {
 #if JOYSTICK_AXES_COUNT > 0
+<<<<<<< HEAD
     int8_t axes[JOYSTICK_AXES_COUNT];
+=======
+#    if JOYSTICK_AXES_RESOLUTION > 8
+    int16_t axes[JOYSTICK_AXES_COUNT];
+#    else
+    int8_t axes[JOYSTICK_AXES_COUNT];
+#    endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #endif
 
 #if JOYSTICK_BUTTON_COUNT > 0

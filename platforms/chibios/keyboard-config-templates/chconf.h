@@ -17,4 +17,8 @@
 
 // #define CH_CFG_OPTIMIZE_SPEED TRUE
 
+<<<<<<< HEAD
 #include_next "chconf.h"
+=======
+#include_next <chconf.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

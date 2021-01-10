@@ -3,30 +3,20 @@
 Check out the user's QMK environment and make sure it's ready to compile.
 """
 import platform
-import re
-import shutil
-import subprocess
-from pathlib import Path
 
 from milc import cli
+from milc.questions import yesno
 from qmk import submodules
 from qmk.constants import QMK_FIRMWARE
+<<<<<<< HEAD
 from qmk.questions import yesno
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 from qmk.commands import run
+from qmk.os_helpers import CheckStatus, check_binaries, check_binary_versions, check_submodules, check_git_repo
 
-ESSENTIAL_BINARIES = {
-    'dfu-programmer': {},
-    'avrdude': {},
-    'dfu-util': {},
-    'avr-gcc': {
-        'version_arg': '-dumpversion'
-    },
-    'arm-none-eabi-gcc': {
-        'version_arg': '-dumpversion'
-    },
-    'bin/qmk': {},
-}
 
+<<<<<<< HEAD
 
 def _udev_rule(vid, pid=None, *args):
     """ Helper function that return udev rules
@@ -231,44 +221,31 @@ def check_modem_manager():
         mm_check = run(["systemctl", "--quiet", "is-active", "ModemManager.service"], timeout=10)
         if mm_check.returncode == 0:
             return True
-
-    else:
-        cli.log.warn("Can't find systemctl to check for ModemManager.")
-
-
-def is_executable(command):
-    """Returns True if command exists and can be executed.
+=======
+def os_tests():
+    """Determine our OS and run platform specific tests
     """
-    # Make sure the command is in the path.
-    res = shutil.which(command)
-    if res is None:
-        cli.log.error("{fg_red}Can't find %s in your path.", command)
-        return False
+    platform_id = platform.platform().lower()
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
-    # Make sure the command can be executed
-    version_arg = ESSENTIAL_BINARIES[command].get('version_arg', '--version')
-    check = run([command, version_arg], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=5, universal_newlines=True)
-
-    ESSENTIAL_BINARIES[command]['output'] = check.stdout
-
-    if check.returncode in [0, 1]:  # Older versions of dfu-programmer exit 1
-        cli.log.debug('Found {fg_cyan}%s', command)
-        return True
-
-    cli.log.error("{fg_red}Can't run `%s %s`", command, version_arg)
-    return False
+    if 'darwin' in platform_id or 'macos' in platform_id:
+        return os_test_macos()
+    elif 'linux' in platform_id:
+        return os_test_linux()
+    elif 'windows' in platform_id:
+        return os_test_windows()
+    else:
+        cli.log.warning('Unsupported OS detected: %s', platform_id)
+        return CheckStatus.WARNING
 
 
 def os_test_linux():
     """Run the Linux specific tests.
     """
     cli.log.info("Detected {fg_cyan}Linux.")
-    ok = True
+    from qmk.os_helpers.linux import check_udev_rules
 
-    if not check_udev_rules():
-        ok = False
-
-    return ok
+    return check_udev_rules()
 
 
 def os_test_macos():
@@ -276,7 +253,7 @@ def os_test_macos():
     """
     cli.log.info("Detected {fg_cyan}macOS.")
 
-    return True
+    return CheckStatus.OK
 
 
 def os_test_windows():
@@ -284,7 +261,7 @@ def os_test_windows():
     """
     cli.log.info("Detected {fg_cyan}Windows.")
 
-    return True
+    return CheckStatus.OK
 
 
 @cli.argument('-y', '--yes', action='store_true', arg_only=True, help='Answer yes to all questions.')
@@ -299,23 +276,17 @@ def doctor(cli):
         * [ ] Compile a trivial program with each compiler
     """
     cli.log.info('QMK Doctor is checking your environment.')
-    ok = True
 
-    # Determine our OS and run platform specific tests
-    platform_id = platform.platform().lower()
+    status = os_tests()
 
-    if 'darwin' in platform_id or 'macos' in platform_id:
-        if not os_test_macos():
-            ok = False
-    elif 'linux' in platform_id:
-        if not os_test_linux():
-            ok = False
-    elif 'windows' in platform_id:
-        if not os_test_windows():
-            ok = False
-    else:
-        cli.log.error('Unsupported OS detected: %s', platform_id)
-        ok = False
+    cli.log.info('QMK home: {fg_cyan}%s', QMK_FIRMWARE)
+
+    # Make sure our QMK home is a Git repo
+    git_ok = check_git_repo()
+
+    if git_ok == CheckStatus.WARNING:
+        cli.log.warning("QMK home does not appear to be a Git repository! (no .git folder)")
+        status = CheckStatus.WARNING
 
     cli.log.info('QMK home: {fg_cyan}%s', QMK_FIRMWARE)
 
@@ -330,31 +301,45 @@ def doctor(cli):
     if bin_ok:
         cli.log.info('All dependencies are installed.')
     else:
-        ok = False
+        status = CheckStatus.ERROR
 
     # Make sure the tools are at the correct version
-    for check in (check_arm_gcc_version, check_avr_gcc_version, check_avrdude_version, check_dfu_util_version, check_dfu_programmer_version):
-        if not check():
-            ok = False
+    ver_ok = check_binary_versions()
+    if CheckStatus.ERROR in ver_ok:
+        status = CheckStatus.ERROR
+    elif CheckStatus.WARNING in ver_ok and status == CheckStatus.OK:
+        status = CheckStatus.WARNING
 
     # Check out the QMK submodules
     sub_ok = check_submodules()
 
-    if sub_ok:
+    if sub_ok == CheckStatus.OK:
         cli.log.info('Submodules are up to date.')
     else:
         if yesno('Would you like to clone the submodules?', default=True):
             submodules.update()
             sub_ok = check_submodules()
 
-        if not sub_ok:
-            ok = False
+        if CheckStatus.ERROR in sub_ok:
+            status = CheckStatus.ERROR
+        elif CheckStatus.WARNING in sub_ok and status == CheckStatus.OK:
+            status = CheckStatus.WARNING
 
     # Report a summary of our findings to the user
-    if ok:
+    if status == CheckStatus.OK:
         cli.log.info('{fg_green}QMK is ready to go')
+        return 0
+    elif status == CheckStatus.WARNING:
+        cli.log.info('{fg_yellow}QMK is ready to go, but minor problems were found')
+        return 1
     else:
+<<<<<<< HEAD
         cli.log.info('{fg_yellow}Problems detected, please fix these problems before proceeding.')
         # FIXME(skullydazed/unclaimed): Link to a document about troubleshooting, or discord or something
 
     return ok
+=======
+        cli.log.info('{fg_red}Major problems detected, please fix these problems before proceeding.')
+        cli.log.info('{fg_blue}Check out the FAQ (https://docs.qmk.fm/#/faq_build) or join the QMK Discord (https://discord.gg/Uq7gcHh) for help.')
+        return 2
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -19,7 +19,12 @@ NKRO_ENABLE = no            # USB Nkey Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
+<<<<<<< HEAD
 RGB_MATRIX_ENABLE = WS2812
+=======
+RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_DRIVER = WS2812
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 LAYOUTS = planck_mit
 LAYOUTS_HAS_RGB = yes

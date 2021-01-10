@@ -1,5 +1,6 @@
 #include "rupa.h"
 
+<<<<<<< HEAD
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Keymap _QWERTY: (Base Layer) Default Layer
      * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┬───┐
@@ -43,3 +44,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         OS_RCTL, OS_RALT, OS_RGUI,                            _______,                   _______, _______, KC_CAPS,      KC_MS_L,     KC_MS_D,      KC_MS_R
     ),
 };
+=======
+#define LAYOUT_65_ansi_wrapper(...) LAYOUT_65_ansi(__VA_ARGS__)
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    [_QWERTY] = LAYOUT_65_ansi_wrapper(
+        ____65_QWERTY______________ROW1,
+        ____65_QWERTY______________ROW2,
+        ____65_QWERTY______________ROW3,
+        ____65_QWERTY______________ROW4,
+        ____65_QWERTY______________ROW5
+    ),
+    [_RAISE] = LAYOUT_65_ansi_wrapper(
+        ____65_RAISE_______________ROW1,
+        ____65_RAISE_______________ROW2,
+        ____65_RAISE_______________ROW3,
+        ____65_RAISE_______________ROW4,
+        ____65_RAISE_______________ROW5
+    ),
+    [_LOWER] = LAYOUT_65_ansi_wrapper(
+        ____65_LOWER_______________ROW1,
+        ____65_LOWER_______________ROW2,
+        ____65_LOWER_______________ROW3,
+        ____65_LOWER_______________ROW4,
+        ____65_LOWER_______________ROW5
+    ),
+    [_ADJUST] = LAYOUT_65_ansi_wrapper(
+        ____65_ADJUST______________ROW1,
+        ____65_ADJUST___________BL_ROW2,
+        ____65_ADJUST______________ROW3,
+        ____65_ADJUST______________ROW4,
+        ____65_ADJUST______________ROW5
+    ),
+};
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
+}
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

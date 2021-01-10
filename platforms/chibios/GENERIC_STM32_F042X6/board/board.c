@@ -19,8 +19,13 @@
  * generator plugin. Do not edit manually.
  */
 
+<<<<<<< HEAD
 #include "hal.h"
 #include "stm32_gpio.h"
+=======
+#include <hal.h>
+#include <stm32_gpio.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 /*===========================================================================*/
 /* Driver local definitions.                                                 */
@@ -155,8 +160,13 @@ static void stm32_gpio_init(void) {
 
   /* Enabling GPIO-related clocks, the mask comes from the
      registry header file.*/
+<<<<<<< HEAD
   rccResetAHB(STM32_GPIO_EN_MASK);
   rccEnableAHB(STM32_GPIO_EN_MASK, true);
+=======
+  rccResetAHB1(STM32_GPIO_EN_MASK);
+  rccEnableAHB1(STM32_GPIO_EN_MASK, true);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
   /* Initializing all the defined GPIO ports.*/
 #if STM32_HAS_GPIOA

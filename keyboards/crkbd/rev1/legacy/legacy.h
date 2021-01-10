@@ -19,3 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #include "rev1.h"
+<<<<<<< HEAD
+=======
+
+extern uint8_t is_master;
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

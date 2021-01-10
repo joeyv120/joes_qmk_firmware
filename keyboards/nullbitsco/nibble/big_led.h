@@ -15,7 +15,11 @@
  */
 #pragma once
 
+<<<<<<< HEAD
 #include "quantum.h" 
+=======
+#include "quantum.h"
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 /* Optional big LED pins */
 #define BIG_LED_R_PIN D7
@@ -29,6 +33,13 @@
 #define GPIO_STATE_HIGH 1
 
 void
+<<<<<<< HEAD
   set_big_LED_r(uint8_t mode),
   set_big_LED_g(uint8_t mode),
   set_big_LED_b(uint8_t mode);
+=======
+  set_big_LED_rgb(uint8_t r_mode, uint8_t g_mode, uint8_t b_mode),
+  set_big_LED_r(uint8_t mode),
+  set_big_LED_g(uint8_t mode),
+  set_big_LED_b(uint8_t mode);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

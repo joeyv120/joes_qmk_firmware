@@ -140,3 +140,10 @@ To use constant speed mode, you must at least define `MK_COMBINED` in your keyma
 ```c
 #define MK_COMBINED
 ```
+<<<<<<< HEAD
+=======
+
+## Use with PS/2 Mouse and Pointing Device
+
+Mouse keys button state is shared with [PS/2 mouse](feature_ps2_mouse.md) and [pointing device](feature_pointing_device.md) so mouse keys button presses can be used for clicks and drags.
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

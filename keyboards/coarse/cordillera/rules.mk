@@ -18,5 +18,10 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
 
+<<<<<<< HEAD
+=======
+LAYOUTS = alice alice_split_bs
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 # Enter lower-power sleep mode when on the ChibiOS idle thread
 OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE

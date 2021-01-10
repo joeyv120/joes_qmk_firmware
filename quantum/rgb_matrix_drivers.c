@@ -34,6 +34,15 @@ static void init(void) {
 #        ifdef DRIVER_ADDR_2
     IS31FL3731_init(DRIVER_ADDR_2);
 #        endif
+<<<<<<< HEAD
+=======
+#        ifdef DRIVER_ADDR_3
+    IS31FL3731_init(DRIVER_ADDR_3);
+#        endif
+#        ifdef DRIVER_ADDR_4
+    IS31FL3731_init(DRIVER_ADDR_4);
+#        endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #    elif defined(IS31FL3733)
     IS31FL3733_init(DRIVER_ADDR_1, 0);
 #    elif defined(IS31FL3737)
@@ -60,6 +69,15 @@ static void init(void) {
 #        ifdef DRIVER_ADDR_2
     IS31FL3731_update_led_control_registers(DRIVER_ADDR_2, 1);
 #        endif
+<<<<<<< HEAD
+=======
+#        ifdef DRIVER_ADDR_3
+    IS31FL3731_update_led_control_registers(DRIVER_ADDR_3, 2);
+#        endif
+#        ifdef DRIVER_ADDR_4
+    IS31FL3731_update_led_control_registers(DRIVER_ADDR_4, 3);
+#        endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #    elif defined(IS31FL3733)
     IS31FL3733_update_led_control_registers(DRIVER_ADDR_1, 0);
     IS31FL3733_update_led_control_registers(DRIVER_ADDR_2, 1);
@@ -76,6 +94,15 @@ static void flush(void) {
 #        ifdef DRIVER_ADDR_2
     IS31FL3731_update_pwm_buffers(DRIVER_ADDR_2, 1);
 #        endif
+<<<<<<< HEAD
+=======
+#        ifdef DRIVER_ADDR_3
+    IS31FL3731_update_pwm_buffers(DRIVER_ADDR_3, 2);
+#        endif
+#        ifdef DRIVER_ADDR_4
+    IS31FL3731_update_pwm_buffers(DRIVER_ADDR_4, 3);
+#        endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 }
 
 const rgb_matrix_driver_t rgb_matrix_driver = {

@@ -1,5 +1,12 @@
 #pragma once
 
+<<<<<<< HEAD
+=======
+#include "quantum.h"
+
+#include <stdint.h>
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #ifndef JOYSTICK_BUTTON_COUNT
 #    define JOYSTICK_BUTTON_COUNT 8
 #endif
@@ -8,9 +15,19 @@
 #    define JOYSTICK_AXES_COUNT 4
 #endif
 
+<<<<<<< HEAD
 #include "quantum.h"
 
 #include <stdint.h>
+=======
+#ifndef JOYSTICK_AXES_RESOLUTION
+#    define JOYSTICK_AXES_RESOLUTION 8
+#elif JOYSTICK_AXES_RESOLUTION < 8 || JOYSTICK_AXES_RESOLUTION > 16
+#    error JOYSTICK_AXES_RESOLUTION must be between 8 and 16
+#endif
+
+#define JOYSTICK_RESOLUTION ((1L << (JOYSTICK_AXES_RESOLUTION - 1)) - 1)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 // configure on input_pin of the joystick_axes array entry to JS_VIRTUAL_AXIS
 // to prevent it from being read from the ADC. This allows outputing forged axis value.

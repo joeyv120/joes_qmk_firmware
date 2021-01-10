@@ -144,6 +144,15 @@ static void dance_oled_finished(qk_tap_dance_state_t *state, void *user_data) {
                 }
             }
             break;
+<<<<<<< HEAD
+=======
+        case 4:
+            if (!state->pressed) {
+                // quadruple tap - step through brightness levels
+                oled_set_brightness(oled_get_brightness() + 0x10);
+            }
+            break;
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         default:
             break;
     }

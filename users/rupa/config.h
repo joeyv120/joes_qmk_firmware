@@ -5,4 +5,11 @@
 #define ONESHOT_TAP_TOGGLE 5
 #define ONESHOT_TIMEOUT 5000
 
+<<<<<<< HEAD
 #define TAP_CODE_DELAY 5 //DEFAULT: 100
+=======
+#undef TAP_CODE_DELAY
+#define TAP_CODE_DELAY 5 //DEFAULT: 100
+
+//#define UNICODE_SCRIPT_MODE_ENABLE
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

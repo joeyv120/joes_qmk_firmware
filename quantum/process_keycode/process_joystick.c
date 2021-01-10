@@ -129,17 +129,30 @@ bool process_joystick_analogread_quantum() {
         // test the converted value against the lower range
         int32_t ref        = joystick_axes[axis_index].mid_digit;
         int32_t range      = joystick_axes[axis_index].min_digit;
+<<<<<<< HEAD
         int32_t ranged_val = ((axis_val - ref) * -127) / (range - ref);
+=======
+        int32_t ranged_val = ((axis_val - ref) * -JOYSTICK_RESOLUTION) / (range - ref);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
         if (ranged_val > 0) {
             // the value is in the higher range
             range      = joystick_axes[axis_index].max_digit;
+<<<<<<< HEAD
             ranged_val = ((axis_val - ref) * 127) / (range - ref);
         }
 
         // clamp the result in the valid range
         ranged_val = ranged_val < -127 ? -127 : ranged_val;
         ranged_val = ranged_val > 127 ? 127 : ranged_val;
+=======
+            ranged_val = ((axis_val - ref) * JOYSTICK_RESOLUTION) / (range - ref);
+        }
+
+        // clamp the result in the valid range
+        ranged_val = ranged_val < -JOYSTICK_RESOLUTION ? -JOYSTICK_RESOLUTION : ranged_val;
+        ranged_val = ranged_val > JOYSTICK_RESOLUTION ? JOYSTICK_RESOLUTION : ranged_val;
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
         if (ranged_val != joystick_status.axes[axis_index]) {
             joystick_status.axes[axis_index] = ranged_val;

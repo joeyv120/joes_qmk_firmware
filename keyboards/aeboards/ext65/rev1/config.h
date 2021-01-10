@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+/* Copyright 2020 Harrison Chan (Xelus)
+=======
 /* Copyright 2018 Jason Williams (Wilba)
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,6 +18,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
+#include "config_common.h"
+=======
 #pragma once
 
 #include "config_common.h"
@@ -22,9 +29,8 @@
 #define VENDOR_ID       0x4145 // "AE"
 #define PRODUCT_ID      0xAE65 // AEboards EXT65
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    AEboards
-#define PRODUCT         AEboards Ext65
-#define DESCRIPTION     AEboards Ext65
+#define MANUFACTURER    AEBoards
+#define PRODUCT         AEBoards Ext65
 
 /* key matrix size */
 #define MATRIX_ROWS 10
@@ -46,3 +52,4 @@
 
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

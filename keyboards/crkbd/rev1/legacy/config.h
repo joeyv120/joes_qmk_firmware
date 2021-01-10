@@ -18,6 +18,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+<<<<<<< HEAD
 #include <serial_config.h>
+=======
+#include "serial_config.h"
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 #define PRODUCT         Corne Keyboard Rev.1 (Legacy Split)

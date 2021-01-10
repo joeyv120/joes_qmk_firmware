@@ -10,8 +10,8 @@ echo "Using git hash ${rev}"
 
 if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]] ; then
 
-# fix formatting
 git checkout master
+<<<<<<< HEAD
 git diff --diff-filter=AM --name-only -n 1 -z ${TRAVIS_COMMIT_RANGE} | xargs -0 dos2unix
 git diff --diff-filter=AM --name-only -n 1 -z ${TRAVIS_COMMIT_RANGE} '*.c' '*.h' '*.cpp' | grep -z -e '^drivers' -e '^quantum' -e '^tests' -e '^tmk_core' | grep -zv -e 'quantum/template' -e 'tmk_core/protocol/usb_hid' -e 'platforms/chibios' | xargs -0 clang-format-7 -i
 git diff --diff-filter=AM --name-only -n 1 -z ${TRAVIS_COMMIT_RANGE} | xargs -0 git add
@@ -24,22 +24,10 @@ increment_version ()
   new="${part[*]}"
   echo -e "${new// /.}"
 }
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 git diff --name-only -n 1 ${TRAVIS_COMMIT_RANGE}
-
-NEFM=$(git diff --name-only -n 1 ${TRAVIS_COMMIT_RANGE} | grep -Ev '^(keyboards/)' | grep -Ev '^(docs/)' | grep -Ev '^(users/)' | grep -Ev '^(layouts/)' | wc -l)
-if [[ $NEFM -gt 0 ]] ; then
-	echo "Essential files modified."
-	git fetch --tags
-	lasttag=$(git tag --sort=-creatordate --no-column --list '*.*.*' | grep -E -m1 '^[0-9]+\.[0-9]+\.[0-9]+$')
-	newtag=$(increment_version $lasttag)
-	until git tag $newtag; do
-		newtag=$(increment_version $newtag)
-	done
-	git push --tags git@github.com:qmk/qmk_firmware.git
-else
-	echo "No essential files modified."
-fi
 
 if [[ "$TRAVIS_COMMIT_MESSAGE" != *"[skip build]"* ]] ; then
 	make generate-keyboards-file SILENT=true > .keyboards

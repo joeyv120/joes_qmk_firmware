@@ -18,8 +18,14 @@
 
 #include QMK_KEYBOARD_H
 
+<<<<<<< HEAD
 enum preonic_layers {
     _QWERTY,
+=======
+enum layer_names {
+    _QWERTY,
+    _HUNGARIAN,
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     _COLEMAK,
     _DVORAK,
     _LOWER,
@@ -27,8 +33,14 @@ enum preonic_layers {
     _ADJUST
 };
 
+<<<<<<< HEAD
 enum preonic_keycodes {
     QWERTY = SAFE_RANGE,
+=======
+enum custom_keycodes {
+    QWERTY = SAFE_RANGE,
+    HUNGARIAN,
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     COLEMAK,
     DVORAK,
     BACKLIT

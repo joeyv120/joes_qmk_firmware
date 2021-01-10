@@ -1,6 +1,12 @@
 #pragma once
 
 #include "helix.h"
+<<<<<<< HEAD
+=======
+
+bool is_mac_mode(void);
+void set_mac_mode_kb(bool macmode);
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 #ifndef SPLIT_KEYBOARD
     extern bool is_helix_master(void);

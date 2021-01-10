@@ -4,9 +4,12 @@ MCU = atmega32u4
 # Processor frequency
 F_CPU = 8000000
 
+<<<<<<< HEAD
 # Bootloader selection
 BOOTLOADER = caterina
 
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 # Build Options
 #   change yes to no to disable
 #

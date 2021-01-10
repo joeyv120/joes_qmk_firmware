@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
+Copyright 2020 noclew
+=======
 Copyright 2012 Jun Wako <wakojun@gmail.com>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -20,6 +24,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/chili/config.h
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define VENDOR_ID       0x5945 // "YE"
 #define PRODUCT_ID      0x0001
 #define DEVICE_VER      0x0001
@@ -46,6 +54,38 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_PIN B7
 #define BACKLIGHT_BREATHING
 #define BACKLIGHT_LEVELS 3
+<<<<<<< HEAD
+=======
+#define VENDOR_ID 0x9906
+#define PRODUCT_ID 0x0001
+#define DEVICE_VER 0x0001
+#define MANUFACTURER noclew
+#define PRODUCT Vaneela
+
+/* key matrix size */
+#define MATRIX_ROWS 5
+#define MATRIX_COLS 12
+
+/*
+ * Keyboard Matrix Assignments
+ *
+ * Change this to how you wired your keyboard
+ * COLS: AVR pins used for columns, left to right
+ * ROWS: AVR pins used for rows, top to bottom
+ * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
+ *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
+ *
+ */
+#define MATRIX_ROW_PINS { F6, F7, B3, B2, B6 }
+#define MATRIX_COL_PINS { F4, F5, B5, B4, E6, D7, C6, D4, D0, D1, D2, D3 }
+#define UNUSED_PINS
+
+/* COL2ROW, ROW2COL*/
+#define DIODE_DIRECTION COL2ROW
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 /* Underlight configuration
  */
@@ -59,14 +99,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/chili/config.h
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
 
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
+=======
+/* Set 0 if debouncing isn't needed */
+#define DEBOUNCE 5
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+<<<<<<< HEAD
+<<<<<<< HEAD:keyboards/chili/config.h
+=======
+/* If defined, GRAVE_ESC will always act as ESC when CTRL is held.
+ * This is userful for the Windows task manager shortcut (ctrl+shift+esc).
+ */
+// #define GRAVE_ESC_CTRL_OVERRIDE
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
 /*
  * Force NKRO
@@ -101,6 +160,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
+<<<<<<< HEAD
+/* key combination for magic key command */
+/* defined by default; to change, uncomment and set to the combination you want */
+// #define IS_COMMAND() (get_mods() == MOD_MASK_SHIFT)
+
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /* control how magic key switches layers */
 //#define MAGIC_KEY_SWITCH_LAYER_WITH_FKEYS  true
 //#define MAGIC_KEY_SWITCH_LAYER_WITH_NKEYS  true
@@ -110,8 +176,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MAGIC_KEY_SWITCH_LAYER_WITH_FKEYS
 //#define MAGIC_KEY_SWITCH_LAYER_WITH_NKEYS
 //#define MAGIC_KEY_SWITCH_LAYER_WITH_CUSTOM
+<<<<<<< HEAD
+//#define MAGIC_KEY_HELP           H
+//#define MAGIC_KEY_HELP_ALT       SLASH
+=======
 //#define MAGIC_KEY_HELP1          H
 //#define MAGIC_KEY_HELP2          SLASH
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 //#define MAGIC_KEY_DEBUG          D
 //#define MAGIC_KEY_DEBUG_MATRIX   X
 //#define MAGIC_KEY_DEBUG_KBD      K
@@ -119,9 +190,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MAGIC_KEY_VERSION        V
 //#define MAGIC_KEY_STATUS         S
 //#define MAGIC_KEY_CONSOLE        C
+<<<<<<< HEAD
+//#define MAGIC_KEY_LAYER0         0
+//#define MAGIC_KEY_LAYER0_ALT     GRAVE
+=======
 //#define MAGIC_KEY_LAYER0_ALT1    ESC
 //#define MAGIC_KEY_LAYER0_ALT2    GRAVE
 //#define MAGIC_KEY_LAYER0         0
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 //#define MAGIC_KEY_LAYER1         1
 //#define MAGIC_KEY_LAYER2         2
 //#define MAGIC_KEY_LAYER3         3
@@ -131,9 +207,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MAGIC_KEY_LAYER7         7
 //#define MAGIC_KEY_LAYER8         8
 //#define MAGIC_KEY_LAYER9         9
+<<<<<<< HEAD
+//#define MAGIC_KEY_BOOTLOADER     B
+//#define MAGIC_KEY_BOOTLOADER_ALT ESC
+//#define MAGIC_KEY_LOCK           CAPS
+//#define MAGIC_KEY_EEPROM         E
+//#define MAGIC_KEY_EEPROM_CLEAR   BSPACE
+=======
 //#define MAGIC_KEY_BOOTLOADER     PAUSE
 //#define MAGIC_KEY_LOCK           CAPS
 //#define MAGIC_KEY_EEPROM         E
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 //#define MAGIC_KEY_NKRO           N
 //#define MAGIC_KEY_SLEEP_LED      Z
 
@@ -152,9 +236,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+<<<<<<< HEAD
+
+<<<<<<< HEAD:keyboards/chili/config.h
+=======
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 /*
  * MIDI options
  */
@@ -177,3 +266,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 1
+<<<<<<< HEAD
+=======
+/* disable these deprecated features by default */
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+
+/* Bootmagic Lite key configuration */
+// #define BOOTMAGIC_LITE_ROW 0
+// #define BOOTMAGIC_LITE_COLUMN 0
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/nckiibs/vaneela/config.h
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

@@ -23,7 +23,10 @@ void board_init(void) {
   SYSCFG->CFGR1 |= SYSCFG_CFGR1_I2C1_DMA_RMP;
   SYSCFG->CFGR1 &= ~(SYSCFG_CFGR1_SPI2_DMA_RMP);
 }
+<<<<<<< HEAD
 
 void keyboard_post_init_user(void) {
 rgblight_set_effect_range(0, 4);
 }
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

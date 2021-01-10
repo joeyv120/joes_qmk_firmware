@@ -24,6 +24,7 @@ The time it takes for the switch to settle might vary with switch type, age, and
 
 If the device chooses not to mitigate contact bounce, then often actions that happen when the switch is pressed are repeated
 multiple times.
+<<<<<<< HEAD
 
 There are many ways to handle contact bounce ("Debouncing"). Some include employing additional hardware, for example an RC filter,
 while there are various ways to do debouncing in software too, often called debounce algorithms. This page discusses software
@@ -43,6 +44,27 @@ susceptible to noise, you must choose a debounce method that will also mitigate 
 
 ## Types of debounce algorithms
 
+=======
+
+There are many ways to handle contact bounce ("Debouncing"). Some include employing additional hardware, for example an RC filter,
+while there are various ways to do debouncing in software too, often called debounce algorithms. This page discusses software
+debouncing methods available in QMK.
+
+While technically not considered contact bounce/contact chatter, some switch technologies are susceptible to noise, meaning,
+while the key is not changing state, sometimes short random 0->1 or 1->0 transitions might be read by the digital circuit, for example:
+```
+                  +-+
+                  | |
+                  | |
++-----------------+ +--------------------
+```
+
+Many debounce methods (but not all) will also make the device resistant to noise. If you are working with a technology that is
+susceptible to noise, you must choose a debounce method that will also mitigate noise for you.
+
+## Types of debounce algorithms
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 1) Unit of time: Timestamp (milliseconds) vs Cycles (scans)
    * Debounce algorithms often have a 'debounce time' parameter, that specifies the maximum settling time of the switch contacts.
      This time might be measured in various units:
@@ -143,9 +165,16 @@ You have the option to implement you own debouncing algorithm. To do this:
 
 ### Old names
 The following old names for existing algorithms will continue to be supported, however it is recommended to use the new names instead.
+<<<<<<< HEAD
 
 * sym_g - old name for sym_defer_g
 * eager_pk - old name for sym_eager_pk
 * sym_pk - old name for sym_defer_pk
 * eager_pr - old name for sym_eager_pr
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
+* sym_g - old name for sym_defer_g
+* eager_pk - old name for sym_eager_pk
+* sym_pk - old name for sym_defer_pk
+* eager_pr - old name for sym_eager_pr

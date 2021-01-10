@@ -14,4 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+<<<<<<< HEAD
 #pragma once
+=======
+<<<<<<< HEAD:keyboards/exclusive/e85/hotswap/hotswap.c
+#include "hotswap.h"
+=======
+#pragma once
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445:keyboards/atreus/feather/feather.h
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

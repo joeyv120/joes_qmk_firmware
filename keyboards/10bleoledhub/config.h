@@ -26,7 +26,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 /* key matrix size */
 #define MATRIX_ROWS 4
 #define MATRIX_COLS 3
+<<<<<<< HEAD
 #define MATRIX_ROW_PINS { F6, F5, F4, F1 }
+=======
+#define MATRIX_ROW_PINS { F0, F5, F4, F6 }
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #define MATRIX_COL_PINS { D6, D7, B5 }
 #define UNUSED_PINS
 

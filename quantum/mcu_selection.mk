@@ -16,7 +16,6 @@ ifneq ($(findstring MKL26Z64, $(MCU)),)
   # Linker script to use
   # - it should exist either in <chibios>/os/common/ports/ARMCMx/compilers/GCC/ld/
   #   or <keyboard_dir>/ld/
-  # - NOTE: a custom ld script is needed for EEPROM on Teensy LC
   MCU_LDSCRIPT ?= MKL26Z64
 
   # Startup code to use
@@ -208,6 +207,7 @@ ifneq ($(findstring STM32F303, $(MCU)),)
   BOARD ?= GENERIC_STM32_F303XC
 
   USE_FPU ?= yes
+<<<<<<< HEAD
 
   # Options to pass to dfu-util when flashing
   DFU_ARGS ?= -d 0483:DF11 -a 0 -s 0x08000000:leave
@@ -274,12 +274,83 @@ ifneq ($(findstring STM32F411, $(MCU)),)
   BOARD ?= BLACKPILL_STM32_F411
 
   USE_FPU ?= yes
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
   # Options to pass to dfu-util when flashing
   DFU_ARGS ?= -d 0483:DF11 -a 0 -s 0x08000000:leave
   DFU_SUFFIX_ARGS ?= -v 0483 -p DF11
 endif
 
+<<<<<<< HEAD
+=======
+ifneq ($(findstring STM32F401, $(MCU)),)
+  # Cortex version
+  MCU = cortex-m4
+
+  # ARM version, CORTEX-M0/M1 are 6, CORTEX-M3/M4/M7 are 7
+  ARMV = 7
+
+  ## chip/board settings
+  # - the next two should match the directories in
+  #   <chibios>/os/hal/ports/$(MCU_FAMILY)/$(MCU_SERIES)
+  MCU_FAMILY = STM32
+  MCU_SERIES = STM32F4xx
+
+  # Linker script to use
+  # - it should exist either in <chibios>/os/common/ports/ARMCMx/compilers/GCC/ld/
+  #   or <keyboard_dir>/ld/
+  MCU_LDSCRIPT ?= STM32F401xC
+
+  # Startup code to use
+  #  - it should exist in <chibios>/os/common/startup/ARMCMx/compilers/GCC/mk/
+  MCU_STARTUP ?= stm32f4xx
+
+  # Board: it should exist either in <chibios>/os/hal/boards/,
+  # <keyboard_dir>/boards/, or drivers/boards/
+  BOARD ?= BLACKPILL_STM32_F401
+
+  USE_FPU ?= yes
+
+  # Options to pass to dfu-util when flashing
+  DFU_ARGS ?= -d 0483:DF11 -a 0 -s 0x08000000:leave
+  DFU_SUFFIX_ARGS ?= -v 0483 -p DF11
+endif
+
+ifneq ($(findstring STM32F411, $(MCU)),)
+  # Cortex version
+  MCU = cortex-m4
+
+  # ARM version, CORTEX-M0/M1 are 6, CORTEX-M3/M4/M7 are 7
+  ARMV = 7
+
+  ## chip/board settings
+  # - the next two should match the directories in
+  #   <chibios>/os/hal/ports/$(MCU_FAMILY)/$(MCU_SERIES)
+  MCU_FAMILY = STM32
+  MCU_SERIES = STM32F4xx
+
+  # Linker script to use
+  # - it should exist either in <chibios>/os/common/ports/ARMCMx/compilers/GCC/ld/
+  #   or <keyboard_dir>/ld/
+  MCU_LDSCRIPT ?= STM32F411xE
+
+  # Startup code to use
+  #  - it should exist in <chibios>/os/common/startup/ARMCMx/compilers/GCC/mk/
+  MCU_STARTUP ?= stm32f4xx
+
+  # Board: it should exist either in <chibios>/os/hal/boards/,
+  # <keyboard_dir>/boards/, or drivers/boards/
+  BOARD ?= BLACKPILL_STM32_F411
+
+  USE_FPU ?= yes
+
+  # Options to pass to dfu-util when flashing
+  DFU_ARGS ?= -d 0483:DF11 -a 0 -s 0x08000000:leave
+  DFU_SUFFIX_ARGS ?= -v 0483 -p DF11
+endif
+
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 ifneq (,$(filter $(MCU),atmega16u2 atmega32u2 atmega16u4 atmega32u4 at90usb646 at90usb647 at90usb1286 at90usb1287))
   PROTOCOL = LUFA
 
@@ -317,6 +388,9 @@ ifneq (,$(filter $(MCU),atmega16u2 atmega32u2 atmega16u4 atmega32u4 at90usb646 a
   # Interrupt driven control endpoint task
   ifeq (,$(filter $(NO_INTERRUPT_CONTROL_ENDPOINT),yes))
     OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
+  endif
+  ifneq (,$(filter $(MCU),atmega16u2 atmega32u2))
+    NO_I2C = yes
   endif
 endif
 
