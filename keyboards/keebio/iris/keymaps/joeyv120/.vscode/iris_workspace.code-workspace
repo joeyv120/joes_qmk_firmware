@@ -1,11 +1,8 @@
 {
 	"folders": [
-		{
-			"path": ".."
-		},
-		{
-			// "path": "..\\..\\..\\..\\..\\..\\..\\Documents\\vizLayer"
-		},
+		{"path": ".."},
+		{"path": "..\\..\\..\\..\\..\\JNAO\\keymaps\\JoeNAO\\"},
+		{"path": "..\\..\\..\\..\\..\\..\\..\\Documents\\vizLayer"},
 	],
 	"settings": {
 		"git.ignoreLimitWarning": true
