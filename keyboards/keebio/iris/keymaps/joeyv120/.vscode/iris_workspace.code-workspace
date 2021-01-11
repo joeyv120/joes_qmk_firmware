@@ -2,6 +2,7 @@
 	"folders": [
 		{"path": ".."},
 		{"path": "..\\..\\..\\..\\..\\JNAO\\keymaps\\JoeNAO\\"},
+		{"path": "..\\..\\..\\..\\..\\uno\\"},
 		{"path": "..\\..\\..\\..\\..\\..\\..\\Documents\\vizLayer"},
 	],
 	"settings": {
