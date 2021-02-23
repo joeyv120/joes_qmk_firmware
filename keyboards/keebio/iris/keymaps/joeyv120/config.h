@@ -44,3 +44,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 	If defined, synchronization functionality for split keyboards is added
 #define RGBLIGHT_SPLIT 
+
+// Documented here: https://github.com/qmk/qmk_firmware/blob/master/docs/config_options.md
+// #define MATRIX_IO_DELAY 30
+// #define QMK_KEYS_PER_SCAN 4
+// #define TAP_CODE_DELAY 150

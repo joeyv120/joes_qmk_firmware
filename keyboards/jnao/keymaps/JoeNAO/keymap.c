@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┼┼────────┼────────┼────────┼────────┼────────┼────────┤
        KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,     KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
     //├────────┼────────┼────────┼────────┼────────┼────────┤├────────┼────────┼────────┼────────┼────────┼────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, TD(GAP), KC_SPACE, TT(1),   TT(2),   KC_ENT,  KC_RALT, XXXXXXX, XXXXXXX, XXXXXXX
+       XXXXXXX, XXXXXXX, XXXXXXX, TD(GAP), KC_SPACE, TT(1),   TT(2),   KC_ENT,  KC_LALT, XXXXXXX, XXXXXXX, XXXXXXX
     //└────────┴────────┴────────┴────────┴────────┴────────┴┴────────┴────────┴────────┴────────┴────────┴────────┘
     ),
   [_NAVIGATION] = LAYOUT_ortho_4x12(
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
   [_FUNCTION] = LAYOUT_ortho_4x12(
     //┌────────┬────────┬────────┬────────┬────────┬────────┐┌────────┬────────┬────────┬────────┬────────┬────────┐
-       _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_LCBR,  KC_RCBR, KC_P7,   KC_P8,   KC_P9,   KC_PAST, KC_PSLS,
+       KC_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_LCBR,  KC_RCBR, KC_P7,   KC_P8,   KC_P9,   KC_PAST, KC_PSLS,
     //├────────┼────────┼────────┼────────┼────────┼────────┤├────────┼────────┼────────┼────────┼────────┼────────┤
        TD(NMS), KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_LBRC,  KC_RBRC, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, KC_MINS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼┼────────┼────────┼────────┼────────┼────────┼────────┤
