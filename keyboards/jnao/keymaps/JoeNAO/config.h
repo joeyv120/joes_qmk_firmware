@@ -23,8 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0x1337
 #define PRODUCT_ID      0x6017
 #define DEVICE_VER      0x0001
-// #define MANUFACTURER    Maple Computing
-#define MANUFACTURER    JoeNAO
+#define MANUFACTURER    Maple Computing
 #define PRODUCT         JNAO Keyboard
 #define DESCRIPTION     A no-frills ortholinear keyboard
 
