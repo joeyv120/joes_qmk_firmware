@@ -25,8 +25,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // https://www.all8.com/tools/bpm.htm
 #define TAPPING_TERM 200
-
+// https://docs.qmk.fm/#/tap_hold
 #define TAPPING_TOGGLE 3
+// #define PERMISSIVE_HOLD
+#define IGNORE_MOD_TAP_INTERRUPT
 
 // Remove some features to save space
 // https://docs.qmk.fm/#/feature_rgblight
@@ -44,8 +46,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 	If defined, synchronization functionality for split keyboards is added
 #define RGBLIGHT_SPLIT 
-
-// Documented here: https://github.com/qmk/qmk_firmware/blob/master/docs/config_options.md
-// #define MATRIX_IO_DELAY 30
-// #define QMK_KEYS_PER_SCAN 4
-// #define TAP_CODE_DELAY 150

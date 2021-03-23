@@ -1,6 +1,6 @@
 # https://docs.qmk.fm/#/getting_started_make_guide?id=rulesmk-options
 
-TAP_DANCE_ENABLE = yes
+# TAP_DANCE_ENABLE = yes
 VIA_ENABLE = no
 # EXTRAKEY_ENABLE = yes        # Audio control and System control
 # CONSOLE_ENABLE = no        # Console for debug
