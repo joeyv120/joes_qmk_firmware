@@ -6,66 +6,50 @@
 #define _FUNCTION 2
 #define _ADVANCED 3
 
-// Tap Dance declarations
-enum {
-    CPS,
-    NMS,
-    GAP,
-};
-// Tap Dance definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
-    // Tap once for Left Shift, twice for Caps Lock
-    [CPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
-    [NMS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_NLCK),
-    [GAP] = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, KC_APP),
-};
-
-// Defines custom aliases
-#define ALTtDOT RALT_T(KC_DOT) // Hold for Alt, tap for Dot
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
   [_QWERTY] = LAYOUT_ortho_4x12(
     //┌────────┬────────┬────────┬────────┬────────┬────────┐┌────────┬────────┬────────┬────────┬────────┬────────┐
-       KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
+       KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_NO,    KC_NO,   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
     //├────────┼────────┼────────┼────────┼────────┼────────┤├────────┼────────┼────────┼────────┼────────┼────────┤
-       TD(CPS), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+       LGUI_T(KC_A),LALT_T(KC_S),LCTL_T(KC_D),LSFT_T(KC_F),KC_G,KC_NO,KC_NO,KC_H,RSFT_T(KC_J),RCTL_T(KC_K),RALT_T(KC_L),RGUI_T(KC_SCLN),
     //├────────┼────────┼────────┼────────┼────────┼────────┼┼────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LCTL, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,     KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+       KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_NO,    KC_NO,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
     //├────────┼────────┼────────┼────────┼────────┼────────┤├────────┼────────┼────────┼────────┼────────┼────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, TD(GAP), KC_SPACE, TT(1),   TT(2),   KC_ENT,  KC_LALT, XXXXXXX, XXXXXXX, XXXXXXX
+       KC_NO,   KC_NO,   KC_NO,   KC_SPC,  MO(1),   KC_NO,    KC_NO,   MO(2),   KC_ENT,  KC_NO,   KC_NO,   KC_NO
     //└────────┴────────┴────────┴────────┴────────┴────────┴┴────────┴────────┴────────┴────────┴────────┴────────┘
     ),
   [_NAVIGATION] = LAYOUT_ortho_4x12(
     //┌────────┬────────┬────────┬────────┬────────┬────────┐┌────────┬────────┬────────┬────────┬────────┬────────┐
-       KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,     XXXXXXX, KC_HOME, KC_UP,   KC_PGUP, XXXXXXX, KC_BSPC,
+       KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_NO,    KC_NO,   KC_NO,   KC_HOME, KC_UP,   KC_PGUP, KC_BSPC,
     //├────────┼────────┼────────┼────────┼────────┼────────┼├────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LSFT, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,     XXXXXXX, KC_LEFT, XXXXXXX, KC_RGHT, XXXXXXX, KC_DEL,
+       KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_NO,    KC_NO,   KC_NO,   KC_LEFT, KC_TAB,  KC_RGHT, KC_INS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼┼────────┼────────┼────────┼────────┼────────┼────────┤
-       _______, XXXXXXX, KC_DOT,  XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, KC_END,  KC_DOWN, KC_PGDN, XXXXXXX, KC_RSFT,
+       KC_ESC,  KC_DOT,  KC_NO,   KC_NO,   KC_NO,   KC_NO,    KC_NO,   KC_NO,   KC_END,  KC_DOWN, KC_PGDN, KC_DEL,
     //├────────┼────────┼────────┼────────┼────────┼────────┼├────────┼────────┼────────┼────────┼────────┼────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______,  _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX
+       KC_NO,   KC_NO,   KC_NO,   KC_TRNS, KC_TRNS, KC_NO,    KC_NO,   KC_TRNS, KC_TRNS, KC_NO,   KC_NO,   KC_NO
     //└────────┴────────┴────────┴────────┴────────┴────────┴┴────────┴────────┴────────┴────────┴────────┴────────┘
     ),
   [_FUNCTION] = LAYOUT_ortho_4x12(
     //┌────────┬────────┬────────┬────────┬────────┬────────┐┌────────┬────────┬────────┬────────┬────────┬────────┐
-       KC_GESC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_LCBR,  KC_RCBR, KC_P7,   KC_P8,   KC_P9,   KC_PAST, KC_PSLS,
+       KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_NO,    KC_NO,   KC_PSLS, KC_P7,   KC_P8,   KC_P9,   KC_PAST,
     //├────────┼────────┼────────┼────────┼────────┼────────┤├────────┼────────┼────────┼────────┼────────┼────────┤
-       TD(NMS), KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_LBRC,  KC_RBRC, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, KC_MINS,
+       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_NO,    KC_NO,   KC_MINS, KC_P4,   KC_P5,   KC_P6,   KC_PPLS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼┼────────┼────────┼────────┼────────┼────────┼────────┤
-       _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LPRN,  KC_RPRN, KC_P1,   KC_P2,   KC_P3,   KC_PENT, KC_EQL,
+       KC_F11,  KC_NO,   KC_NO,   KC_NO,   KC_F12,  KC_NO,    KC_NO,   KC_PDOT, KC_P1,   KC_P2,   KC_P3,   KC_EQL,
     //├────────┼────────┼────────┼────────┼────────┼────────┤├────────┼────────┼────────┼────────┼────────┼────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______,  _______, KC_P0,   ALTtDOT, XXXXXXX, XXXXXXX, XXXXXXX
+       KC_NO,   KC_NO,   KC_NO,   KC_TRNS, KC_TRNS, KC_NO,    KC_NO,   KC_TRNS, KC_P0,   KC_NO,   KC_NO,   KC_NO
     //└────────┴────────┴────────┴────────┴────────┴────────┴┴────────┴────────┴────────┴────────┴────────┴────────┘
     ),
   [_ADVANCED] = LAYOUT_ortho_4x12(
     //┌────────┬────────┬────────┬────────┬────────┬────────┐┌────────┬────────┬────────┬────────┬────────┬────────┐
-       RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, XXXXXXX,  XXXXXXX, KC_VOLU, KC_BRIU, XXXXXXX, XXXXXXX, RESET,
+       KC_NLCK, KC_NO,   KC_BRIU, KC_VOLU, RGB_VAI, KC_NO,    KC_NO,   KC_NO,   KC_NO,   KC_LCBR, KC_RCBR, KC_BSLS,
     //├────────┼────────┼────────┼────────┼────────┤────────┼├────────┼────────┼────────┼────────┼────────┼────────┤
-       RGB_TOG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, KC_MUTE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_CAPS, KC_NO,   KC_NO,   KC_MUTE, RGB_TOG, KC_NO,    KC_NO,   KC_APP,  KC_NO,   KC_LPRN, KC_RPRN, KC_QUOT,
     //├────────┼────────┼────────┼────────┼────────┼────────┼┼────────┼────────┼────────┼────────┼────────┼────────┤
-       RGB_RMOD,RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, XXXXXXX,  XXXXXXX, KC_VOLD, KC_BRID, XXXXXXX, XXXXXXX, XXXXXXX,
+       KC_SLCK, KC_NO,   KC_BRID, KC_VOLD, RGB_VAD, KC_NO,    KC_NO,   RESET,   KC_NO,   KC_LBRC, KC_RBRC, KC_GRV,
     //├────────┼────────┼────────┼────────┼────────┼────────┤├────────┼────────┼────────┼────────┼────────┼────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+       KC_NO,   KC_NO,   KC_NO,   KC_TRNS, KC_TRNS, KC_NO,    KC_NO,   KC_TRNS, KC_TRNS, KC_NO,   KC_NO,   KC_NO
     //└────────┴────────┴────────┴────────┴────────┴────────┴┴────────┴────────┴────────┴────────┴────────┴────────┘
     )
 };
