@@ -77,3 +77,8 @@ __pycache__
 
 # Allow to exist but don't include it in the repo
 user_song_list.h
+keyboards/keebio/iris/keymaps/joeyv120/QMK Configurator.pdf
+keyboards/jnao/keymaps/JoeNAO/jnao.json
+keyboards/jnao/keymaps/JoeNAO/c_to_json.c
+keyboards/keebio/iris/keymaps/joeyv120/c_to_json.c
+keyboards/keebio/iris/keymaps/joeyv120/joeyv120.json
