@@ -54,11 +54,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                              KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_NO,   KC_NLCK, KC_NO,   KC_BRIU, KC_VOLU, RGB_VAI,                            KC_NO,   KC_NO,   KC_LCBR, KC_RCBR, KC_BSLS, KC_NO,
+     KC_NO,   KC_NLCK, RGB_MOD,   KC_BRIU, KC_VOLU, RGB_VAI,                            KC_NO,   KC_NO,   KC_LCBR, KC_RCBR, KC_BSLS, KC_NO,
   //├────────┼────────┼────────┼────────┼────────┤────────┼                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_NO,   KC_CAPS, KC_NO,   KC_NO,   KC_MUTE, RGB_TOG,                            KC_APP,  KC_NO,   KC_LPRN, KC_RPRN, KC_QUOT, KC_NO,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_NO,   KC_SLCK, KC_NO,   KC_BRID, KC_VOLD, RGB_VAD, KC_NO,            KC_NO,   RESET,   KC_NO,   KC_LBRC, KC_RBRC, KC_GRV,  KC_NO, 
+     KC_NO,   KC_SLCK, RGB_RMOD,   KC_BRID, KC_VOLD, RGB_VAD, KC_NO,            KC_NO,   RESET,   KC_NO,   KC_LBRC, KC_RBRC, KC_GRV,  KC_NO, 
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_NO,   KC_NO,   KC_TRNS,                   KC_TRNS,  KC_NO,  KC_NO
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -72,14 +72,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/rgblight_list.h
 // https://docs.qmk.fm/#/feature_rgblight
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/rgblight.h
-uint32_t base_mode = 1; // Unlocked animation (solid)
-uint32_t lock_mode = 5; // Locked animation (breathing)
-uint32_t advn_mode = 22; // Advanced layer animation (alternating)
+uint32_t base_mode = RGBLIGHT_MODE_STATIC_LIGHT; // Unlocked animation (solid)
+uint32_t lock_mode = RGBLIGHT_MODE_BREATHING + 3; // Locked animation (breathing, fast)
+uint32_t advn_mode = RGBLIGHT_MODE_KNIGHT + 2; // Advanced layer animation (knight, fast)
 
 void keyboard_post_init_user(void) {
   rgblight_enable();
   rgblight_mode(base_mode);
-  rgblight_sethsv(128, 255, 128);
+  rgblight_sethsv(128, 255, 255);
   rgblight_disable();
 }
 
@@ -89,7 +89,7 @@ uint32_t layer_state_set_user(uint32_t state) {
   xprintf("%d", layer);
   led_t led_state = host_keyboard_led_state();
   switch (layer) {
-    case _QWERTY: // Name of my 0-th layer (includes alphas and caps-lock)
+    case _QWERTY:
       rgblight_sethsv_noeeprom(145, 255, rgblight_get_val());
       if (led_state.caps_lock) {
         rgblight_mode_noeeprom(lock_mode);
@@ -97,13 +97,11 @@ uint32_t layer_state_set_user(uint32_t state) {
         rgblight_mode_noeeprom(base_mode);
       }
       break;
-
-    case _NAVIGATION: // Name of my 2st layer (includes 10-key and num-lock)
+    case _NAVIGATION:
       rgblight_mode_noeeprom(base_mode);
       rgblight_sethsv_noeeprom(70, 255, rgblight_get_val());
       break;
-    
-    case _FUNCTION: // Name of my 1st layer (includes 10-key and num-lock)
+    case _FUNCTION:
       rgblight_sethsv_noeeprom(190, 255, rgblight_get_val());
       if (led_state.num_lock) {
         rgblight_mode_noeeprom(lock_mode);
@@ -111,8 +109,7 @@ uint32_t layer_state_set_user(uint32_t state) {
         rgblight_mode_noeeprom(base_mode);
       }
       break;
-    
-    case _ADVANCED: // Name of my 3nd layer (includes hardware related keys)
+    case _ADVANCED:
       rgblight_mode_noeeprom(advn_mode);
       rgblight_sethsv_noeeprom(0, 255, rgblight_get_val());
       break;
@@ -121,20 +118,27 @@ uint32_t layer_state_set_user(uint32_t state) {
 }
 
 bool led_update_user(led_t led_state) { 
-    if (led_state.caps_lock & layer_state_is(0)) {
-      rgblight_mode_noeeprom(lock_mode);      
+    if (layer_state_is(0)) {
+      if (led_state.caps_lock) {
+        rgblight_mode_noeeprom(lock_mode);      
+      }
+      else {
+        rgblight_mode_noeeprom(base_mode);      
+      }
     }
-    else if (led_state.num_lock & layer_state_is(2)) {
-      rgblight_mode_noeeprom(lock_mode);      
+    if (layer_state_is(1)) {
+      rgblight_mode_noeeprom(base_mode);      
     }
-    else if (layer_state_is(1)) {
-      rgblight_mode_noeeprom(base_mode);
+    if (layer_state_is(2)) {
+      if (led_state.num_lock) {
+        rgblight_mode_noeeprom(lock_mode);      
+      }
+      else {
+        rgblight_mode_noeeprom(base_mode);      
+      }
     }
-    else if (layer_state_is(3)) {
+    if (layer_state_is(3)) {
       rgblight_mode_noeeprom(advn_mode);
-    }
-    else {
-      rgblight_mode_noeeprom(base_mode);
     }
     return true;
 }
