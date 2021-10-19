@@ -2,13 +2,6 @@
 MCU = atmega32u4
 
 # Bootloader selection
-#   Teensy       halfkay
-#   Pro Micro    caterina
-#   Atmel DFU    atmel-dfu
-#   LUFA DFU     lufa-dfu
-#   QMK DFU      qmk-dfu
-#   ATmega32A    bootloadHID
-#   ATmega328P   USBasp
 BOOTLOADER = halfkay
 
 # If you have Left LEDs (see
@@ -19,7 +12,7 @@ BOOTLOADER = halfkay
 # Build Options
 #   comment out to disable the options.
 #
-BOOTMAGIC_ENABLE = no   # Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
 MOUSEKEY_ENABLE  = yes  # Mouse keys
 EXTRAKEY_ENABLE  = yes  # Audio control and System control
 CONSOLE_ENABLE   = no   # Console for debug
@@ -29,22 +22,10 @@ NKRO_ENABLE      = yes  # USB Nkey Rollover - if this doesn't work, see here: ht
 UNICODE_ENABLE   = yes  # Unicode
 SWAP_HANDS_ENABLE= yes  # Allow swapping hands of keyboard
 SLEEP_LED_ENABLE = no
-API_SYSEX_ENABLE = no
 
-<<<<<<< HEAD
-RGB_MATRIX_ENABLE = no  # enable later
-=======
 RGB_MATRIX_ENABLE = no # enable later
 RGB_MATRIX_DRIVER = IS31FL3731
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
-DEBOUNCE_TYPE = eager_pr
+DEBOUNCE_TYPE = sym_eager_pr
 
 # project specific files
 SRC += matrix.c \
@@ -52,3 +33,7 @@ SRC += matrix.c \
 QUANTUM_LIB_SRC += i2c_master.c
 
 LAYOUTS = ergodox
+
+# Disable unsupported hardware
+AUDIO_SUPPORTED = no
+BACKLIGHT_SUPPORTED = no

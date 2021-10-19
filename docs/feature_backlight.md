@@ -13,51 +13,9 @@ BACKLIGHT_ENABLE = yes
 ```
 
 ## Keycodes :id=keycodes
-<<<<<<< HEAD
-=======
 
 Once enabled, the following keycodes below can be used to change the backlight level.
 
-|Key      |Description                        |
-|---------|-----------------------------------|
-|`BL_TOGG`|Turn the backlight on or off       |
-|`BL_STEP`|Cycle through backlight levels     |
-|`BL_ON`  |Set the backlight to max brightness|
-|`BL_OFF` |Turn the backlight off             |
-|`BL_INC` |Increase the backlight level       |
-|`BL_DEC` |Decrease the backlight level       |
-|`BL_BRTG`|Toggle backlight breathing         |
-
-## Functions :id=functions
-
-These functions can be used to change the backlighting in custom code:
-
-|Function                |Description                                 |
-|------------------------|--------------------------------------------|
-|`backlight_toggle()`    |Turn the backlight on or off                |
-|`backlight_enable()`    |Turn the backlight on                       |
-|`backlight_disable()`   |Turn the backlight off                      |
-|`backlight_step()`      |Cycle through backlight levels              |
-|`backlight_increase()`  |Increase the backlight level                |
-|`backlight_decrease()`  |Decrease the backlight level                |
-|`backlight_level(x)`    |Sets the backlight level to specified level |
-|`get_backlight_level()` |Return the current backlight level          |
-|`is_backlight_enabled()`|Return whether the backlight is currently on|
-
-If backlight breathing is enabled (see below), the following functions are also available:
-
-|Function             |Description                           |
-|---------------------|--------------------------------------|
-|`breathing_toggle()` |Turn the backlight breathing on or off|
-|`breathing_enable()` |Turns on backlight breathing          |
-|`breathing_disable()`|Turns off backlight breathing         |
-
-## Configuration :id=configuration
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
-
-Once enabled, the following keycodes below can be used to change the backlight level.
-
-<<<<<<< HEAD
 |Key      |Description                        |
 |---------|-----------------------------------|
 |`BL_TOGG`|Turn the backlight on or off       |
@@ -104,55 +62,20 @@ Valid driver values are `pwm`, `software`, `custom` or `no`. See below for help 
 
 To configure the backlighting, `#define` these in your `config.h`:
 
-<<<<<<< HEAD
-|Define               |Default      |Description                                                                          |
-|---------------------|-------------|-------------------------------------------------------------------------------------|
-|`BACKLIGHT_PIN`      |*Not defined*|The pin that controls the LED(s)                                                     |
-|`BACKLIGHT_LEVELS`   |`3`          |The number of brightness levels (maximum 31 excluding off)                           |
-|`BACKLIGHT_CAPS_LOCK`|*Not defined*|Enable Caps Lock indicator using backlight (for keyboards without dedicated LED)     |
-|`BACKLIGHT_BREATHING`|*Not defined*|Enable backlight breathing, if supported                                             |
-|`BREATHING_PERIOD`   |`6`          |The length of one backlight "breath" in seconds                                      |
-|`BACKLIGHT_ON_STATE` |`1`          |The state of the backlight pin when the backlight is "on" - `1` for high, `0` for low|
-=======
-| Define                 | Default       | Description                                                                                                       |
-|------------------------|---------------|-------------------------------------------------------------------------------------------------------------------|
-| `BACKLIGHT_PIN`        | *Not defined* | The pin that controls the LED(s)                                                                                  |
-| `BACKLIGHT_LEVELS`     | `3`           | The number of brightness levels (maximum 31 excluding off)                                                        |
-| `BACKLIGHT_CAPS_LOCK`  | *Not defined* | Enable Caps Lock indicator using backlight (for keyboards without dedicated LED)                                  |
-| `BACKLIGHT_BREATHING`  | *Not defined* | Enable backlight breathing, if supported                                                                          |
-| `BREATHING_PERIOD`     | `6`           | The length of one backlight "breath" in seconds                                                                   |
-| `BACKLIGHT_ON_STATE`   | `1`           | The state of the backlight pin when the backlight is "on" - `1` for high, `0` for low                             |
-| `BACKLIGHT_LIMIT_VAL ` | `255`         | The maximum duty cycle of the backlight -- `255` allows for full brightness, any lower will decrease the maximum. |
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
+|Define                       |Default           |Description                                                                                                      |
+|-----------------------------|------------------|-----------------------------------------------------------------------------------------------------------------|
+|`BACKLIGHT_PIN`              |*Not defined*     |The pin that controls the LED(s)                                                                                 |
+|`BACKLIGHT_LEVELS`           |`3`               |The number of brightness levels (maximum 31 excluding off)                                                       |
+|`BACKLIGHT_CAPS_LOCK`        |*Not defined*     |Enable Caps Lock indicator using backlight (for keyboards without dedicated LED)                                 |
+|`BACKLIGHT_BREATHING`        |*Not defined*     |Enable backlight breathing, if supported                                                                         |
+|`BREATHING_PERIOD`           |`6`               |The length of one backlight "breath" in seconds                                                                  |
+|`BACKLIGHT_ON_STATE`         |`1`               |The state of the backlight pin when the backlight is "on" - `1` for high, `0` for low                            |
+|`BACKLIGHT_LIMIT_VAL`        |`255`             |The maximum duty cycle of the backlight -- `255` allows for full brightness, any lower will decrease the maximum.|
+|`BACKLIGHT_DEFAULT_LEVEL`    |`BACKLIGHT_LEVELS`|The default backlight level to use upon clearing the EEPROM                                                      |
+|`BACKLIGHT_DEFAULT_BREATHING`|*Not defined*     |Whether to enable backlight breathing upon clearing the EEPROM                                                   |
 
 Unless you are designing your own keyboard, you generally should not need to change the `BACKLIGHT_PIN` or `BACKLIGHT_ON_STATE`.
 
-=======
-```makefile
-BACKLIGHT_DRIVER = software
-```
-
-Valid driver values are `pwm`, `software`, `custom` or `no`. See below for help on individual drivers.
-
-To configure the backlighting, `#define` these in your `config.h`:
-
-| Define                 | Default       | Description                                                                                                       |
-|------------------------|---------------|-------------------------------------------------------------------------------------------------------------------|
-| `BACKLIGHT_PIN`        | *Not defined* | The pin that controls the LED(s)                                                                                  |
-| `BACKLIGHT_LEVELS`     | `3`           | The number of brightness levels (maximum 31 excluding off)                                                        |
-| `BACKLIGHT_CAPS_LOCK`  | *Not defined* | Enable Caps Lock indicator using backlight (for keyboards without dedicated LED)                                  |
-| `BACKLIGHT_BREATHING`  | *Not defined* | Enable backlight breathing, if supported                                                                          |
-| `BREATHING_PERIOD`     | `6`           | The length of one backlight "breath" in seconds                                                                   |
-| `BACKLIGHT_ON_STATE`   | `1`           | The state of the backlight pin when the backlight is "on" - `1` for high, `0` for low                             |
-| `BACKLIGHT_LIMIT_VAL ` | `255`         | The maximum duty cycle of the backlight -- `255` allows for full brightness, any lower will decrease the maximum. |
-
-Unless you are designing your own keyboard, you generally should not need to change the `BACKLIGHT_PIN` or `BACKLIGHT_ON_STATE`.
-
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 ### Backlight On State :id=backlight-on-state
 
 Most backlight circuits are driven by an N-channel MOSFET or NPN transistor. This means that to turn the transistor *on* and light the LEDs, you must drive the backlight pin, connected to the gate or base, *high*.
@@ -172,18 +95,18 @@ BACKLIGHT_DRIVER = pwm
 
 On AVR boards, QMK automatically decides which driver to use according to the following table:
 
-|Backlight Pin|AT90USB64/128|ATmega16/32U4|ATmega16/32U2|ATmega32A|ATmega328/P|
-|-------------|-------------|-------------|-------------|---------|-----------|
-|`B1`         |             |             |             |         |Timer 1    |
-|`B2`         |             |             |             |         |Timer 1    |
-|`B5`         |Timer 1      |Timer 1      |             |         |           |
-|`B6`         |Timer 1      |Timer 1      |             |         |           |
-|`B7`         |Timer 1      |Timer 1      |Timer 1      |         |           |
-|`C4`         |Timer 3      |             |             |         |           |
-|`C5`         |Timer 3      |             |Timer 1      |         |           |
-|`C6`         |Timer 3      |Timer 3      |Timer 1      |         |           |
-|`D4`         |             |             |             |Timer 1  |           |
-|`D5`         |             |             |             |Timer 1  |           |
+|Backlight Pin|AT90USB64/128|AT90USB162|ATmega16/32U4|ATmega16/32U2|ATmega32A|ATmega328/P|
+|-------------|-------------|----------|-------------|-------------|---------|-----------|
+|`B1`         |             |          |             |             |         |Timer 1    |
+|`B2`         |             |          |             |             |         |Timer 1    |
+|`B5`         |Timer 1      |          |Timer 1      |             |         |           |
+|`B6`         |Timer 1      |          |Timer 1      |             |         |           |
+|`B7`         |Timer 1      |Timer 1   |Timer 1      |Timer 1      |         |           |
+|`C4`         |Timer 3      |          |             |             |         |           |
+|`C5`         |Timer 3      |Timer 1   |             |Timer 1      |         |           |
+|`C6`         |Timer 3      |Timer 1   |Timer 3      |Timer 1      |         |           |
+|`D4`         |             |          |             |             |Timer 1  |           |
+|`D5`         |             |          |             |             |Timer 1  |           |
 
 All other pins will use timer-assisted software PWM:
 
@@ -227,7 +150,6 @@ BACKLIGHT_DRIVER = pwm
 #### ChibiOS Configuration :id=arm-configuration
 
 The following `#define`s apply only to ARM-based keyboards:
-<<<<<<< HEAD
 
 |Define                 |Default|Description                        |
 |-----------------------|-------|-----------------------------------|
@@ -241,21 +163,6 @@ See the ST datasheet for your particular MCU to determine these values. Unless y
 
 Currently only hardware PWM is supported, not timer assisted, and does not provide automatic configuration.
 
-=======
-
-|Define                 |Default|Description                        |
-|-----------------------|-------|-----------------------------------|
-|`BACKLIGHT_PWM_DRIVER` |`PWMD4`|The PWM driver to use              |
-|`BACKLIGHT_PWM_CHANNEL`|`3`    |The PWM channel to use             |
-|`BACKLIGHT_PAL_MODE`   |`2`    |The pin alternative function to use|
-
-See the ST datasheet for your particular MCU to determine these values. Unless you are designing your own keyboard, you generally should not need to change them.
-
-#### Caveats :id=arm-caveats
-
-Currently only hardware PWM is supported, not timer assisted, and does not provide automatic configuration.
-
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 ### Software PWM Driver :id=software-pwm-driver
 
 In this mode, PWM is "emulated" while running other keyboard tasks. It offers maximum hardware compatibility without extra platform configuration. The tradeoff is the backlight might jitter when the keyboard is busy. To enable, add this to your `rules.mk`:
@@ -266,17 +173,11 @@ BACKLIGHT_DRIVER = software
 
 #### Multiple Backlight Pins :id=multiple-backlight-pins
 
-Most keyboards have only one backlight pin which control all backlight LEDs (especially if the backlight is connected to an hardware PWM pin).
+Most keyboards have only one backlight pin which controls all backlight LEDs (especially if the backlight is connected to a hardware PWM pin).
 In software PWM, it is possible to define multiple backlight pins, which will be turned on and off at the same time during the PWM duty cycle.
-<<<<<<< HEAD
 
 This feature allows to set, for instance, the Caps Lock LED's (or any other controllable LED) brightness at the same level as the other LEDs of the backlight. This is useful if you have mapped Control in place of Caps Lock and you need the Caps Lock LED to be part of the backlight instead of being activated when Caps Lock is on, as it is usually wired to a separate pin from the backlight.
 
-=======
-
-This feature allows to set, for instance, the Caps Lock LED's (or any other controllable LED) brightness at the same level as the other LEDs of the backlight. This is useful if you have mapped Control in place of Caps Lock and you need the Caps Lock LED to be part of the backlight instead of being activated when Caps Lock is on, as it is usually wired to a separate pin from the backlight.
-
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 To activate multiple backlight pins, add something like this to your `config.h`, instead of `BACKLIGHT_PIN`:
 
 ```c

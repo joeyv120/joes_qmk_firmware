@@ -20,78 +20,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-void encoder_update_user(uint8_t index, bool clockwise) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  /*  Custom encoder control - handles CW/CCW turning of encoder
-   *  Default behavior:
-   *    main layer:
-   *       CW: move mouse right
-   *      CCW: move mouse left
-   *    other layers:
-   *       CW: = (equals/plus - increase slider in Adobe products)
-   *      CCW: - (minus/underscore - decrease slider in adobe products)
-   * Thank you to imchipwood/dumbpad for defining this. 
-   */
-=======
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+bool encoder_update_user(uint8_t index, bool clockwise) {
   if (index == 0) {
     switch (get_highest_layer(layer_state)) {
       case 1:
         // main layer - move mouse right (CW) and left (CCW)
         if (clockwise) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          tap_code(KC_MS_R);
-        } else {
-          tap_code(KC_MS_L);
-=======
           tap_code(KC_BRIGHTNESS_UP);
         } else {
           tap_code(KC_BRIGHTNESS_DOWN);
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-          tap_code(KC_BRIGHTNESS_UP);
-        } else {
-          tap_code(KC_BRIGHTNESS_DOWN);
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         }
         break;
 
       default:
         // other layers - =/+ (quals/plus) (CW) and -/_ (minus/underscore) (CCW)
         if (clockwise) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          tap_code(KC_EQL);
-        } else {
-          tap_code(KC_MINS);
-=======
           tap_code(KC_AUDIO_VOL_UP);
         } else {
           tap_code(KC_AUDIO_VOL_DOWN);
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-          tap_code(KC_AUDIO_VOL_UP);
-        } else {
-          tap_code(KC_AUDIO_VOL_DOWN);
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         }
         break;
     }
   }
+    return true;
 }

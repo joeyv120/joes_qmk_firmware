@@ -2,8 +2,6 @@
     "keyboard_name": "Kangaroo", 
     "url": "https://github.com/qmk/qmk_firmware/tree/master/keyboards/xelus/kangaroo", 
     "maintainer": "qmk", 
-    "width": 22.5, 
-    "height": 6.25, 
     "layouts": {
 <<<<<<< HEAD
 <<<<<<< HEAD

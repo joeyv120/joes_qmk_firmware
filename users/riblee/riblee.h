@@ -38,6 +38,7 @@ enum layer_names {
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     _COLEMAK,
     _DVORAK,
+    _WORKMAN,
     _LOWER,
     _RAISE,
     _ADJUST
@@ -63,6 +64,7 @@ enum custom_keycodes {
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     COLEMAK,
     DVORAK,
+    WORKMAN,
     BACKLIT
 };
 

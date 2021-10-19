@@ -7,7 +7,7 @@ BOOTLOADER = atmel-dfu
 # Build Options
 #   change yes to no to disable
 #
-BOOTMAGIC_ENABLE = no      	# Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = yes      	# Mouse keys
 EXTRAKEY_ENABLE = yes      	# Audio control and System control
 CONSOLE_ENABLE = no        	# Console for debug
@@ -21,20 +21,4 @@ RGB_MATRIX_DRIVER = WS2812
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
 UNICODE_ENABLE = yes        # Unicode
-<<<<<<< HEAD
-<<<<<<< HEAD
-BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
-AUDIO_ENABLE = no           # Audio output on port C6
-FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
-=======
-BLUETOOTH_ENABLE = no       # Enable Bluetooth
 AUDIO_ENABLE = no           # Audio output
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-BLUETOOTH_ENABLE = no       # Enable Bluetooth
-AUDIO_ENABLE = no           # Audio output
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

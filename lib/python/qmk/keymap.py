@@ -1,30 +1,19 @@
 """Functions that help you work with QMK keymaps.
 """
-from pathlib import Path
 import json
-import subprocess
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import sys
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-import sys
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+from pathlib import Path
+from subprocess import DEVNULL
 
+import argcomplete
+from milc import cli
 from pygments.lexers.c_cpp import CLexer
 from pygments.token import Token
 from pygments import lex
 
-from milc import cli
-
-from qmk.keyboard import rules_mk
 import qmk.path
-import qmk.commands
+from qmk.keyboard import find_keyboard_from_dir, rules_mk
+from qmk.errors import CppError
 
 # The `keymap.c` template to use when a keyboard doesn't have its own
 DEFAULT_KEYMAP_C = """#include QMK_KEYBOARD_H
@@ -53,32 +42,23 @@ def template_json(keyboard):
     template_file = Path('keyboards/%s/templates/keymap.json' % keyboard)
     template = {'keyboard': keyboard}
     if template_file.exists():
-        template.update(json.loads(template_file.read_text()))
+        template.update(json.load(template_file.open(encoding='utf-8')))
 
     return template
 
-<<<<<<< HEAD
 
 def template_c(keyboard):
     """Returns a `keymap.c` template for a keyboard.
 
     If a template exists in `keyboards/<keyboard>/templates/keymap.c` that text will be used instead of an empty dictionary.
 
-=======
-
-def template_c(keyboard):
-    """Returns a `keymap.c` template for a keyboard.
-
-    If a template exists in `keyboards/<keyboard>/templates/keymap.c` that text will be used instead of an empty dictionary.
-
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     Args:
         keyboard
             The keyboard to return a template for.
     """
     template_file = Path('keyboards/%s/templates/keymap.c' % keyboard)
     if template_file.exists():
-        template = template_file.read_text()
+        template = template_file.read_text(encoding='utf-8')
     else:
         template = DEFAULT_KEYMAP_C
 
@@ -92,6 +72,54 @@ def _strip_any(keycode):
         keycode = keycode[4:-1]
 
     return keycode
+
+
+def find_keymap_from_dir():
+    """Returns `(keymap_name, source)` for the directory we're currently in.
+
+    """
+    relative_cwd = qmk.path.under_qmk_firmware()
+
+    if relative_cwd and len(relative_cwd.parts) > 1:
+        # If we're in `qmk_firmware/keyboards` and `keymaps` is in our path, try to find the keyboard name.
+        if relative_cwd.parts[0] == 'keyboards' and 'keymaps' in relative_cwd.parts:
+            current_path = Path('/'.join(relative_cwd.parts[1:]))  # Strip 'keyboards' from the front
+
+            if 'keymaps' in current_path.parts and current_path.name != 'keymaps':
+                while current_path.parent.name != 'keymaps':
+                    current_path = current_path.parent
+
+                return current_path.name, 'keymap_directory'
+
+        # If we're in `qmk_firmware/layouts` guess the name from the community keymap they're in
+        elif relative_cwd.parts[0] == 'layouts' and is_keymap_dir(relative_cwd):
+            return relative_cwd.name, 'layouts_directory'
+
+        # If we're in `qmk_firmware/users` guess the name from the userspace they're in
+        elif relative_cwd.parts[0] == 'users':
+            # Guess the keymap name based on which userspace they're in
+            return relative_cwd.parts[1], 'users_directory'
+
+    return None, None
+
+
+def keymap_completer(prefix, action, parser, parsed_args):
+    """Returns a list of keymaps for tab completion.
+    """
+    try:
+        if parsed_args.keyboard:
+            return list_keymaps(parsed_args.keyboard)
+
+        keyboard = find_keyboard_from_dir()
+
+        if keyboard:
+            return list_keymaps(keyboard)
+
+    except Exception as e:
+        argcomplete.warn(f'Error: {e.__class__.__name__}: {str(e)}')
+        return []
+
+    return []
 
 
 def is_keymap_dir(keymap, c=True, json=True, additional_files=None):
@@ -121,8 +149,8 @@ def is_keymap_dir(keymap, c=True, json=True, additional_files=None):
     for file in files:
         if (keymap / file).is_file():
             if additional_files:
-                for file in additional_files:
-                    if not (keymap / file).is_file():
+                for additional_file in additional_files:
+                    if not (keymap / additional_file).is_file():
                         return False
 
             return True
@@ -200,28 +228,10 @@ def write_json(keyboard, keymap, layout, layers):
 
         keymap
             The name of the keymap
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         layout
             The LAYOUT macro this keymap uses.
 
-=======
-
-        layout
-            The LAYOUT macro this keymap uses.
-
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-
-        layout
-            The LAYOUT macro this keymap uses.
-
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         layers
             An array of arrays describing the keymap. Each item in the inner array should be a string that is a valid QMK keycode.
     """
@@ -351,47 +361,22 @@ def list_keymaps(keyboard, c=True, json=True, additional_files=None, fullpath=Fa
     return sorted(names)
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-def _c_preprocess(path):
-    """ Run a file through the C pre-processor
-
-    Args:
-        path: path of the keymap.c file
-=======
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
-def _c_preprocess(path, stdin=None):
+def _c_preprocess(path, stdin=DEVNULL):
     """ Run a file through the C pre-processor
 
     Args:
         path: path of the keymap.c file (set None to use stdin)
         stdin: stdin pipe (e.g. sys.stdin)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     Returns:
         the stdout of the pre-processor
     """
-<<<<<<< HEAD
-<<<<<<< HEAD
-    pre_processed_keymap = qmk.commands.run(['cpp', path], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
-=======
-    pre_processed_keymap = qmk.commands.run(['cpp', path] if path else ['cpp'], stdin=stdin, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-    pre_processed_keymap = qmk.commands.run(['cpp', path] if path else ['cpp'], stdin=stdin, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+    cmd = ['cpp', str(path)] if path else ['cpp']
+    pre_processed_keymap = cli.run(cmd, stdin=stdin)
+    if 'fatal error' in pre_processed_keymap.stderr:
+        for line in pre_processed_keymap.stderr.split('\n'):
+            if 'fatal error' in line:
+                raise (CppError(line))
     return pre_processed_keymap.stdout
 
 
@@ -521,34 +506,13 @@ def parse_keymap_c(keymap_file, use_cpp=True):
     Currently only cares about the keymaps array.
 
     Args:
-<<<<<<< HEAD
-<<<<<<< HEAD
-        keymap_file: path of the keymap.c file
-=======
         keymap_file: path of the keymap.c file (or '-' to use stdin)
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-        keymap_file: path of the keymap.c file (or '-' to use stdin)
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
         use_cpp: if True, pre-process the file with the C pre-processor
 
     Returns:
         a dictionary containing the parsed keymap
     """
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if use_cpp:
-        keymap_file = _c_preprocess(keymap_file)
-    else:
-        keymap_file = keymap_file.read_text()
-=======
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     if keymap_file == '-':
         if use_cpp:
             keymap_file = _c_preprocess(None, sys.stdin)
@@ -558,15 +522,7 @@ def parse_keymap_c(keymap_file, use_cpp=True):
         if use_cpp:
             keymap_file = _c_preprocess(keymap_file)
         else:
-            keymap_file = keymap_file.read_text()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+            keymap_file = keymap_file.read_text(encoding='utf-8')
 
     keymap = dict()
     keymap['layers'] = _get_layers(keymap_file)

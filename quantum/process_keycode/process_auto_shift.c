@@ -103,7 +103,7 @@ static bool autoshift_press(uint16_t keycode, uint16_t now, keyrecord_t *record)
     }
 
 #    ifndef AUTO_SHIFT_MODIFIERS
-    if (get_mods() & (~MOD_BIT(KC_LSFT))) {
+    if (get_mods()) {
         return true;
     }
 #    endif
@@ -393,7 +393,18 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
         }
     }
+    if (get_auto_shifted_key(keycode, record)) {
+        if (record->event.pressed) {
+            return autoshift_press(keycode, now, record);
+        } else {
+            autoshift_end(keycode, now, false);
+            return false;
+        }
+    }
+    return true;
+}
 
+__attribute__((weak)) bool get_auto_shifted_key(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -414,14 +425,9 @@ bool process_auto_shift(uint16_t keycode, keyrecord_t *record) {
         case KC_MINUS ... KC_SLASH:
         case KC_NONUS_BSLASH:
 #    endif
-            if (record->event.pressed) {
-                return autoshift_press(keycode, now, record);
-            } else {
-                autoshift_end(keycode, now, false);
-                return false;
-            }
+            return true;
     }
-    return true;
+    return false;
 }
 
 #endif

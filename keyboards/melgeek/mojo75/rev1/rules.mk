@@ -1,10 +1,14 @@
 # MCU name
 MCU = STM32F303
+BOARD = QMK_PROTON_C
+
+# Bootloader selection
+BOOTLOADER = stm32-dfu
 
 # Build Options
 #   change yes to no to disable
 #
-BOOTMAGIC_ENABLE = lite        # Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = lite     # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = yes          # Mouse keys
 EXTRAKEY_ENABLE = yes          # Audio control and System control
 CONSOLE_ENABLE = no            # Console for debug
@@ -15,20 +19,8 @@ SLEEP_LED_ENABLE = no          # Breathing sleep LED during USB suspend
 NKRO_ENABLE = yes              # USB Nkey Rollover
 BACKLIGHT_ENABLE = no          # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no           # Enable keyboard RGB underglow
-BLUETOOTH_ENABLE = no          # Enable Bluetooth
-<<<<<<< HEAD
-<<<<<<< HEAD
-RGB_MATRIX_ENABLE = IS31FL3741 # Use RGB matrix
-=======
 RGB_MATRIX_ENABLE = yes        # Use RGB matrix
 RGB_MATRIX_DRIVER = IS31FL3741
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-RGB_MATRIX_ENABLE = yes        # Use RGB matrix
-RGB_MATRIX_DRIVER = IS31FL3741
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 NO_USB_STARTUP_CHECK = no      # Disable initialization only when usb is plugged in
+
+LAYOUTS = 75_ansi

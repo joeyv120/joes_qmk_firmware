@@ -13,41 +13,4 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-<<<<<<< HEAD
 #include "eon75.h"
-=======
-#include "eon95.h"
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
-
-void matrix_init_kb(void) {
-    // put your keyboard start-up code here
-    // runs once when the firmware starts up
-    matrix_init_user();
-    led_init_ports();
-<<<<<<< HEAD
-};
-=======
-}
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
-
-void led_init_ports(void) {
-    // * Set our LED pins as output and high
-    setPinOutput(D5);
-    writePinHigh(D5);
-    
-    setPinOutput(B7);
-    writePinHigh(B7);
-    
-    setPinOutput(B0);
-    writePinHigh(B0);
-}
-
-bool led_update_kb(led_t led_state) {
-    if(led_update_user(led_state)) {
-        writePin(D5, !led_state.caps_lock);
-        writePin(B7, !led_state.num_lock);
-        writePin(B0, !led_state.scroll_lock);
-    }
-
-    return true;
-}

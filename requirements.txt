@@ -2,17 +2,10 @@
 appdirs
 argcomplete
 colorama
+hid
 hjson
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-milc
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-milc
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+jsonschema>=3
+milc>=1.4.2
 pygments
+pyusb
+qmk-dotty-dict

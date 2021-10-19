@@ -2,19 +2,12 @@
 MCU = atmega32u4
 
 # Bootloader selection
-#   Teensy       halfkay
-#   Pro Micro    caterina
-#   Atmel DFU    atmel-dfu
-#   LUFA DFU     lufa-dfu
-#   QMK DFU      qmk-dfu
-#   ATmega32A    bootloadHID
-#   ATmega328P   USBasp
 BOOTLOADER = atmel-dfu
 
 # Build Options
 #   change yes to no to disable
 #
-BOOTMAGIC_ENABLE = lite        # Virtual DIP switch configuration
+BOOTMAGIC_ENABLE = lite     # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = yes          # Mouse keys
 EXTRAKEY_ENABLE = yes          # Audio control and System control
 CONSOLE_ENABLE = no            # Console for debug
@@ -25,23 +18,7 @@ SLEEP_LED_ENABLE = no          # Breathing sleep LED during USB suspend
 NKRO_ENABLE = yes              # USB Nkey Rollover
 BACKLIGHT_ENABLE = no          # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no           # Enable keyboard RGB underglow
-MIDI_ENABLE = no               # MIDI support
-BLUETOOTH_ENABLE = no          # Enable Bluetooth with the Adafruit EZ-Key HID
-AUDIO_ENABLE = no              # Audio output on port C6
-FAUXCLICKY_ENABLE = no         # Use buzzer to emulate clicky switches
-<<<<<<< HEAD
-<<<<<<< HEAD
-RGB_MATRIX_ENABLE = IS31FL3733 # Use RGB matrix
-=======
+AUDIO_ENABLE = no              # Audio output
 RGB_MATRIX_ENABLE = yes        # Use RGB matrix
 RGB_MATRIX_DRIVER = IS31FL3733
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-RGB_MATRIX_ENABLE = yes        # Use RGB matrix
-RGB_MATRIX_DRIVER = IS31FL3733
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 NO_USB_STARTUP_CHECK = no      # Disable initialization only when usb is plugged in

@@ -21,7 +21,7 @@
 
 >>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #include "wampus.h"
-#ifdef OLED_DRIVER_ENABLE
+#ifdef OLED_ENABLE
 
 void board_init(void) {
     SYSCFG->CFGR1 |= SYSCFG_CFGR1_I2C1_DMA_RMP;

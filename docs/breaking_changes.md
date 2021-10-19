@@ -6,18 +6,10 @@ The breaking change period is when we will merge PR's that change QMK in dangero
 
 ## What has been included in past Breaking Changes?
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+* [2021 Aug 28](ChangeLog/20210828.md)
+* [2021 May 29](ChangeLog/20210529.md)
+* [2021 Feb 27](ChangeLog/20210227.md)
 * [2020 Nov 28](ChangeLog/20201128.md)
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
-* [2020 Nov 28](ChangeLog/20201128.md)
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 * [2020 Aug 29](ChangeLog/20200829.md)
 * [2020 May 30](ChangeLog/20200530.md)
 * [2020 Feb 29](ChangeLog/20200229.md)
@@ -25,43 +17,16 @@ The breaking change period is when we will merge PR's that change QMK in dangero
 
 ## When is the next Breaking Change?
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-The next Breaking Change is scheduled for November 28, 2020.
+The next Breaking Change is scheduled for August 28, 2021.
 
 ### Important Dates
 
-* [x] 2020 Aug 29 - `develop` is created. It will be rebased weekly.
-* [ ] 2020 Oct 31 - `develop` closed to new PR's.
-* [ ] 2020 Oct 31 - Call for testers.
-* [ ] 2020 Nov 26 - `master` is locked, no PR's merged.
-* [ ] 2020 Nov 28 - Merge `develop` to `master`.
-* [ ] 2020 Nov 28 - `master` is unlocked. PR's can be merged again.
-=======
-The next Breaking Change is scheduled for February 27, 2021.
-
-### Important Dates
-
-=======
-The next Breaking Change is scheduled for February 27, 2021.
-
-### Important Dates
-
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
-* [x] 2020 Nov 28 - `develop` is created. Each push to `master` is subsequently merged to `develop`
-* [ ] 2021 Jan 30 - `develop` closed to new PR's.
-* [ ] 2021 Jan 30 - Call for testers.
-* [ ] 2021 Feb 25 - `master` is locked, no PR's merged.
-* [ ] 2021 Feb 27 - Merge `develop` to `master`.
-* [ ] 2021 Feb 27 - `master` is unlocked. PR's can be merged again.
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+* [x] 2021 Aug 29 - `develop` is created. Each push to `master` is subsequently merged to `develop`
+* [ ] 2021 Oct 31 - `develop` closed to new PR's.
+* [ ] 2021 Oct 31 - Call for testers.
+* [ ] 2021 Nov 26 - `master` is locked, no PR's merged.
+* [ ] 2021 Nov 28 - Merge `develop` to `master`.
+* [ ] 2021 Nov 28 - `master` is unlocked. PR's can be merged again.
 
 ## What changes will be included?
 
@@ -92,7 +57,7 @@ This happens immediately after the previous `develop` branch is merged.
     * [ ] `git commit -m 'Branch point for <DATE> Breaking Change'`
     * [ ] `git tag breakpoint_<YYYY>_<MM>_<DD>`
     * [ ] `git tag <next_version>` # Prevent the breakpoint tag from confusing version incrementing
-    * [ ] `git push origin develop`
+    * [ ] `git push upstream develop`
     * [ ] `git push --tags`
 
 ## 4 Weeks Before Merge
@@ -122,13 +87,20 @@ This happens immediately after the previous `develop` branch is merged.
 * `qmk_firmware` git commands
     * [ ] `git checkout develop`
     * [ ] `git pull --ff-only`
-    * [ ] `git rebase origin/master`
     * [ ] Edit `readme.md`
         * [ ] Remove the notes about `develop`
     * [ ] Roll up the ChangeLog into one file.
     * [ ] `git commit -m 'Merge point for <DATE> Breaking Change'`
-    * [ ] `git push origin develop`
+    * [ ] `git push upstream develop`
 * GitHub Actions
     * [ ] Create a PR for `develop`
-    * [ ] Make sure travis comes back clean
-    * [ ] Merge `develop` PR
+    * [ ] **Turn off 'Automatically delete head branches' for the repository** -- confirm with @qmk/directors that it is done before continuing
+* `qmk_firmware` git commands
+    * [ ] `git checkout master`
+    * [ ] `git pull --ff-only`
+    * [ ] `git merge --no-ff develop`
+    * [ ] `git push upstream master`
+
+## Post-merge operations
+
+* (Optional) [update ChibiOS + ChibiOS-Contrib on `develop`](chibios_upgrade_instructions.md)
