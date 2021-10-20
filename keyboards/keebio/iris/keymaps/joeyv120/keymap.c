@@ -127,7 +127,12 @@ bool led_update_user(led_t led_state) {
       }
     }
     if (layer_state_is(1)) {
-      rgblight_mode_noeeprom(base_mode);      
+      if (led_state.scroll_lock) {
+        rgblight_mode_noeeprom(lock_mode);      
+      }
+      else {
+        rgblight_mode_noeeprom(base_mode);      
+      }
     }
     if (layer_state_is(2)) {
       if (led_state.num_lock) {
