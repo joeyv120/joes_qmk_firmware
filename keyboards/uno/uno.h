@@ -17,8 +17,8 @@
 
 #include "quantum.h"
 
-#define LAYOUT( \
-  K00  \
-) { \
-  { K00 } \
-}
+#ifdef KEYBOARD_uno_rev1
+    #include "rev1.h"
+#elif KEYBOARD_uno_rev2
+    #include "rev2.h"
+#endif
