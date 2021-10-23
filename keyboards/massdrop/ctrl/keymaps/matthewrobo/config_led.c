@@ -19,7 +19,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef RGB_MATRIX_ENABLE
 #    include "ctrl.h"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 #    include "led_matrix.h"
+=======
+#    include "md_rgb_matrix.h"
+<<<<<<< HEAD
+>>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
+=======
+#    include "md_rgb_matrix.h"
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #    include "rgb_matrix.h"
 #    include "config_led.h"
 // clang-format off
@@ -91,7 +103,25 @@ led_config_t g_led_config = { {
 // clang-format on
 
 #    ifdef USB_LED_INDICATOR_ENABLE
+<<<<<<< HEAD
+<<<<<<< HEAD
 void rgb_matrix_indicators_kb(void) { led_matrix_indicators(); }
 #    endif  // USB_LED_INDICATOR_ENABLE
 
 #endif
+=======
+void rgb_matrix_indicators_kb(void) { md_rgb_matrix_indicators(); }
+#    endif  // USB_LED_INDICATOR_ENABLE
+
+#endif
+<<<<<<< HEAD
+>>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
+=======
+void rgb_matrix_indicators_kb(void) { md_rgb_matrix_indicators(); }
+#    endif  // USB_LED_INDICATOR_ENABLE
+
+#endif
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

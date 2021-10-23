@@ -1,7 +1,21 @@
 #include "bootloader.h"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 #include "ch.h"
 #include "hal.h"
+=======
+#include <ch.h>
+#include <hal.h>
+<<<<<<< HEAD
+>>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
+=======
+#include <ch.h>
+#include <hal.h>
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 #include "wait.h"
 
 /* This code should be checked whether it runs correctly on platforms */
@@ -13,7 +27,23 @@
 #    define STM32_BOOTLOADER_DUAL_BANK FALSE
 #endif
 
-#if STM32_BOOTLOADER_DUAL_BANK
+#ifdef BOOTLOADER_TINYUF2
+
+#    define DBL_TAP_MAGIC 0xf01669ef  // From tinyuf2's board_api.h
+
+// defined by linker script
+extern uint32_t _board_dfu_dbl_tap[];
+#    define DBL_TAP_REG _board_dfu_dbl_tap[0]
+
+void bootloader_jump(void) {
+    DBL_TAP_REG = DBL_TAP_MAGIC;
+    NVIC_SystemReset();
+}
+
+void enter_bootloader_mode_if_requested(void) { /* not needed, no two-stage reset */
+}
+
+#elif STM32_BOOTLOADER_DUAL_BANK
 
 // Need pin definitions
 #    include "config_common.h"
@@ -30,9 +60,18 @@
 #        define STM32_BOOTLOADER_DUAL_BANK_DELAY 100000
 #    endif
 
+<<<<<<< HEAD
 extern uint32_t __ram0_end__;
 
+<<<<<<< HEAD
 void bootloader_jump(void) {
+=======
+__attribute__((weak)) void bootloader_jump(void) {
+<<<<<<< HEAD
+>>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
     // For STM32 MCUs with dual-bank flash, and we're incapable of jumping to the bootloader. The first valid flash
     // bank is executed unconditionally after a reset, so it doesn't enter DFU unless BOOT0 is high. Instead, we do
     // it with hardware...in this case, we pull a GPIO high/low depending on the configuration, connects 3.3V to
@@ -58,7 +97,46 @@ void enter_bootloader_mode_if_requested(void) {}  // not needed at all, but if a
 
 extern uint32_t __ram0_end__;
 
+<<<<<<< HEAD
 void bootloader_jump(void) {
+=======
+__attribute__((weak)) void bootloader_jump(void) {
+<<<<<<< HEAD
+>>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
+=======
+extern uint32_t __ram0_end__;
+
+__attribute__((weak)) void bootloader_jump(void) {
+    // For STM32 MCUs with dual-bank flash, and we're incapable of jumping to the bootloader. The first valid flash
+    // bank is executed unconditionally after a reset, so it doesn't enter DFU unless BOOT0 is high. Instead, we do
+    // it with hardware...in this case, we pull a GPIO high/low depending on the configuration, connects 3.3V to
+    // BOOT0's RC charging circuit, lets it charge the capacitor, and issue a system reset. See the QMK discord
+    // #hardware channel pins for an example circuit.
+    palSetPadMode(PAL_PORT(STM32_BOOTLOADER_DUAL_BANK_GPIO), PAL_PAD(STM32_BOOTLOADER_DUAL_BANK_GPIO), PAL_MODE_OUTPUT_PUSHPULL);
+#    if STM32_BOOTLOADER_DUAL_BANK_POLARITY
+    palSetPad(PAL_PORT(STM32_BOOTLOADER_DUAL_BANK_GPIO), PAL_PAD(STM32_BOOTLOADER_DUAL_BANK_GPIO));
+#    else
+    palClearPad(PAL_PORT(STM32_BOOTLOADER_DUAL_BANK_GPIO), PAL_PAD(STM32_BOOTLOADER_DUAL_BANK_GPIO));
+#    endif
+
+    // Wait for a while for the capacitor to charge
+    wait_ms(100);
+
+    // Issue a system reset to get the ROM bootloader to execute, with BOOT0 high
+    NVIC_SystemReset();
+}
+
+void enter_bootloader_mode_if_requested(void) {}  // not needed at all, but if anybody attempts to invoke it....
+
+#elif defined(STM32_BOOTLOADER_ADDRESS)  // STM32_BOOTLOADER_DUAL_BANK
+
+extern uint32_t __ram0_end__;
+
+__attribute__((weak)) void bootloader_jump(void) {
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     *MAGIC_ADDR = BOOTLOADER_MAGIC;  // set magic flag => reset handler will jump into boot loader
     NVIC_SystemReset();
 }
@@ -79,15 +157,16 @@ void enter_bootloader_mode_if_requested(void) {
     }
 }
 
-#elif defined(KL2x) || defined(K20x)  // STM32_BOOTLOADER_DUAL_BANK // STM32_BOOTLOADER_ADDRESS
+#elif defined(KL2x) || defined(K20x) || defined(MK66F18) || defined(MIMXRT1062)  // STM32_BOOTLOADER_DUAL_BANK // STM32_BOOTLOADER_ADDRESS
 /* Kinetis */
 
 #    if defined(BOOTLOADER_KIIBOHD)
 /* Kiibohd Bootloader (MCHCK and Infinity KB) */
 #        define SCB_AIRCR_VECTKEY_WRITEMAGIC 0x05FA0000
-const uint8_t sys_reset_to_loader_magic[] = "\xff\x00\x7fRESET TO LOADER\x7f\x00\xff";
-void          bootloader_jump(void) {
-    __builtin_memcpy((void *)VBAT, (const void *)sys_reset_to_loader_magic, sizeof(sys_reset_to_loader_magic));
+const uint8_t              sys_reset_to_loader_magic[] = "\xff\x00\x7fRESET TO LOADER\x7f\x00\xff";
+__attribute__((weak)) void bootloader_jump(void) {
+    void *volatile vbat = (void *)VBAT;
+    __builtin_memcpy(vbat, (const void *)sys_reset_to_loader_magic, sizeof(sys_reset_to_loader_magic));
     // request reset
     SCB->AIRCR = SCB_AIRCR_VECTKEY_WRITEMAGIC | SCB_AIRCR_SYSRESETREQ_Msk;
 }
@@ -95,7 +174,7 @@ void          bootloader_jump(void) {
 #    else /* defined(BOOTLOADER_KIIBOHD) */
 /* Default for Kinetis - expecting an ARM Teensy */
 #        include "wait.h"
-void bootloader_jump(void) {
+__attribute__((weak)) void bootloader_jump(void) {
     wait_ms(100);
     __BKPT(0);
 }

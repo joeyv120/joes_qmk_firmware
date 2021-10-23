@@ -1,4 +1,4 @@
-/* Copyright 2020 Jay Greco
+/* Copyright 2021 Jay Greco
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,6 +15,25 @@
  */
 #include "big_led.h"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+void set_big_LED_rgb(uint8_t r_mode, uint8_t g_mode, uint8_t b_mode) {
+    set_big_LED_r(r_mode);
+    set_big_LED_g(g_mode);
+    set_big_LED_b(b_mode);
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 void set_big_LED_r(uint8_t mode) {
     switch(mode) {
         case LED_ON:
@@ -64,4 +83,16 @@ void set_big_LED_b(uint8_t mode) {
         default:
         break;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+>>>>>>> dontTouch/master
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+>>>>>>> UpdateQMK
+=======
+}
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445

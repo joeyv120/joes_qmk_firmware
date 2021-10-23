@@ -14,6 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "tkc1800.h"
+<<<<<<< HEAD
+<<<<<<< HEAD
 #include "led.h"
 
 void keyboard_pre_init_kb(void) {
@@ -74,3 +76,20 @@ void led_set_kb(uint8_t usb_led) {
 		PORTD &= ~(1<<4);
     }
 }
+=======
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+
+void keyboard_pre_init_kb(void) {
+    setPinInputHigh(D0);
+    setPinInputHigh(D1);
+
+    setPinOutput(B7);
+    writePinHigh(B7);
+
+    keyboard_pre_init_user();
+}
+<<<<<<< HEAD
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
+=======
+>>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
