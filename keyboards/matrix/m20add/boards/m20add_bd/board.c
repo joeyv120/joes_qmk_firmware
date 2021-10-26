@@ -19,8 +19,8 @@
  * generator plugin. Do not edit manually.
  */
 
-#include "hal.h"
-#include "stm32_gpio.h"
+#include <hal.h>
+#include <stm32_gpio.h>
 
 /*===========================================================================*/
 /* Driver local definitions.                                                 */
@@ -208,9 +208,6 @@ static void stm32_gpio_init(void) {
  *          else.
  */
 void __early_init(void) {
-  extern void enter_bootloader_mode_if_requested(void);
-  enter_bootloader_mode_if_requested();
-
   stm32_gpio_init();
   stm32_clock_init();
 }

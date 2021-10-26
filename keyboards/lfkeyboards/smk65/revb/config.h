@@ -40,26 +40,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define UNUSED_PINS {}
 #define RGBLED_NUM 20     // Number of LEDs
 
-//RevB only:
+/* key matrix size */
+#define MATRIX_ROWS 11
+#define MATRIX_COLS 10
 
 #define AUDIO_VOICES
-#define C6_AUDIO
-// #define B5_AUDIO
+#define AUDIO_PIN C6
 
-#define BACKLIGHT_LEVELS 8
-#define BACKLIGHT_PWM_MAP {8, 16, 40, 55, 70, 128, 200, 255}
+/* COL2ROW or ROW2COL */
+#define DIODE_DIRECTION COL2ROW
 
-#define RGB_DI_PIN C7  // Have to set it to something to get the ws2812 code to compile
-#define RGBLED_NUM 20     // Number of LEDs
+#define BACKLIGHT_PIN B7
+#define BACKLIGHT_BREATHING
+#define BACKLIGHT_LEVELS 3
+
+/* Underlight configuration
+ */
+#define RGB_DI_PIN B3
 #define RGBLIGHT_ANIMATIONS
-#define RGBLIGHT_HUE_STEP 10
-#define RGBLIGHT_SAT_STEP 17
-#define RGBLIGHT_VAL_STEP 17
+#define RGBLED_NUM 30     // Number of LEDs
+#define RGBLIGHT_HUE_STEP 5
+#define RGBLIGHT_SAT_STEP 10
+#define RGBLIGHT_VAL_STEP 10
 
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
-
-/* define if matrix has ghost (lacks anti-ghosting diodes) */
+/* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */

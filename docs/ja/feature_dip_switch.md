@@ -14,6 +14,15 @@ DIP スイッチは、以下を `rules.mk` に追加することでサポート�
 ```c
 // Connects each switch in the dip switch to the GPIO pin of the MCU
 #define DIP_SWITCH_PINS { B14, A15, A10, B9 }
+// For split keyboards, you can separately define the right side pins
+#define DIP_SWITCH_PINS_RIGHT { ... }
+```
+
+あるいは
+
+```c
+// Connect each switch in the DIP switch to an unused intersections in the key matrix.
+#define DIP_SWITCH_MATRIX_GRID { {0,6}, {1,6}, {2,6} } // List of row and col pairs
 ```
 
 あるいは
@@ -28,8 +37,9 @@ DIP スイッチは、以下を `rules.mk` に追加することでサポート�
 コールバック関数を `<keyboard>.c` に記述することができます:
 
 ```c
-void dip_switch_update_kb(uint8_t index, bool active) { 
-    dip_switch_update_user(index, active); 
+bool dip_switch_update_kb(uint8_t index, bool active) { 
+    if !(dip_switch_update_user(index, active)) { return false; }
+    return true;
 }
 ```
 
@@ -37,7 +47,7 @@ void dip_switch_update_kb(uint8_t index, bool active) {
 あるいは `keymap.c` に記述することもできます:
 
 ```c
-void dip_switch_update_user(uint8_t index, bool active) { 
+bool dip_switch_update_user(uint8_t index, bool active) { 
     switch (index) {
         case 0:
             if(active) { audio_on(); } else { audio_off(); }
@@ -62,6 +72,7 @@ void dip_switch_update_user(uint8_t index, bool active) {
             }
             break;
     }
+    return true;
 }
 ```
 
@@ -69,8 +80,9 @@ void dip_switch_update_user(uint8_t index, bool active) {
 
 
 ```c
-void dip_switch_update_mask_kb(uint32_t state) { 
-    dip_switch_update_mask_user(state); 
+bool dip_switch_update_mask_kb(uint32_t state) { 
+    if (!dip_switch_update_mask_user(state)) { return false; }
+    return true;
 }
 ```
 
@@ -78,7 +90,7 @@ void dip_switch_update_mask_kb(uint32_t state) {
 あるいは `keymap.c` に記述することもできます:
 
 ```c
-void dip_switch_update_mask_user(uint32_t state) { 
+bool dip_switch_update_mask_user(uint32_t state) { 
     if (state & (1UL<<0) && state & (1UL<<1)) {
         layer_on(_ADJUST); // C on esc
     } else {
@@ -94,6 +106,7 @@ void dip_switch_update_mask_user(uint32_t state) {
     } else {
         layer_off(_TEST_B);
     }
+    return true;
 }
 ```
 
