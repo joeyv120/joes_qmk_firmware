@@ -1,18 +1,7 @@
 """Generate a keymap.json from a keymap.c file.
 """
 import json
-<<<<<<< HEAD
-<<<<<<< HEAD
 import sys
-=======
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
-
 from argcomplete.completers import FilesCompleter
 from milc import cli
 
@@ -35,8 +24,6 @@ def c2json(cli):
 
     This command uses the `qmk.keymap` module to generate a keymap.json from a keymap.c file. The generated keymap is written to stdout, or to a file if -o is provided.
     """
-<<<<<<< HEAD
-<<<<<<< HEAD
     cli.args.filename = qmk.path.normpath(cli.args.filename)
 
     # Error checking
@@ -50,9 +37,6 @@ def c2json(cli):
         cli.log.error('Reading from STDIN is not (yet) supported.')
         cli.print_usage()
         exit(1)
-=======
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
     if cli.args.filename != '-':
         cli.args.filename = qmk.path.normpath(cli.args.filename)
 
@@ -61,14 +45,6 @@ def c2json(cli):
             cli.log.error('C file does not exist!')
             cli.print_usage()
             return False
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     # Environment processing
     if cli.args.output == ('-'):
@@ -88,19 +64,9 @@ def c2json(cli):
         keymap_json = qmk.keymap.generate_json(keymap_json['keymap'], keymap_json['keyboard'], keymap_json['layout'], keymap_json['layers'])
     except KeyError:
         cli.log.error('Something went wrong. Try to use --no-cpp.')
-<<<<<<< HEAD
-<<<<<<< HEAD
         sys.exit(1)
-=======
         return False
-<<<<<<< HEAD
->>>>>>> dontTouch/master
-=======
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
->>>>>>> UpdateQMK
-=======
         return False
->>>>>>> acdcc622028a7c8e6ec086a5da2bff67fd137445
 
     if cli.args.output:
         cli.args.output.parent.mkdir(parents=True, exist_ok=True)
