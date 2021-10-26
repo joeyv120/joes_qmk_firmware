@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // https://github.com/qmk/qmk_firmware/blob/master/quantum/rgblight.h
 uint32_t base_mode = RGBLIGHT_MODE_STATIC_LIGHT; // Unlocked animation (solid)
 uint32_t lock_mode = RGBLIGHT_MODE_BREATHING + 3; // Locked animation (breathing, fast)
-uint32_t advn_mode = RGBLIGHT_MODE_KNIGHT + 2; // Advanced layer animation (knight, fast)
+uint32_t advn_mode = RGBLIGHT_MODE_STATIC_LIGHT; // (solid)
 
 void keyboard_post_init_user(void) {
   rgblight_enable();
