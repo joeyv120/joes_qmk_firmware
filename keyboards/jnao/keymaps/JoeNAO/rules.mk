@@ -11,11 +11,13 @@ MCU = atmega32u4
 #   ATmega328P   USBasp
 BOOTLOADER = atmel-dfu
 
+VIA_ENABLE = yes
+
 # Build Options
 #   change yes to no to disable
 #
 BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration
-MOUSEKEY_ENABLE = no        # Mouse keys
+MOUSEKEY_ENABLE = yes        # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = yes         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
